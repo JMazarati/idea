@@ -1,0 +1,33 @@
+body{background-color: #eee;
+
+}
+h1{color: darkblue;}
+
+#headerWrapper {
+    position:fixed;
+    width:100%;
+    top:0px;
+    text-align: center;
+}
+
+#wrapper {
+    position:fixed;
+    width:300px;
+    height:300px;
+    top:150px;
+    background-color: rgba(178, 174, 201, 0.62);
+}
+#main{
+    position:fixed;
+    width:600px;
+
+    top:150px;
+    background-color: rgba(174, 168, 62, 0.68);
+    margin-left:98%;
+    left:-600px;
+    padding: 20px;
+
+}
+#foo{
+    text-align: center;
+}

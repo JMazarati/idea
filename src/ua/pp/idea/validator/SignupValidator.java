@@ -1,0 +1,49 @@
+package ua.pp.idea.validator;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
+import org.springframework.validation.Validator;
+import ua.pp.idea.dao.UserDaoImpl;
+import ua.pp.idea.entity.User;
+
+/**
+ * Created by Dark on 18.11.2016.
+ */
+
+public class SignupValidator implements Validator {
+    @Autowired
+    UserDaoImpl udi;
+    @Override
+    public boolean supports(Class<?> aClass) {
+        return User.class.isAssignableFrom(aClass);
+    }
+
+    @Override
+    public void validate(Object o, Errors errors) {
+        User myUser = (User) o;
+
+        String str;
+        try {str=udi.findUserByName(myUser.getUsername().toLowerCase()).get(0).getUsername();
+
+        }catch (Exception e){str="";}
+
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "username.empty", "Username must not be empty.");
+        String username = myUser.getUsername();
+        if ((username.length()) < 2) {
+            errors.rejectValue("username", "username.tooLong", "Username must more than 2 characters.");
+        }
+        if (username.toLowerCase().equals(str.toLowerCase())){
+            errors.rejectValue("username","username.full","Username is busy");
+        }
+
+
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "userpwd", "password.empty", "Password must not be empty.");
+        if (!(myUser.getUserpwd()).equals(myUser.getUserkpwd())) {
+            errors.rejectValue("userkpwd", "confirmPassword.passwordDontMatch", "Passwords don't match.");
+        }
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "useremail", "useremail.empty", "Email must not be empty.");
+        if(myUser.getUseremail().indexOf('@')==-1 || myUser.getUseremail().length()<5){errors.rejectValue("useremail","useremail.notDog","Not @email format");}
+    }
+}
