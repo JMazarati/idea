@@ -6,11 +6,15 @@ import org.springframework.validation.Validator;
 
 import ua.pp.idea.entity.Idea;
 
+import java.util.regex.Pattern;
+
 /**
  * Created by Dark on 20.11.2016.
  */
 public class AddideaValidator implements Validator {
-
+    private final static Pattern EMAIL_PATTERN = Pattern.compile(".+@.+\\.[a-z]+");
+    private final static Pattern NOHTML_PATTERN = Pattern.compile("[0-9a-zA-Zа-яА-ЯёЁіІЄєїЇ.!?$@*+&_,\\- ()\\r\\n]*");
+    private final static Pattern NOYOUTUBE_PATTERN = Pattern.compile("[0-9a-zA-Z_\\- ()]*");
     @Override
     public boolean supports(Class<?> aClass) {
 
@@ -29,6 +33,23 @@ public class AddideaValidator implements Validator {
         }
 
         //ValidationUtils.rejectIfEmptyOrWhitespace(errors, "txt", "txt.empty", "Text must not be empty.");
-        //if(idea.getTxt().length()<1){errors.rejectValue("txt","txt.Toshort","txt short");}
+        if(idea.getTxt().isEmpty()&&idea.getVideo().isEmpty()&&idea.getFile().isEmpty()){errors.rejectValue("txt","txt.Toshort","Enter at least something");}
+
+        if(!isHtml(idea.getCaption())){errors.rejectValue("caption","txt.Toshort","No html");}
+        if(!isHtml(idea.getTxt())){errors.rejectValue("txt","txt.Toshort","No html");}
+        if(!isYOUTUBE(idea.getVideo())){errors.rejectValue("video","video.Toshort","No YOUTUBE CODE");}
+        if(!isHtml(idea.getTags())){errors.rejectValue("tags","txt.Toshort","No html");}
     }
+
+    private boolean isHtml(String value) {
+
+        return NOHTML_PATTERN.matcher(value).matches();
+
+    }
+    private boolean isYOUTUBE(String value) {
+
+        return NOYOUTUBE_PATTERN.matcher(value).matches();
+
+    }
+
 }

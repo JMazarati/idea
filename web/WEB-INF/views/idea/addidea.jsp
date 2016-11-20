@@ -17,6 +17,7 @@
         <tr>
             <td><form:label path="caption">caption</form:label></td>
             <td><form:input path="caption" maxlength="128"/></td>
+            <td><span class="error" ><form:errors path="caption" /></span></td>
         </tr>
         <tr>
             <td><form:label path="category">category</form:label></td>
@@ -27,7 +28,7 @@
         </tr>
         <tr>
             <td><form:label path="txt">txt</form:label></td>
-            <td><form:input path="txt" /></td>
+            <td><form:textarea path="txt" cols="30" rows="5"/></td>
             <td><span class="error" ><form:errors path="txt" /></span></td>
         </tr>
         <tr>
@@ -40,10 +41,12 @@
         <tr>
             <td><form:label path="video">video YOUTUBE</form:label></td>
             <td><form:input path="video" maxlength="11"/></td>
+            <td><span class="error" ><form:errors path="video" /></span></td>
         </tr>
         <tr>
             <td><form:label path="tags">tags</form:label></td>
             <td><form:input path="tags" maxlength="256"/></td>
+            <td><span class="error" ><form:errors path="tags" /></span></td>
         </tr>
         <tr>
             <td colspan="2">
@@ -52,6 +55,7 @@
         </tr>
     </table>
 </form:form>
+<br />
 <span style="color: #0e1aff; ">* Если мы добавляем ссылку на видео в ютюбе, то вставлять надо только код видео. Выделено красным цветом.<br />
 https://www.youtube.com/watch?v=</span><span style="color: #ff0003; ">rU1m-nyfK34</span><br />
 <span style="color: #0e1aff; ">* Если мы добавляем несколько тегов, то разделять их надо запятыми</span>

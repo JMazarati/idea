@@ -8,6 +8,8 @@ import org.springframework.validation.Validator;
 import ua.pp.idea.dao.UserDaoImpl;
 import ua.pp.idea.entity.User;
 
+import java.util.regex.Pattern;
+
 /**
  * Created by Dark on 18.11.2016.
  */
@@ -15,6 +17,7 @@ import ua.pp.idea.entity.User;
 public class SignupValidator implements Validator {
     @Autowired
     UserDaoImpl udi;
+    private final static Pattern EMAIL_PATTERN = Pattern.compile(".+@.+\\.[a-z]+");
     @Override
     public boolean supports(Class<?> aClass) {
         return User.class.isAssignableFrom(aClass);
@@ -44,6 +47,11 @@ public class SignupValidator implements Validator {
             errors.rejectValue("userkpwd", "confirmPassword.passwordDontMatch", "Passwords don't match.");
         }
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "useremail", "useremail.empty", "Email must not be empty.");
-        if(myUser.getUseremail().indexOf('@')==-1 || myUser.getUseremail().length()<5){errors.rejectValue("useremail","useremail.notDog","Not @email format");}
+        if(!isEmail(myUser.getUseremail())){errors.rejectValue("useremail","useremail.notDog","Not @email format");}
+    }
+    private boolean isEmail(String value) {
+
+        return EMAIL_PATTERN.matcher(value).matches();
+
     }
 }
