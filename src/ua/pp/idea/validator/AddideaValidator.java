@@ -28,7 +28,7 @@ public class AddideaValidator implements Validator {
             }
         }
 
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "txt", "txt.empty", "Text must not be empty.");
+        //ValidationUtils.rejectIfEmptyOrWhitespace(errors, "txt", "txt.empty", "Text must not be empty.");
         //if(idea.getTxt().length()<1){errors.rejectValue("txt","txt.Toshort","txt short");}
     }
 }

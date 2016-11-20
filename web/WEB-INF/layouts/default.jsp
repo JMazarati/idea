@@ -13,22 +13,13 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/resources/css/admin.css" />
     <link rel="shortcut icon" href="${pageContext.servletContext.contextPath}/resources/pict/idea.png" />
 </head>
-<body class="tundra spring">
+<body class="spring">
 
-<div id="headerWrapper">
-    <tiles:insertAttribute name="header" ignore="true" />
+<div class="container">
+    <div class="header"><tiles:insertAttribute name="header" ignore="true" /></div>
+    <div class="sidebar"><tiles:insertAttribute name="menu" ignore="true" /></div>
+    <div class="content"><tiles:insertAttribute name="body" /></div>
+    <div class="footer"><tiles:insertAttribute name="footer" ignore="true" /></div>
 </div>
-
-<div id="wrapper">
-    <tiles:insertAttribute name="menu" ignore="true" />
-    <div id="main">
-        <tiles:insertAttribute name="body" />
-        <div id="foo">
-            <tiles:insertAttribute name="footer" ignore="true" />
-        </div>
-    </div>
-</div>
-
-
 </body>
 </html>
