@@ -18,6 +18,7 @@ public class SignupValidator implements Validator {
     @Autowired
     UserDaoImpl udi;
     private final static Pattern EMAIL_PATTERN = Pattern.compile(".+@.+\\.[a-z]+");
+    private final static Pattern LOGIN_PATTERN = Pattern.compile("[0-9a-zA-Z_@.!$=?{}\\- ()]+");
     @Override
     public boolean supports(Class<?> aClass) {
         return User.class.isAssignableFrom(aClass);
@@ -34,6 +35,7 @@ public class SignupValidator implements Validator {
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "username.empty", "Username must not be empty.");
         String username = myUser.getUsername();
+        if(!isLogin(username)){errors.rejectValue("username","username.wrong","not correct symbols on your username");}
         if ((username.length()) < 2) {
             errors.rejectValue("username", "username.tooLong", "Username must more than 2 characters.");
         }
@@ -50,8 +52,11 @@ public class SignupValidator implements Validator {
         if(!isEmail(myUser.getUseremail())){errors.rejectValue("useremail","useremail.notDog","Not @email format");}
     }
     private boolean isEmail(String value) {
-
         return EMAIL_PATTERN.matcher(value).matches();
+    }
+    private boolean isLogin(String value) {
+
+        return LOGIN_PATTERN.matcher(value).matches();
 
     }
 }
