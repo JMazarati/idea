@@ -1,5 +1,7 @@
 package ua.pp.idea.entity;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import java.sql.Date;
 import java.time.LocalDateTime;
 
@@ -10,6 +12,8 @@ public class Idea {
     private Long id;
     private String txt;
     private String pict;
+
+    private MultipartFile file ;
     private String video;
     private String caption;
     private float rating;
@@ -115,4 +119,13 @@ public class Idea {
     public void setTags(String tags) {
         this.tags = tags;
     }
+    public MultipartFile getFile() {
+        return file;
+    }
+
+    public void setFile(MultipartFile file) {
+        this.file = file;
+    }
+
+
 }

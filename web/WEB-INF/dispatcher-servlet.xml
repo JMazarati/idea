@@ -7,10 +7,14 @@
     <bean id="ideaDaoImpl" class="ua.pp.idea.dao.IdeaDaoImpl" />
     <bean id="userDaoImpl" class="ua.pp.idea.dao.UserDaoImpl" />
     <bean id="signupValidator" class="ua.pp.idea.validator.SignupValidator" />
+    <bean id="addideaValidator" class="ua.pp.idea.validator.AddideaValidator"/>
 
     <context:component-scan base-package="ua.pp.idea"/>
 
     <mvc:resources mapping="/resources/**" location="/resources/" />
+
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
     <!--bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           p:prefix="/WEB-INF/views/"
           p:suffix=".jsp"

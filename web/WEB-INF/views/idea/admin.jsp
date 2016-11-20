@@ -12,6 +12,8 @@ scheme... ${scheme} <br/>
 serverName:... ${serverName}<br/>
 serverPort... ${serverPort}<br/>
 contextPath... ${contextPath}<br/>
+webRootPath... ${webRootPath}<br/>
+    <br/>
 
 </div>
 <input type="text" id="adminput"/>

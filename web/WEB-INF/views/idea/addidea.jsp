@@ -7,7 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<form:form method="POST" action="${pageContext.servletContext.contextPath}/addideapost">
+<form:form method="POST" action="${pageContext.servletContext.contextPath}/addideapost" enctype="multipart/form-data">
     <table>
         <tr>
             <td><form:label path="caption">caption</form:label></td>
@@ -23,11 +23,13 @@
         <tr>
             <td><form:label path="txt">txt</form:label></td>
             <td><form:input path="txt" /></td>
+            <td><span class="error" ><form:errors path="txt" /></span></td>
         </tr>
         <tr>
             <td><form:label path="pict">picture</form:label></td>
-            <td><form:input path="pict" type="file"/></td>
 
+            <td><input name="p" type="file"/></td>
+            <td><span class="error" ><form:errors path="file" /></span></td>
 
         </tr>
         <tr>

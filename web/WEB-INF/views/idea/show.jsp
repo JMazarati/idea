@@ -16,7 +16,7 @@ TEXT:    ${check.txt} <br />
 </c:if>
 <c:if test="${check.pict.length()>1}">
 
-PHOTO:    ${check.pict} <br />
+PHOTO:   <img src="/resources/upload_image/${check.pict}" width="560"/>  <br />
 
 </c:if>
 <c:if test="${check.video.length()>1}">
