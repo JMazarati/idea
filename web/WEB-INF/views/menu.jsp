@@ -31,9 +31,9 @@
 
 <sec:authorize access="hasAnyRole('ROLE_USER','ROLE_OPERATOR', 'ROLE_ADMINISTRATOR')">
     <sec:authentication property="principal.username" var="username"/>
-    <a href="${addContactUrl}"><h3>${labelwelcome} ${username}</h3></a>
 
-    <b>${labellogin}: </b> ${username}<br />
+
+    <b>${labellogin}: </b> <a href="${addContactUrl}">${username}</a><br />
     <a href="<c:url value="/j_spring_security_logout"/>">${labellogout}</a>
     <br/>
     <hr/>

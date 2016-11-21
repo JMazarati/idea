@@ -31,6 +31,8 @@ h2 {
     margin-left: 170px; /* Отступ слева */
     padding: 10px; /* Отступы внутри правого блока */
     background: #fff; /* Цвет фона правого блока */
+    word-wrap: break-word;
+
 }
 .footer {
     background: #8fa09b; /* Цвет фона нижнего блока-подвала */
@@ -41,7 +43,8 @@ h2 {
 }
 
 #login1{
-    font-size:12px;
+    background-color: #8fabaa;
 
+    font-size:12px;
     float:right;
 }

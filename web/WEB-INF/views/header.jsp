@@ -55,7 +55,7 @@
         <sec:authentication property="principal.username" var="username"/>
         <table>
             <tr>
-                <td align="left"><a href="${addContactUrl}"><h3>${labelwelcome} ${username}</h3></a></td>
+                    <td align="left">${labelwelcome}<a href="${addContactUrl}"> ${username}</a></td>
             </tr>
             <tr>
                 <td align="left"><b>${labellogin}: </b> ${username}<b>--></b><a

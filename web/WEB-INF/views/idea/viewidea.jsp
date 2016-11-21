@@ -15,7 +15,7 @@
         <tr>
             <th>ID</th>
             <th>User name</th>
-            <th>Text of idea</th>
+            <th>Caption of idea</th>
             <th>View</th>
 
         </tr>
