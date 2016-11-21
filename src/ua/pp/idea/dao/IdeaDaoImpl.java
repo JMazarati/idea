@@ -1,6 +1,6 @@
 package ua.pp.idea.dao;
 
-import org.apache.commons.collections.FastHashMap;
+
 import org.springframework.stereotype.Repository;
 import ua.pp.idea.dao.crud.InsertNewIdea;
 import ua.pp.idea.dao.crud.SelectAllIdea;
@@ -9,7 +9,6 @@ import ua.pp.idea.entity.Idea;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +22,7 @@ public class IdeaDaoImpl {
     private SelectAllIdea selectAllIdea;
     private SelectIdeaById selectIdeaById;
     private InsertNewIdea insertNewIdea;
-    //List<Idea> myList = new ArrayList<Idea>();
+
 
     @Resource(name = "dataSource")
     public void setDataSource(DataSource dataSource) {
@@ -35,15 +34,6 @@ public class IdeaDaoImpl {
 
     public List<Idea> getAll() {
 
-    /*if(myList.isEmpty()){
-    Idea i1 = new Idea();
-        i1.setId(1L);
-        i1.setTxt("Идея заключается в том, что сила в единстве!");
-        i1.setVideo("rU1m-nyfK34");
-        i1.setUsername("Gerbert_Shild");
-        myList.add(i1);
-    }
-    */
         return selectAllIdea.execute();
     }
 
