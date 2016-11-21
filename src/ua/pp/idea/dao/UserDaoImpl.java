@@ -1,12 +1,9 @@
 package ua.pp.idea.dao;
 
 
-import org.springframework.stereotype.Repository;
 import ua.pp.idea.dao.crud.InsertUser;
 import ua.pp.idea.dao.crud.SelectUser;
-import ua.pp.idea.dao.crud.SelectUserByEmail;
 import ua.pp.idea.entity.User;
-
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.util.HashMap;

@@ -68,9 +68,6 @@ public class SecurityController {
         signupValidator.validate(myUser, bindingResult);
         if (bindingResult.hasErrors()) {
 
-            // model.addAttribute("binding",bindingResult.getFieldErrors());
-            //model.addAttribute("command",myUser);
-            //model.addAttribute(BindingResult.class.getName() + ".command", bindingResult);
             model.asMap().clear();
             redirectAttributes.addFlashAttribute("b", bindingResult);
             return rdrct+"/reg";
@@ -96,13 +93,7 @@ public class SecurityController {
         model.addAttribute(BindingResult.class.getName() + ".command", bindingResult);
         return "reg";
     }
-/*
-    @RequestMapping(value = "/reg", method = RequestMethod.GET)
-    public ModelAndView createUserForm(){
 
-        return new ModelAndView("reg", "command", new User());
-    }
-*/
 
 
 }

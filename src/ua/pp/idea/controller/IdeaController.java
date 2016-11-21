@@ -5,22 +5,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.FileCopyUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import ua.pp.idea.dao.IdeaDaoImpl;
 import ua.pp.idea.dao.UserDaoImpl;
 import ua.pp.idea.entity.Idea;
 import ua.pp.idea.validator.AddideaValidator;
-
-
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
-import java.io.IOException;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -72,10 +67,6 @@ public class IdeaController {
         category.put("9", "Обучение");
         category.put("10", "Дом");
 
-
-        //nmv.setViewName("addidea");
-        //nmv.getModel().put("cat",category);
-        //nmv.addObject("command", new Idea());
         model.addAttribute("cat", category);
 
 

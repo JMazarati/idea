@@ -1,8 +1,6 @@
 package ua.pp.idea.dao;
 
 import ua.pp.idea.entity.Idea;
-
-import java.util.Date;
 import java.util.List;
 
 /**

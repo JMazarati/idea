@@ -1,11 +1,8 @@
 package ua.pp.idea.entity;
 
-import com.sun.istack.internal.NotNull;
-import org.springframework.validation.annotation.Validated;
-
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
+
 
 
 
