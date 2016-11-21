@@ -18,7 +18,7 @@ public class SignupValidator implements Validator {
     @Autowired
     UserDaoImpl udi;
     private final static Pattern EMAIL_PATTERN = Pattern.compile(".+@.+\\.[a-z]+");
-    private final static Pattern LOGIN_PATTERN = Pattern.compile("[0-9a-zA-Z_@.!$=?{}\\- ()]+");
+    private final static Pattern LOGIN_PATTERN = Pattern.compile("[0-9a-zA-Z_@.'!$=?{}\\- ()]+");
     @Override
     public boolean supports(Class<?> aClass) {
         return User.class.isAssignableFrom(aClass);
