@@ -6,7 +6,6 @@ import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 import ua.pp.idea.dao.UserDaoImpl;
 import ua.pp.idea.entity.User;
-
 import java.util.regex.Pattern;
 
 /**
