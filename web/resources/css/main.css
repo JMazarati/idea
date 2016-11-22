@@ -31,7 +31,7 @@ h2 {
     margin-left: 170px; /* Отступ слева */
     padding: 10px; /* Отступы внутри правого блока */
     background: #fff; /* Цвет фона правого блока */
-    word-wrap: break-word;
+    word-wrap: break-word;/* перенос */
 
 }
 .footer {
