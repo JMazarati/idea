@@ -11,29 +11,28 @@
 <spring:message code="label_link_2" var="labellink2" />
 <h1>${labelcontactlist}</h1>
 <c:if test="${not empty list}">
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>User name</th>
-            <th>Caption of idea</th>
-            <th>View</th>
 
-        </tr>
-        </thead>
+    <c:forEach items="${list}" var="list">
 
-        <tbody>
-        <c:forEach items="${list}" var="list">
-            <tr>
-                <th><a href="viewidea/${list.id}">${list.id}</a></th>
-                <th>${list.username}</th>
-                <th>${list.caption}</th>
-                <th><a href="viewidea/${list.id}">view</a></th>
+        <div class="idea">
+            <div class="row" id="row1">
+                <div id="tags" class="col-xs-4">${list.tags}</div>
+                <div id="title" class="col-xs-8">${list.caption}</div>
+            </div>
+            <div class="row" id="row1">
+                <div id="username" class="col-xs-4">${list.username}</div>
+                <div id="date" class="col-xs-8">${list.date_create}</div>
+            </div>
+            <div id="textOfIdea" class="text-center">${list.txt}</div>
+            <div class="row" id="row1">
+                <div id="rating" class="col-xs-4">${list.rating}</div>
+                <div id="comments" class="col-xs-4">Comments</div>
+                <div id="view" class="col-xs-4"><a href="viewidea/${list.id}">view</a></div>
+            </div>
 
-            </tr>
+
         </c:forEach>
-
-        </tbody>
-    </table>
+    </div>
 </c:if>
 <c:if test="${empty list}">
 
