@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-md-12 text-center" id="contacts">
                 Contact us on
-                <a href="https://github.com/MrTitarenko/JAVAIT.Brainstorm">GitHub</a>
+                <a href="https://github.com/andrewdark/idea">GitHub</a>
             </div>
             <div id="language" class="col-md-12 text-center">
                 <a href="${currentUrl}?lang=en">${labelEn}</a>
