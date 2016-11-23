@@ -10,8 +10,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <spring:message code="label_en" var="labelEn" />
 <spring:message code="label_ru" var="labelRu" />
-<hr />
-THIS IS FOOTER <br />
 
-<a href="${currentUrl}?lang=en">${labelEn}</a>
-<a href="${currentUrl}?lang=ru">${labelRu}</a>
+<footer id="foo" class="panel-footer navbar-fixed-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center" id="contacts">
+                Contact us on
+                <a href="https://github.com/MrTitarenko/JAVAIT.Brainstorm">GitHub</a>
+            </div>
+            <div id="language" class="col-md-12 text-center">
+                <a href="${currentUrl}?lang=en">${labelEn}</a>
+                <a href="${currentUrl}?lang=ru">${labelRu}</a>
+            </div>
+            <div class="col-md-12 text-center" id="copyright">&copy; Copyright J.A.V.A.I.T. 2016</div>
+
+        </div>
+    </div>
+</footer>

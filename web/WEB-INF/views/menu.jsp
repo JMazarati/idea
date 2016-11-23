@@ -10,6 +10,8 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 
+
+
 <spring:url value="/myoffice" var="addContactUrl"/>
 <spring:url value="/viewidea" var="viewidealink"/>
 <spring:url value="/addidea" var="addidealink"/>
@@ -27,20 +29,31 @@
         code="label_registration" var="labelregistration"/>
 
 <c:url value="/login" var="loginUrl"/>
-<h3>${menuHeaderText}</h3>
+
 
 <sec:authorize access="hasAnyRole('ROLE_USER','ROLE_OPERATOR', 'ROLE_ADMINISTRATOR')">
     <sec:authentication property="principal.username" var="username"/>
+    <a href="${addContactUrl}"><h3>${labelwelcome} ${username}</h3></a>
 
-
-    <b>${labellogin}: </b> <a href="${addContactUrl}">${username}</a><br />
+    <b>${labellogin}: </b> ${username}<br />
     <a href="<c:url value="/j_spring_security_logout"/>">${labellogout}</a>
     <br/>
     <hr/>
-    <h2>${labelmenu}</h2>
-    <a href=${viewidealink}>${labellink1}</a><br/>
-    <a href=${addidealink}>${labellink2}</a><br/>
-    <a href=${homelink}>${labellink3}</a><br/>
+    <nav class="nav nav-bar" id="menu1" role="navigation">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="/viewidea">View ideas</a></li>
+            <li role="presentation"><a href="/addidea">Add idea</a></li>
+            <li role="presentation"><a href="/myoffice">My account</a></li>
+            <li class="pull-right">
+                <div class="form-group" id="search">
+                    <input type="text" class="form-control " placeholder="Search">
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+
 </sec:authorize>
 
 <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">
@@ -53,7 +66,17 @@
 
 <sec:authorize access="isAnonymous()">
 
-    <h2>${labelmenu}</h2>
-    <a href="/viewidea">${labellink1}</a><br/>
-    <a href="/">${labellink3}</a>
+    <nav class="nav nav-bar" id="menu2" role="navigation">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="/viewidea">View ideas</a></li>
+            <li class="pull-right">
+                <div class="form-group" id="search">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+            </li>
+
+
+        </ul>
+    </nav>
 </sec:authorize>

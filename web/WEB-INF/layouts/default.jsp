@@ -10,6 +10,7 @@
     <title>JAVA IT WEB APP</title>
 
     <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/resources/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/resources/css/bootstrap-3.3.7.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/resources/css/admin.css" />
     <link rel="shortcut icon" href="${pageContext.servletContext.contextPath}/resources/pict/idea.png" />
 </head>

@@ -12,39 +12,42 @@
         color: red;
     }
 </style>
+<div class="page-header text-center">
+    <h3 id="addIdea">Add new idea</h3>
+</div>
 <form:form method="POST" action="${pageContext.servletContext.contextPath}/addideapost" enctype="multipart/form-data">
-    <table>
+    <table id="tableAddIdea">
         <tr>
-            <td><form:label path="caption">caption</form:label></td>
+            <td><form:label path="caption">Title</form:label></td>
             <td><form:input path="caption" maxlength="128"/></td>
             <td><span class="error" ><form:errors path="caption" /></span></td>
         </tr>
         <tr>
-            <td><form:label path="category">category</form:label></td>
+            <td><form:label path="category">Category</form:label></td>
             <td><form:select path="category" items="${cat}">
 
 
             </form:select></td>
         </tr>
         <tr>
-            <td><form:label path="txt">txt</form:label></td>
+            <td><form:label path="txt">Text</form:label></td>
             <td><form:textarea path="txt" cols="30" rows="5"/></td>
             <td><span class="error" ><form:errors path="txt" /></span></td>
         </tr>
         <tr>
-            <td><form:label path="pict">picture</form:label></td>
+            <td><form:label path="pict">Picture</form:label></td>
 
             <td><input name="p" type="file"/></td>
             <td><span class="error" ><form:errors path="file" /></span></td>
 
         </tr>
         <tr>
-            <td><form:label path="video">video YOUTUBE</form:label></td>
+            <td><form:label path="video">Video YOUTUBE</form:label></td>
             <td><form:input path="video" maxlength="11"/></td>
             <td><span class="error" ><form:errors path="video" /></span></td>
         </tr>
         <tr>
-            <td><form:label path="tags">tags</form:label></td>
+            <td><form:label path="tags">Tags</form:label></td>
             <td><form:input path="tags" maxlength="256"/></td>
             <td><span class="error" ><form:errors path="tags" /></span></td>
         </tr>
