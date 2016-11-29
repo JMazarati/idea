@@ -26,12 +26,12 @@ public class UserDaoImpl implements UserDao{
         return dataSource;
     }
 @Resource(name = "dataSource")
-    public void setDataSource(DataSource dataSource) {
+    public void setDataSource(DataSource dataSource) {  //      return selectUser.executeByNamedParam(paramMap);
         this.dataSource = dataSource;
         this.insertUser=new InsertUser(dataSource);
         this.selectUser=new SelectUser(dataSource);
-        //this.selectUserByEmail=new SelectUserByEmail(dataSource);
-    }
+    //this.selectUserByEmail=new SelectUserByEmail(dataSource);
+}
 
     @Override
     public void createUser(User user) {
@@ -50,9 +50,9 @@ public class UserDaoImpl implements UserDao{
         return selectUser.executeByNamedParam(paramMap);
     }
 
-  //  public List<User> findUserByEmail(String useremail){
-  //      Map<String,Object> paramMap = new HashMap<String,Object>();
-  //      paramMap.put("useremail",useremail);
-  //      return selectUser.executeByNamedParam(paramMap);
-   // }
+    //  public List<User> findUserByEmail(String useremail){
+    //      Map<String,Object> paramMap = new HashMap<String,Object>();
+    //      paramMap.put("useremail",useremail);
+
+    // }
 }

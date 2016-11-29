@@ -10,6 +10,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <spring:message code="label_link_2" var="labellink2" />
 <h1>${labelcontactlist}</h1>
+
 <c:if test="${not empty list}">
 
     <c:forEach items="${list}" var="list">
