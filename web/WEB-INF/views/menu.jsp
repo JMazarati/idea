@@ -47,7 +47,7 @@
             <li role="presentation"><a href="/myoffice">My account</a></li>
             <li class="pull-right">
                 <div class="form-group" id="search">
-                    <input type="text" class="form-control " placeholder="Search">
+                    <input type="text" class="form-control" placeholder="Search">
                 </div>
             </li>
 

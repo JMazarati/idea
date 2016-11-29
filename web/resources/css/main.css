@@ -48,31 +48,78 @@ a.navbar-brand {
 .form-horizontal{
     width: 700px;
     margin: 10px auto;
+    position: absolute;
+}
+#button{
+    position: relative;
+    padding-left: 550px;
+    padding-top: 20px;
 }
 /*View idea*/
 .idea{
-    width: 800px;
-    outline: 1px solid #d0d2d0;
+    border: 1px solid rgba(108, 4, 158, 0.24);
+    border-radius: 10px;
+    width: 700px;
+    padding: 5px;
+    margin: 20px;
 }
-#row1{
+.row1{
     height:30px;
 
 }
 #textOfIdea{
     height:100px;
-    border-bottom: 1px solid rgba(168, 168, 168, 0.96);
-    border-top: 1px solid rgba(168, 168, 168, 0.96);
+    border-bottom: 1px solid rgba(108, 4, 158, 0.24);
+    border-top: 1px solid rgba(108, 4, 158, 0.24);
 
+}
+#textOfIdeaShow{
+    border-bottom: 1px solid rgba(108, 4, 158, 0.24);
+    border-top: 1px solid rgba(108, 4, 158, 0.24);
+    height: auto;
+    text-align: justify;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 #tags{
     font-style: italic;
+    color: #390457;
 }
 #title{
+    font-size: 16px;
     font-weight: bold;
+    text-decoration: underline;
+    color: #390457;
 }
-#username, #date {
+#username, #date, #checkID{
     color: #696969;
     font-size: 12px;
+}
+#date{
+    text-align: right;
+}
+#view{
+    text-decoration: underline;
+}
+/*Show idea*/
+.showIdea{
+    width: 700px;
+    margin-bottom: 50px;
+}
+#nameCategory, #nameTags{
+    color: #696969;
+    font-size: 12px;
+    font-style: normal;
+}
+#mediaItems{
+    border-top: 1px solid rgba(108, 4, 158, 0.24);
+    padding: 10px;
+    text-align: center;
+}
+#titleComments{
+    font-weight: bold;
+    border-bottom: 1px solid rgba(108, 4, 158, 0.24);
+    border-top: 1px solid rgba(108, 4, 158, 0.24);
 }
 #tableAddIdea{
     margin: auto;

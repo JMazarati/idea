@@ -41,7 +41,7 @@
             <td><span class="error" ><form:errors path="userkpwd" /></span></td>
         </tr>
         <tr>
-            <td colspan="2">
+            <td colspan="2" id="button">
                 <input type="submit" class="btn btn-default" value="Submit"/>
                 <input type="reset" class="btn btn-default" value="Reset"/>
             </td>

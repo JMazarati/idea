@@ -15,24 +15,24 @@
     <c:forEach items="${list}" var="list">
 
         <div class="idea">
-            <div class="row" id="row1">
-                <div id="tags" class="col-xs-4">${list.tags}</div>
-                <div id="title" class="col-xs-8">${list.caption}</div>
-            </div>
-            <div class="row" id="row1">
-                <div id="username" class="col-xs-4">${list.username}</div>
-                <div id="date" class="col-xs-8">${list.date_create}</div>
-            </div>
-            <div id="textOfIdea" class="text-center">${list.txt}</div>
-            <div class="row" id="row1">
-                <div id="rating" class="col-xs-4">${list.rating}</div>
-                <div id="comments" class="col-xs-4">Comments</div>
-                <div id="view" class="col-xs-4"><a href="viewidea/${list.id}">view</a></div>
-            </div>
-
+        <div class="row row1">
+            <div id="tags" class="col-xs-4">${list.tags}</div>
+            <div id="title" class="col-xs-8">${list.caption}</div>
+        </div>
+        <div class="row row1">
+            <div id="username" class="col-xs-4">${list.username}</div>
+            <div id="date" class="col-xs-8">${list.date_create}</div>
+        </div>
+        <div id="textOfIdea" class="text-center">${list.txt}</div>
+        <div class="row row1">
+            <div id="rating" class="col-xs-5">${list.rating}</div>
+            <div id="comments" class="col-xs-5">Comments</div>
+            <div id="view" class="col-xs-2"><a href="viewidea/${list.id}">View more</a></div>
+        </div>
+        </div>
 
         </c:forEach>
-    </div>
+
 </c:if>
 <c:if test="${empty list}">
 
