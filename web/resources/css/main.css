@@ -10,6 +10,9 @@
 #menu {
     margin-top: 100px;
 }
+#login, #password{
+    color: black;
+}
 a.navbar-brand {
     font-size: 2em;
     color: #ffffff !important;
@@ -76,15 +79,15 @@ a.navbar-brand {
 }
 #textOfIdeaShow{
     border-bottom: 1px solid rgba(108, 4, 158, 0.24);
-    border-top: 1px solid rgba(108, 4, 158, 0.24);
     height: auto;
     text-align: justify;
     padding-bottom: 10px;
-    padding-top: 10px;
 }
 #tags{
     font-style: italic;
     color: #390457;
+    border-bottom: 1px solid rgba(108, 4, 158, 0.24);
+    padding-bottom: 10px;
 }
 #title{
     font-size: 16px;
@@ -113,7 +116,6 @@ a.navbar-brand {
     font-style: normal;
 }
 #mediaItems{
-    border-top: 1px solid rgba(108, 4, 158, 0.24);
     padding: 10px;
     text-align: center;
 }

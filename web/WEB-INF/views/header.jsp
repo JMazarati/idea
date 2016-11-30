@@ -37,11 +37,11 @@
                         <caption align="left">${labellogin}</caption>
                         <tr>
                             <td>${labelusername}</td>
-                            <td><input type="text" name="username"/></td>
+                            <td><input type="text" name="username" id="login"/></td>
                         </tr>
                         <tr>
                             <td>${labelpwd}</td>
-                            <td><input type="password" name="password"/></td>
+                            <td><input type="password" name="password" id="password"/></td>
                         </tr>
                         <tr>
                             <td><input name="submit" type="submit" value="${labellogin}"/></td>
@@ -71,7 +71,6 @@
             </sec:authorize>
         </div>
         </div>
-</div>
 </nav>
 
         ${lmnl}
