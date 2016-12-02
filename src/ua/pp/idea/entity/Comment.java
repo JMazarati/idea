@@ -1,31 +1,35 @@
 package ua.pp.idea.entity;
 
 import java.sql.Date;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.util.Comparator;
 
 /**
  * Created by Dark on 21.11.2016.
  */
 public class Comment {
-    private Long id;
-    private int userLink;
+    private int id;
+    private String userLink;
     private int ideaLink;
     private int parentLink;
     private String note;
-    private Date dateComment;
+    private Timestamp dateComment;
+    private int depth;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public int getUserLink() {
+    public String getUserLink() {
         return userLink;
     }
 
-    public void setUserLink(int userLink) {
+    public void setUserLink(String userLink) {
         this.userLink = userLink;
     }
 
@@ -53,11 +57,20 @@ public class Comment {
         this.note = note;
     }
 
-    public Date getDateComment() {
+    public Timestamp getDateComment() {
         return dateComment;
     }
 
-    public void setDateComment(Date dateComment) {
+    public void setDateComment(Timestamp dateComment) {
         this.dateComment = dateComment;
     }
+
+    public int getDepth() {return depth;}
+
+    public void setDepth(int depth) {this.depth = depth;}
+
+    public static final Comparator<Comment> sortByParrent = new Comparator<Comment>(){
+        @Override
+        public int compare(Comment c1, Comment c2){return c1.getParentLink()-c2.getParentLink();}
+    };
 }

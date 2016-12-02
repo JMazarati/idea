@@ -44,7 +44,7 @@ public class IdeaDaoImpl {
             return selectIdeaById.executeByNamedParam(paramMap).get(0);
         } catch (Exception e) {
             Idea i1 = new Idea();
-            i1.setId(0L);
+            i1.setId(0);
             i1.setCaption("Данных нет");
             return i1;
 

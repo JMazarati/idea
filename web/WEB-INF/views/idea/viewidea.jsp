@@ -12,6 +12,7 @@
 <h1>${labelcontactlist}</h1>
 <c:if test="${not empty list}">
     <table border="1">
+        <thead>
         <tr>
             <th>ID</th>
             <th>User name</th>

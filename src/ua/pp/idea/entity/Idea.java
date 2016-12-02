@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
  * Created by Dark on 07.11.2016.
  */
 public class Idea {
-    private Long id;
+    private int id;
     private String txt;
     private String pict;
 
@@ -23,11 +23,11 @@ public class Idea {
     private String category;
     private String tags;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

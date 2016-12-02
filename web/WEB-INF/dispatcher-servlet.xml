@@ -6,6 +6,7 @@
     <mvc:annotation-driven />
     <bean id="ideaDaoImpl" class="ua.pp.idea.dao.IdeaDaoImpl" />
     <bean id="userDaoImpl" class="ua.pp.idea.dao.UserDaoImpl" />
+    <bean id="commentsDaoImpl" class="ua.pp.idea.dao.CommentDaoImpl"/>
     <bean id="signupValidator" class="ua.pp.idea.validator.SignupValidator" />
     <bean id="addideaValidator" class="ua.pp.idea.validator.AddideaValidator"/>
 

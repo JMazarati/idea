@@ -21,7 +21,7 @@ public class SelectAllIdea extends MappingSqlQuery<Idea>{
     @Override
     protected Idea mapRow(ResultSet resultSet, int i) throws SQLException {
         Idea idea = new Idea();
-        idea.setId(resultSet.getLong("id"));
+        idea.setId(resultSet.getInt("id"));
         //idea.setTxt(resultSet.getString("txt"));
        // idea.setPict(resultSet.getString("pict"));
        // idea.setVideo(resultSet.getString("video"));

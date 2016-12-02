@@ -12,18 +12,18 @@ import java.sql.Types;
 /**
  * Created by Dark on 15.11.2016.
  */
-public class SelectIdeaById extends MappingSqlQuery<Idea>{
-    private static final String SQL_SELECT_IDEA_BY_ID="select i.id, i.txt, i.pict,i.video, i.caption, i.rating, i.count_like, i.count_dislike, u.username, i.date_create, i.category_link,i.tags from user_table u inner join idea_table i on(i.owner=u.id) WHERE i.id=:id";
+public class SelectIdeaById extends MappingSqlQuery<Idea> {
+    private static final String SQL_SELECT_IDEA_BY_ID = "SELECT i.id, i.txt, i.pict,i.video, i.caption, i.rating, i.count_like, i.count_dislike, u.username, i.date_create, i.category_link,i.tags FROM user_table u INNER JOIN idea_table i ON(i.owner=u.id) WHERE i.id=:id";
 
-    public SelectIdeaById(DataSource dataSource){
-       super(dataSource,SQL_SELECT_IDEA_BY_ID);
+    public SelectIdeaById(DataSource dataSource) {
+        super(dataSource, SQL_SELECT_IDEA_BY_ID);
         super.declareParameter(new SqlParameter("id", Types.INTEGER));
     }
 
     @Override
     protected Idea mapRow(ResultSet resultSet, int i) throws SQLException {
         Idea idea = new Idea();
-        idea.setId(resultSet.getLong("id"));
+        idea.setId(resultSet.getInt("id"));
         idea.setTxt(resultSet.getString("txt"));
         idea.setPict(resultSet.getString("pict"));
         idea.setVideo(resultSet.getString("video"));

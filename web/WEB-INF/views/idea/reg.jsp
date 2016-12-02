@@ -23,7 +23,7 @@
             <td><span class="error" >
                 <form:errors path="username" element="div"/>
                 </span>
-
+            </td>
         </tr>
         <tr>
             <td><form:label path="useremail">Email</form:label></td>

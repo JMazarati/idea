@@ -9,13 +9,17 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import ua.pp.idea.dao.CommentDao;
 import ua.pp.idea.dao.IdeaDaoImpl;
 import ua.pp.idea.dao.UserDaoImpl;
+import ua.pp.idea.entity.Comment;
 import ua.pp.idea.entity.Idea;
 import ua.pp.idea.validator.AddideaValidator;
+
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
+import java.lang.reflect.Method;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -29,6 +33,8 @@ public class IdeaController {
     IdeaDaoImpl ide;
     @Autowired
     UserDaoImpl udi;
+    @Autowired
+    CommentDao cdi;
     @Autowired
     ServletContext context;
     @Autowired
@@ -109,10 +115,8 @@ public class IdeaController {
         }
 
 
-
         ide.createIdea(myIdea);
         return rdrct + "/viewidea";
-
 
 
     }
@@ -136,16 +140,39 @@ public class IdeaController {
     }
 
     @RequestMapping(value = "/viewidea/{id}", method = RequestMethod.GET)
-    public String showid(@PathVariable("id") String i, Model uiModel) {
+    public String showid(@PathVariable("id") String s, Model uiModel, Comment myComment) {
+
+
+        ArrayList<Comment> allComments = new ArrayList<>();
+
+
 
         try {
-            uiModel.addAttribute("check", ide.findIdeaByID(Integer.parseInt(i)));
+            uiModel.addAttribute("check", ide.findIdeaByID(Integer.parseInt(s)));
+
+
+            allComments.addAll(cdi.getAllCommentsByIdeaLink(Integer.parseInt(s)));
+
+
+            uiModel.addAttribute("child", allComments);
+            uiModel.addAttribute("count",cdi.getCnt());
+
+
         } catch (Exception e) {
             uiModel.addAttribute("check", ide.findIdeaByID(1));
+            //uiModel.addAttribute("comments", cdi.getAllCommentsByIdeaLink(1));
+            //uiModel.addAttribute("comments1", cdi.getAllCommentsByIdeaLink(1));
         }
 
-
+        uiModel.addAttribute("command", myComment);
         return "show";
+    }
+
+    @RequestMapping(value = "/addcomments", method = RequestMethod.POST)
+    public String addComments(@ModelAttribute Comment comment){
+
+        cdi.createNewComments(comment);
+        return "redirect:/viewidea/"+comment.getIdeaLink();
     }
 
     private void saveImage(String fileName, MultipartFile multipartFile) {
