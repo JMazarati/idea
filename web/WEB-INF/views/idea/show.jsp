@@ -43,9 +43,8 @@
 
     <div class="row" id="row3">
         <div class="col-xs-9" id="rating"> RATING: ${check.rating}</div>
-        <div class="pull-right col-xs-3" id="likes">Like:${check.count_like} DisLike:${check.count_dislike}</div>
-        <%--<span class="likebtn-wrapper" data-theme="youtube" data-white_label="true" data-identifier="item_1" data-show_like_label="false" data-counter_clickable="true" data-share_enabled="false"></span>--%>
-        <%--<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>--%>
+        <div class="text-center col-xs-3" id="likes"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"/>${check.count_like}<span class="glyphicon glyphicon-thumbs-down" aria-hidden="true" />${check.count_dislike}</div>
+
 
     </div>
 <div class="comments">

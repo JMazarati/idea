@@ -32,19 +32,20 @@
 
 
 <sec:authorize access="hasAnyRole('ROLE_USER','ROLE_OPERATOR', 'ROLE_ADMINISTRATOR')">
-    <sec:authentication property="principal.username" var="username"/>
-    <a href="${addContactUrl}"><h3>${labelwelcome} ${username}</h3></a>
+    <%--<sec:authentication property="principal.username" var="username"/>--%>
+    <%--<a href="${addContactUrl}"><h3>${labelwelcome} ${username}</h3></a>--%>
+    <%--<b>${labellogin}: </b> ${username}<br />--%>
+    <%--<a href="<c:url value="/j_spring_security_logout"/>">${labellogout}</a>--%>
+    <%--<br/>--%>
+    <%--<hr/>--%>
 
-    <b>${labellogin}: </b> ${username}<br />
-    <a href="<c:url value="/j_spring_security_logout"/>">${labellogout}</a>
-    <br/>
-    <hr/>
-    <nav class="nav nav-bar" id="menu1" role="navigation">
+
+    <nav class="nav nav-bar" id="menu" role="navigation">
         <ul class="nav nav-tabs">
             <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="/viewidea">View ideas</a></li>
-            <li role="presentation"><a href="/addidea">Add idea</a></li>
-            <li role="presentation"><a href="/myoffice">My account</a></li>
+            <li role="presentation" class="active"><a href="/viewidea">View ideas</a></li>
+            <li role="presentation" class="active"><a href="/addidea">Add idea</a></li>
+            <li role="presentation" class="active"><a href="/myoffice">My account</a></li>
             <li class="pull-right">
                 <div class="form-group" id="search">
                     <input type="text" class="form-control" placeholder="Search">
@@ -66,7 +67,7 @@
 
 <sec:authorize access="isAnonymous()">
 
-    <nav class="nav nav-bar" id="menu2" role="navigation">
+    <nav class="nav nav-bar" id="menu" role="navigation">
         <ul class="nav nav-tabs">
             <li role="presentation" class="active"><a href="#">Home</a></li>
             <li role="presentation"><a href="/viewidea">View ideas</a></li>
