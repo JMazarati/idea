@@ -59,6 +59,7 @@ public class IdeaDaoImpl {
         paramMap.put("pict",idea.getPict());
         paramMap.put("video",idea.getVideo());
         paramMap.put("caption",idea.getCaption());
+        paramMap.put("category",idea.getCategory());
         paramMap.put("tags",idea.getTags());
         paramMap.put("username",idea.getUsername());
         insertNewIdea.updateByNamedParam(paramMap);

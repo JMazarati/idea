@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 
@@ -9,14 +10,16 @@
         document.getElementById('parentLink').value = k;
     }
 </script>
-
+<spring:message code="message_viewidea" var="messageviewidea"/>
 <div id="idea">
+    <font color="red">${err}</font><br />
     <h1>
         ${check.username} added IDEA
         ID: ${check.id} <br/>
         Caption: ${check.caption} <br/>RATING: ${check.rating}<br/>
     </h1>
-    Category: ${check.category} &nbsp; Tags:${check.tags}&nbsp;
+    <spring:message code="${check.category}" var="labelcategory"/>
+    Category: ${labelcategory} &nbsp; Tags:${check.tags}&nbsp;
     added ${check.date_create}
     <br/>
     <c:if test="${check.txt.length()>1}">
@@ -98,4 +101,4 @@
 
 </sec:authorize>
 <br/>
-<span style="color: #0e1aff; ">* Если какое-то поле идеи не заполнено, то оно отображаться на форме не будет</span>
+${messageviewidea}

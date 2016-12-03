@@ -13,7 +13,8 @@ import java.sql.Types;
  * Created by Dark on 15.11.2016.
  */
 public class SelectIdeaById extends MappingSqlQuery<Idea> {
-    private static final String SQL_SELECT_IDEA_BY_ID = "SELECT i.id, i.txt, i.pict,i.video, i.caption, i.rating, i.count_like, i.count_dislike, u.username, i.date_create, i.category_link,i.tags FROM user_table u INNER JOIN idea_table i ON(i.owner=u.id) WHERE i.id=:id";
+    private static final String SQL_SELECT_IDEA_BY_ID = "SELECT i.id, i.txt, i.pict,i.video, i.caption, i.rating, i.count_like, i.count_dislike, u.username, i.date_create, cat.title,i.tags FROM user_table u " +
+            "INNER JOIN idea_table i ON(i.owner=u.id) INNER JOIN category_table cat ON (cat.id=i.category_link)  WHERE i.id=:id";
 
     public SelectIdeaById(DataSource dataSource) {
         super(dataSource, SQL_SELECT_IDEA_BY_ID);
@@ -33,7 +34,7 @@ public class SelectIdeaById extends MappingSqlQuery<Idea> {
         idea.setCount_dislike(resultSet.getInt("count_dislike"));
         idea.setUsername(resultSet.getString("username"));
         idea.setDate_create(resultSet.getDate("date_create"));
-        idea.setCategory(resultSet.getString("category_link"));
+        idea.setCategory(resultSet.getString("title"));
         idea.setTags(resultSet.getString("tags"));
 
         return idea;

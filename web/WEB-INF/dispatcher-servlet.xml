@@ -7,8 +7,10 @@
     <bean id="ideaDaoImpl" class="ua.pp.idea.dao.IdeaDaoImpl" />
     <bean id="userDaoImpl" class="ua.pp.idea.dao.UserDaoImpl" />
     <bean id="commentsDaoImpl" class="ua.pp.idea.dao.CommentDaoImpl"/>
+    <bean id="categoryDaoImpl" class="ua.pp.idea.dao.CategoryDaoImpl"/>
     <bean id="signupValidator" class="ua.pp.idea.validator.SignupValidator" />
     <bean id="addideaValidator" class="ua.pp.idea.validator.AddideaValidator"/>
+    <bean id="addcommentValidator" class="ua.pp.idea.validator.AddcommentValidator"/>
 
     <context:component-scan base-package="ua.pp.idea"/>
 

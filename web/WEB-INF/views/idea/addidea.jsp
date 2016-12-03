@@ -1,4 +1,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Dark
@@ -12,6 +14,9 @@
         color: red;
     }
 </style>
+
+
+<spring:message code="message_add_idea" var="messageaddidea" />
 <form:form method="POST" action="${pageContext.servletContext.contextPath}/addideapost" enctype="multipart/form-data">
     <table>
         <tr>
@@ -21,7 +26,8 @@
         </tr>
         <tr>
             <td><form:label path="category">category</form:label></td>
-            <td><form:select path="category" items="${cat}">
+            <td><form:select path="category"  items="${cat}" >
+
 
 
             </form:select></td>
@@ -56,6 +62,4 @@
     </table>
 </form:form>
 <br />
-<span style="color: #0e1aff; ">* Если мы добавляем ссылку на видео в ютюбе, то вставлять надо только код видео. Выделено красным цветом.<br />
-https://www.youtube.com/watch?v=</span><span style="color: #ff0003; ">rU1m-nyfK34</span><br />
-<span style="color: #0e1aff; ">* Если мы добавляем несколько тегов, то разделять их надо запятыми</span>
+${messageaddidea}
