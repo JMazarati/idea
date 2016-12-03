@@ -67,9 +67,9 @@
 <sec:authorize access="isAnonymous()">
 
     <nav class="nav nav-bar" id="menu2" role="navigation">
-        <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="/viewidea">View ideas</a></li>
+        <ul class="nav nav-tabs" id="myTabs">
+            <li role="presentation" class="active"><a href="#" >Home</a></li>
+            <li role="presentation"><a href="/viewidea" >View ideas</a></li>
             <li class="pull-right">
                 <div class="form-group" id="search">
                     <input type="text" class="form-control" placeholder="Search">

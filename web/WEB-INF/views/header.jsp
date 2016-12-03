@@ -33,21 +33,14 @@
                 <form name="loginForm" action="${loginUrl}" method="post">
 
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" class="form-control"/>
-                    <table>
-                        <caption align="left">${labellogin}</caption>
-                        <tr>
-                            <td>${labelusername}</td>
-                            <td><input type="text" name="username"/></td>
-                        </tr>
-                        <tr>
-                            <td>${labelpwd}</td>
-                            <td><input type="password" name="password"/></td>
-                        </tr>
-                        <tr>
-                            <td><input name="submit" type="submit" value="${labellogin}"/></td>
-                            <td><a href=${registrationlink}>${labelregistration}</a></td>
-                        </tr>
-                    </table>
+
+                        <%--<p align="left">${labellogin}</p>--%>
+                            <input class="loginform" type="text" name="username" placeholder="${labelusername}"/>
+                            <input class="loginform" type="password" name="password" placeholder="${labelpwd}"/>
+                            <input class="loginbutton" name="submit" type="submit" value="${labellogin}"/>
+                            <p class="registration"><a href=${registrationlink}>${labelregistration}</a></p>
+
+
                 </form>
 
                 <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
