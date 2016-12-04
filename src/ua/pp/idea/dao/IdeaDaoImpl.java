@@ -9,6 +9,7 @@ import ua.pp.idea.entity.Idea;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +18,7 @@ import java.util.Map;
  * Created by Dark on 07.11.2016.
  */
 @Repository
-public class IdeaDaoImpl {
+public class IdeaDaoImpl implements Serializable{
     private DataSource dataSource;
     private SelectAllIdea selectAllIdea;
     private SelectIdeaById selectIdeaById;

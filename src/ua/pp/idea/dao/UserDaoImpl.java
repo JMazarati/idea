@@ -6,6 +6,7 @@ import ua.pp.idea.dao.crud.SelectUser;
 import ua.pp.idea.entity.User;
 import javax.annotation.Resource;
 import javax.sql.DataSource;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Map;
  * Created by Dark on 09.11.2016.
  */
 
-public class UserDaoImpl implements UserDao{
+public class UserDaoImpl implements UserDao,Serializable{
     private DataSource dataSource;
     private InsertUser insertUser;
     private SelectUser selectUser;
