@@ -134,6 +134,9 @@
 #tableAddIdea{
     margin: auto;
 }
+.content{
+    margin-bottom: 70px;
+}
 /* Footer */
 #foo {
     height: 60px;
