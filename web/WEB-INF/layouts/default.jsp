@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/resources/css/main.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/resources/css/admin.css" />
     <link rel="shortcut icon" href="${pageContext.servletContext.contextPath}/resources/pict/idea.png" />
+    <script type="text/javascript" src="${pageContext.servletContext.contextPath}/resources/js/reply_to_comment.js"></script>
 </head>
 <body class="spring">
 

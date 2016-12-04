@@ -7,13 +7,6 @@
 <spring:message code="label_delete" var="labeldelete"/>
 <spring:message code="label_update" var="labelupdate"/>
 
-<script>
-    function setCommentId(k) {
-        document.getElementById('parentLink').value = k;
-    }
-</script>
-
-
 <div id="delete_update">
 
     <sec:authorize access="!isAnonymous()">
@@ -55,7 +48,8 @@
     </c:if>
     <br/>
     Like:${check.count_like} DisLike:${check.count_dislike}<br/>
-</div><br/><br/>
+</div>
+<br/><br/>
 
 
 <div id="comments">
@@ -70,7 +64,7 @@
                 </c:forEach>
             </c:if>
 
-            <span style="font-size: x-small; "><i> ${child.id} ${child.userLink}${child.dateComment}</i>&nbsp;${child.note} </span>
+            <span style="font-size: x-small; "><i> ${child.userLink}${child.dateComment}</i>&nbsp;<b>${child.note}</b> </span>
             <sec:authorize access="!isAnonymous()">
                 <button onclick="setCommentId(${child.id})">reply</button>
             </sec:authorize>
@@ -92,7 +86,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td><form:input path="note" maxlength="50"/></td>
+                <td><form:input id="commentField" path="note" maxlength="128"/></td>
                 <td><input type="submit" value="Submit"/></td>
 
             </tr>
