@@ -11,7 +11,7 @@ import java.sql.SQLException;
  * Created by Dark on 15.11.2016.
  */
 public class SelectAllIdea extends MappingSqlQuery<Idea>{
-    private static final String SQL_SELECT_ALL_IDEA = "SELECT i.id, i.txt, i.caption,u.username,i.rating,i.date_create, i.category_link, i.tags FROM user_table u inner join idea_table i on(i.owner=u.id) ORDER BY id";
+    private static final String SQL_SELECT_ALL_IDEA = "SELECT i.id,i.caption,i.txt,u.username,i.rating,i.date_create, i.category_link, i.tags FROM user_table u inner join idea_table i on(i.owner=u.id) ORDER BY id";
 
     public SelectAllIdea(DataSource dataSource){
         super(dataSource,SQL_SELECT_ALL_IDEA);
@@ -21,7 +21,7 @@ public class SelectAllIdea extends MappingSqlQuery<Idea>{
     @Override
     protected Idea mapRow(ResultSet resultSet, int i) throws SQLException {
         Idea idea = new Idea();
-        idea.setId(resultSet.getLong("id"));
+        idea.setId(resultSet.getInt("id"));
         idea.setTxt(resultSet.getString("txt"));
        // idea.setPict(resultSet.getString("pict"));
        // idea.setVideo(resultSet.getString("video"));

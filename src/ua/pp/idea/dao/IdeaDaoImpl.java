@@ -9,6 +9,7 @@ import ua.pp.idea.entity.Idea;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +18,7 @@ import java.util.Map;
  * Created by Dark on 07.11.2016.
  */
 @Repository
-public class IdeaDaoImpl {
+public class IdeaDaoImpl implements Serializable{
     private DataSource dataSource;
     private SelectAllIdea selectAllIdea;
     private SelectIdeaById selectIdeaById;
@@ -44,7 +45,7 @@ public class IdeaDaoImpl {
             return selectIdeaById.executeByNamedParam(paramMap).get(0);
         } catch (Exception e) {
             Idea i1 = new Idea();
-            i1.setId(0L);
+            i1.setId(0);
             i1.setCaption("Данных нет");
             return i1;
 
@@ -59,6 +60,7 @@ public class IdeaDaoImpl {
         paramMap.put("pict",idea.getPict());
         paramMap.put("video",idea.getVideo());
         paramMap.put("caption",idea.getCaption());
+        paramMap.put("category",idea.getCategory());
         paramMap.put("tags",idea.getTags());
         paramMap.put("username",idea.getUsername());
         insertNewIdea.updateByNamedParam(paramMap);

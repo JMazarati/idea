@@ -9,15 +9,24 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import ua.pp.idea.dao.CategoryDaoImpl;
+import ua.pp.idea.dao.CommentDao;
 import ua.pp.idea.dao.IdeaDaoImpl;
 import ua.pp.idea.dao.UserDaoImpl;
+import ua.pp.idea.entity.Category;
+import ua.pp.idea.entity.Comment;
 import ua.pp.idea.entity.Idea;
+import ua.pp.idea.validator.AddcommentValidator;
 import ua.pp.idea.validator.AddideaValidator;
+
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+import java.awt.*;
 import java.io.File;
+import java.lang.reflect.Method;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.List;
 
 
 /**
@@ -30,9 +39,15 @@ public class IdeaController {
     @Autowired
     UserDaoImpl udi;
     @Autowired
+    CommentDao cdi;
+    @Autowired
+    CategoryDaoImpl catdi;
+    @Autowired
     ServletContext context;
     @Autowired
     AddideaValidator addideaValidator;
+    @Autowired
+    AddcommentValidator addcommentValidator;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String HomeController(Model uiModel) {
@@ -52,23 +67,13 @@ public class IdeaController {
     @RequestMapping(value = "/addidea", method = RequestMethod.GET)
     public String updateForm(@ModelAttribute Idea myIdea, Model model) {
 
+        Map<Integer, String> category = new LinkedHashMap<Integer, String>();
 
-        Map<String, String> category = new LinkedHashMap<String, String>();
-        //ModelAndView nmv = new ModelAndView();
-
-        category.put("1", "Обобщенная тематика");
-        category.put("2", "Безопасность");
-        category.put("3", "Вопросы и ответы");
-        category.put("4", "День святого Валентина");
-        category.put("5", "Интернет");
-        category.put("6", "ИТ");
-        category.put("7", "Автомобили");
-        category.put("8", "Спорт");
-        category.put("9", "Обучение");
-        category.put("10", "Дом");
+        for (Category item : catdi.getAllCategory()) {
+            category.put(item.getId(), item.getTitle());
+        }
 
         model.addAttribute("cat", category);
-
 
         BindingResult bindingResult = (BindingResult) model.asMap().get("b1");
         model.addAttribute("command", myIdea);
@@ -78,7 +83,6 @@ public class IdeaController {
     }
 
     @RequestMapping(value = "/addideapost", method = RequestMethod.POST)
-
     public String update(@ModelAttribute Idea myIdea, HttpServletRequest httpServletRequest, Model model, RedirectAttributes redirectAttributes, BindingResult bindingResult,
                          @RequestParam(value = "p", required = false) MultipartFile image) {
 
@@ -107,12 +111,8 @@ public class IdeaController {
         if (myIdea.getCaption().isEmpty()) {
             myIdea.setCaption("Idea by " + SecurityContextHolder.getContext().getAuthentication().getName());
         }
-
-
-
         ide.createIdea(myIdea);
         return rdrct + "/viewidea";
-
 
 
     }
@@ -136,16 +136,47 @@ public class IdeaController {
     }
 
     @RequestMapping(value = "/viewidea/{id}", method = RequestMethod.GET)
-    public String showid(@PathVariable("id") String i, Model uiModel) {
+    public String showid(@PathVariable("id") String s, Model uiModel, Comment myComment) {
+
+
+        ArrayList<Comment> allComments = new ArrayList<>();
+        BindingResult bindingResult = (BindingResult) uiModel.asMap().get("b1");
+
+        uiModel.addAttribute(BindingResult.class.getName() + ".command", bindingResult);
+
 
         try {
-            uiModel.addAttribute("check", ide.findIdeaByID(Integer.parseInt(i)));
+            uiModel.addAttribute("check", ide.findIdeaByID(Integer.parseInt(s)));
+
+
+            allComments.addAll(cdi.getAllCommentsByIdeaLink(Integer.parseInt(s)));
+
+
+            uiModel.addAttribute("child", allComments);
+            uiModel.addAttribute("count", cdi.getCnt());
+
+
         } catch (Exception e) {
             uiModel.addAttribute("check", ide.findIdeaByID(1));
+            uiModel.addAttribute("err", e + "getStackTrace() " + e.getStackTrace() + "getMessage " + e.getMessage());
+            //uiModel.addAttribute("comments", cdi.getAllCommentsByIdeaLink(1));
+            //uiModel.addAttribute("comments1", cdi.getAllCommentsByIdeaLink(1));
         }
 
-
+        uiModel.addAttribute("command", myComment);
         return "show";
+    }
+
+    @RequestMapping(value = "/addcomments", method = RequestMethod.POST)
+    public String addComments(@ModelAttribute Comment comment, RedirectAttributes redirectAttributes, BindingResult bindingResult) {
+
+        addcommentValidator.validate(comment, bindingResult);
+        if (bindingResult.hasErrors()) {
+            redirectAttributes.addFlashAttribute("b1", bindingResult);
+            return "redirect:/viewidea/" + comment.getIdeaLink();
+        }
+        cdi.createNewComments(comment);
+        return "redirect:/viewidea/" + comment.getIdeaLink();
     }
 
     private void saveImage(String fileName, MultipartFile multipartFile) {

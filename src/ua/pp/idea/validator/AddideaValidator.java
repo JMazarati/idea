@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
  */
 public class AddideaValidator implements Validator {
     private final static Pattern EMAIL_PATTERN = Pattern.compile(".+@.+\\.[a-z]+");
-    private final static Pattern NOHTML_PATTERN = Pattern.compile("[0-9a-zA-Zа-яА-ЯёЁіІЄєїЇ.'!?$@*+&_,\\- ()\\r\\n\\s]*");
+    private final static Pattern NOHTML_PATTERN = Pattern.compile("[0-9a-zA-Zа-яА-ЯёЁіІЄєїЇ/:\\Q.'!?$@*+&_,\\E\\- ()\\r\\n\\s]*");
     private final static Pattern NOYOUTUBE_PATTERN = Pattern.compile("[0-9a-zA-Z_\\- ()]*");
     @Override
     public boolean supports(Class<?> aClass) {
@@ -26,8 +26,10 @@ public class AddideaValidator implements Validator {
         //ValidationUtils.rejectIfEmptyOrWhitespace(errors, "file", "file.empty", "Image must not be empty.");
 
         if (!idea.getFile().isEmpty()) {
-            if (!idea.getFile().getContentType().equals("image/jpeg")) {
-                errors.rejectValue("file", "file.Toshort", "Image must be image/jpeg.");
+            if (!idea.getFile().getContentType().equals("image/jpeg")
+                    &!idea.getFile().getContentType().equals("image/gif")
+                    &!idea.getFile().getContentType().equals("image/png")) {
+                errors.rejectValue("file", "file.Toshort", "Image must be image/jpeg. Mime type in your file was: "+idea.getFile().getContentType()+"");
             }
         }
 
