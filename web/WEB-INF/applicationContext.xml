@@ -25,9 +25,9 @@
 
         <security:logout invalidate-session="true" logout-success-url="/" />
 
-        <security:intercept-url pattern="/addidea" access="hasRole('ROLE_USER')" />
-        <security:intercept-url pattern="/myoffice" access="hasRole('ROLE_USER')" />
-        <security:intercept-url pattern="/admin" access="hasRole('ROLE_USER')" />
+        <security:intercept-url pattern="/addidea" access="hasAnyRole('ROLE_USER','ROLE_ADMINISTRATOR')" />
+        <security:intercept-url pattern="/myoffice" access="hasAnyRole('ROLE_USER','ROLE_ADMINISTRATOR')" />
+        <security:intercept-url pattern="/admin" access="hasRole('ROLE_ADMINISTRATOR')" />
 
 
 
