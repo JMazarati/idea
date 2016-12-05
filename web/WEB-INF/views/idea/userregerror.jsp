@@ -22,6 +22,7 @@
 </c:if>
 
 <c:if test="${error==3}" >
+    <iframe src="//coub.com/embed/4jfpl?muted=false&autostart=true&originalSize=false&startWithHD=false" allowfullscreen="true" frameborder="0" width="498" height="314"></iframe><br />
     Не возможно записать данные в базу. Попробуйте позже.
 </c:if>
 <c:if test="${error==4}" >
@@ -33,10 +34,16 @@
 
 </c:if>
 <c:if test="${error==400}" >
-    Ой! Что-то не получилось ничего сделать. <b>ERROR 400.</b><br />
-    <a href="/index">Вернуться на главную</a>
+    <iframe src="//coub.com/embed/4jfpl?muted=false&autostart=true&originalSize=false&startWithHD=false" allowfullscreen="true" frameborder="0" width="498" height="314"></iframe><br />
+    <b>ERROR 400.</b><br />
+    <a href="/index">Go back to the main page</a>
 </c:if>
 <c:if test="${error==404}" >
-    Ой! Не могу найти, но я таки старался!. <b>ERROR 404.</b><br />
-    <a href="/index">Вернуться на главную</a>
+    <iframe src="//coub.com/embed/4jfpl?muted=false&autostart=true&originalSize=false&startWithHD=false" allowfullscreen="true" frameborder="0" width="498" height="314"></iframe><br />
+    <b>ERROR 404.</b>
+    <a href="/index">Go back to the main page</a>
+</c:if>
+<c:if test="${error==500}" >
+    <iframe src="//coub.com/embed/4jfpl?muted=false&autostart=true&originalSize=false&startWithHD=false" allowfullscreen="true" frameborder="0" width="498" height="314"></iframe><br />
+    <b>ERROR 500.</b> <a href="/index">Go back to the main page</a>
 </c:if>

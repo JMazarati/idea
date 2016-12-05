@@ -88,7 +88,6 @@
             <tr>
                 <td><form:input id="commentField" path="note" maxlength="128"/></td>
                 <td><input type="submit" value="Submit"/></td>
-
             </tr>
             <tr>
                 <td><span class="error"><form:errors path="note"/></span></td>
