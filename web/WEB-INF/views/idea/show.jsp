@@ -14,11 +14,11 @@
     </sec:authorize>
     <sec:authorize access="hasRole('ROLE_USER')">
         <c:if test="${username eq check.username}">
-            <b>${labelupdate}</b><br/><b>${labeldelete}</b>
+            <b>${labelupdate}</b><br/><a href="/deleteIdea?id=${check.id}">${labeldelete}</a>
         </c:if>
     </sec:authorize>
     <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">
-        <b>${labelupdate}</b><br/><b>${labeldelete}</b>
+        <b>${labelupdate}</b><br/><a href="/deleteIdea?id=${check.id}">${labeldelete}</a>
     </sec:authorize>
 </div>
 
@@ -31,8 +31,8 @@
         ID: ${check.id} <br/>
         Caption: ${check.caption} <br/>RATING: ${check.rating}<br/>
     </h1>
-    <spring:message code="${check.category}" var="labelcategory"/>
-    Category: ${labelcategory} &nbsp; Tags:${check.tags}&nbsp;
+    <!-- spring:message code="${check.category}" var="labelcategory"/ -->
+    Category: ${check.category} &nbsp; Tags:${check.tags}&nbsp;
     added ${check.date_create}
     <br/>
     <c:if test="${check.txt.length()>1}">

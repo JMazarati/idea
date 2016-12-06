@@ -23,6 +23,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import java.awt.*;
 import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.time.LocalDate;
 import java.util.*;
@@ -146,21 +147,28 @@ public class IdeaController {
 
 
         try {
-            uiModel.addAttribute("check", ide.findIdeaByID(Integer.parseInt(s)));
+            if(ide.findIdeaByID(Integer.parseInt(s)).getId()!=0){
+                uiModel.addAttribute("check", ide.findIdeaByID(Integer.parseInt(s)));
 
 
-            allComments.addAll(cdi.getAllCommentsByIdeaLink(Integer.parseInt(s)));
+                allComments.addAll(cdi.getAllCommentsByIdeaLink(Integer.parseInt(s)));
 
 
-            uiModel.addAttribute("child", allComments);
-            uiModel.addAttribute("count", cdi.getCnt());
+                uiModel.addAttribute("child", allComments);
+                uiModel.addAttribute("count", cdi.getCnt());
+            }
+            else {
+                return "redirect:/viewidea";
+            }
+
 
 
         } catch (Exception e) {
-            uiModel.addAttribute("check", ide.findIdeaByID(1));
+
             uiModel.addAttribute("err", e + "getStackTrace() " + e.getStackTrace() + "getMessage " + e.getMessage());
             //uiModel.addAttribute("comments", cdi.getAllCommentsByIdeaLink(1));
             //uiModel.addAttribute("comments1", cdi.getAllCommentsByIdeaLink(1));
+            return "show";
         }
 
         uiModel.addAttribute("command", myComment);
@@ -191,4 +199,23 @@ public class IdeaController {
 
     }
 
+    @RequestMapping(value = "/deleteIdea")
+    public String deleteIdea(Model myModel, @RequestParam(value = "id", defaultValue = "0") String id) {
+
+        try{
+            Idea checkIdea = ide.findIdeaByID(Integer.parseInt(id));
+            if (checkIdea.getUsername().toLowerCase().equals(SecurityContextHolder.getContext().getAuthentication().getName().toString().toLowerCase())||
+                    SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString().equals("[ROLE_ADMINISTRATOR]")) {
+                ide.deleteIdeaById(checkIdea);
+                return "redirect:/userregerror?error=5";
+            }
+
+        }catch (Exception e){
+            myModel.addAttribute("e",e);
+            return "redirect:/userregerror?error=6";
+        }
+
+        return "redirect:/userregerror?error=7";
+
+    }
 }

@@ -8,7 +8,5 @@ import java.util.List;
  */
 public interface IdeaDao {
 
-    public String findLastIdeaById(Long id);
 
-    public List<Idea> findAllIdeaSortByDate();
 }

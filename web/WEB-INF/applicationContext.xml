@@ -28,6 +28,7 @@
         <security:intercept-url pattern="/addidea" access="hasAnyRole('ROLE_USER','ROLE_ADMINISTRATOR')" />
         <security:intercept-url pattern="/myoffice" access="hasAnyRole('ROLE_USER','ROLE_ADMINISTRATOR')" />
         <security:intercept-url pattern="/admin" access="hasRole('ROLE_ADMINISTRATOR')" />
+        <security:intercept-url pattern="/deleteidea" access="hasAnyRole('ROLE_USER','ROLE_ADMINISTRATOR')" />
 
 
 

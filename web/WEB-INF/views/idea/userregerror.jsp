@@ -33,6 +33,14 @@
     Идея удалена!
 
 </c:if>
+<c:if test="${error==6}" >
+    Не верный параметр!
+
+</c:if>
+<c:if test="${error==7}" >
+    У Вас нет прав на выполнение данной операции!
+
+</c:if>
 <c:if test="${error==400}" >
     <iframe src="//coub.com/embed/4jfpl?muted=false&autostart=true&originalSize=false&startWithHD=false" allowfullscreen="true" frameborder="0" width="498" height="314"></iframe><br />
     <b>ERROR 400.</b><br />
@@ -47,3 +55,5 @@
     <iframe src="//coub.com/embed/4jfpl?muted=false&autostart=true&originalSize=false&startWithHD=false" allowfullscreen="true" frameborder="0" width="498" height="314"></iframe><br />
     <b>ERROR 500.</b> <a href="/index">Go back to the main page</a>
 </c:if>
+<br />
+${e}

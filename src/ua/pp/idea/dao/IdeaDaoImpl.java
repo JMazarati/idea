@@ -2,6 +2,7 @@ package ua.pp.idea.dao;
 
 
 import org.springframework.stereotype.Repository;
+import ua.pp.idea.dao.crud.DeleteIdeaByID;
 import ua.pp.idea.dao.crud.InsertNewIdea;
 import ua.pp.idea.dao.crud.SelectAllIdea;
 import ua.pp.idea.dao.crud.SelectIdeaById;
@@ -18,11 +19,12 @@ import java.util.Map;
  * Created by Dark on 07.11.2016.
  */
 @Repository
-public class IdeaDaoImpl implements Serializable{
+public class IdeaDaoImpl implements Serializable,IdeaDao{
     private DataSource dataSource;
     private SelectAllIdea selectAllIdea;
     private SelectIdeaById selectIdeaById;
     private InsertNewIdea insertNewIdea;
+    private DeleteIdeaByID deleteIdeaByID;
 
 
     @Resource(name = "dataSource")
@@ -31,6 +33,7 @@ public class IdeaDaoImpl implements Serializable{
         this.selectAllIdea = new SelectAllIdea(dataSource);
         this.selectIdeaById = new SelectIdeaById(dataSource);
         this.insertNewIdea = new InsertNewIdea(dataSource);
+        this.deleteIdeaByID = new DeleteIdeaByID(dataSource);
     }
 
     public List<Idea> getAll() {
@@ -47,6 +50,7 @@ public class IdeaDaoImpl implements Serializable{
             Idea i1 = new Idea();
             i1.setId(0);
             i1.setCaption("Данных нет");
+            i1.setTxt("Идея не существует");
             return i1;
 
         }
@@ -66,6 +70,12 @@ public class IdeaDaoImpl implements Serializable{
         insertNewIdea.updateByNamedParam(paramMap);
 
 
+    }
+
+    public void deleteIdeaById(Idea idea){
+        Map<String,Object> paramMap = new HashMap<String,Object>();
+        paramMap.put("id",idea.getId());
+        deleteIdeaByID.updateByNamedParam(paramMap);
     }
 
 }
