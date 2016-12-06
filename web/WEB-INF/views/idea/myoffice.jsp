@@ -13,8 +13,10 @@
 <spring:message code="label_contact_first_name" var="labelfirstname" />
 <spring:message code="label_contact_last_name" var="labellastname" />
 <spring:message code="label_contact_desc" var="labeldesc" />
-<b>${labellogin}:</b> ${username} <br/>
-<b>${labelfirstname}:</b>  <br/>
-<b>${labellastname}:</b>  <br/>
-<b>${labeldesc}:</b>  <br/><hr />
-${txt}
+<div id="myOffice">
+    <b>${labellogin}:</b> ${username} <br/>
+    <b>${labelfirstname}:</b>  <br/>
+    <b>${labellastname}:</b>  <br/>
+    <b>${labeldesc}:</b>  <br/><hr />
+    ${txt}
+</div>

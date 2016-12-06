@@ -10,12 +10,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <spring:message code="label_en" var="labelEn" />
 <spring:message code="label_ru" var="labelRu" />
+<spring:message code="label_copy" var="label_copy" />
 
-<footer id="foo" class="panel-footer navbar-fixed-bottom">
+<footer id="foo" class="panel-footer">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center" id="contacts">
-                Contact us on
+                ${label_copy}
                 <a href="https://github.com/andrewdark/idea">GitHub</a>
             </div>
             <div id="language" class="col-md-12 text-center">

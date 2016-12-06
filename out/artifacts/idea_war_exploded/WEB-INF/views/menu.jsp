@@ -21,12 +21,13 @@
 <spring:message code="label_logout" var="labellogout"/>
 <spring:message code="label_welcome" var="labelwelcome"/>
 <spring:message code="menu_header_text" var="labelmenu"/>
-<spring:message code="label_link_1" var="labellink1"/><spring:message code="label_link_2"
-                                                                      var="labellink2"/><spring:message
-        code="label_link_3" var="labellink3"/>
-<spring:message code="label_username" var="labelusername"/><spring:message code="label_pwd"
-                                                                           var="labelpwd"/><spring:message
-        code="label_registration" var="labelregistration"/>
+<spring:message code="label_link_1" var="label_link_1"/>
+<spring:message code="label_link_2" var="label_link_2"/>
+<spring:message code="label_link_3" var="label_link_3"/>
+<spring:message code="label_link_4" var="label_link_4"/>
+<spring:message code="label_username" var="labelusername"/>
+<spring:message code="label_pwd" var="labelpwd"/>
+<spring:message code="label_registration" var="labelregistration"/>
 
 <c:url value="/login" var="loginUrl"/>
 
@@ -41,10 +42,10 @@
 
     <nav class="nav nav-bar" id="menu" role="navigation">
         <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="/viewidea">View ideas</a></li>
-            <li role="presentation"><a href="/addidea">Add idea</a></li>
-            <li role="presentation"><a href="/myoffice">My account</a></li>
+            <li role="presentation" class="active"><a href="/index">${label_link_3}</a></li>
+            <li role="presentation"><a href="/viewidea">${label_link_1}</a></li>
+            <li role="presentation"><a href="/addidea">${label_link_2}</a></li>
+            <li role="presentation"><a href="/myoffice">${label_link_4}</a></li>
             <li class="pull-right">
                 <div class="form-group" id="search">
                     <input type="text" class="form-control" placeholder="Search">
@@ -68,8 +69,8 @@
 
     <nav class="nav nav-bar" id="menu" role="navigation">
         <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="/viewidea">View ideas</a></li>
+            <li role="presentation" class="active"><a href="/index">${label_link_3}</a></li>
+            <li role="presentation"><a href="/viewidea">${label_link_1}</a></li>
             <li class="pull-right">
                 <div class="form-group" id="search">
                     <input type="text" class="form-control" placeholder="Search">

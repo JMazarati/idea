@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="${pageContext.servletContext.contextPath}/resources/js/bootstrap.min.js"></script>
+    <script src="${pageContext.servletContext.contextPath}/resources/js/reply_to_comment.js"></script>
     <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/resources/css/main.css"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/resources/css/admin.css" />
+    <link rel="shortcut icon" href="${pageContext.servletContext.contextPath}/resources/pict/Lumier.jpg"/>
     <link rel="shortcut icon" href="${pageContext.servletContext.contextPath}/resources/pict/idea.png"/>
 </head>
 <body class="spring">

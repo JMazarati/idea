@@ -3,7 +3,7 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<spring:message code="message_viewidea" var="messageviewidea"/>
+<%--<spring:message code="message_viewidea" var="messageviewidea"/>--%>
 <spring:message code="label_delete" var="labeldelete"/>
 <spring:message code="label_update" var="labelupdate"/>
 
@@ -65,8 +65,8 @@
             <div class="col-xs-9" id="rating"> RATING: ${check.rating}</div>
             <div class="text-center col-xs-3" id="likes"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"/>${check.count_like}<span class="glyphicon glyphicon-thumbs-down" aria-hidden="true" />${check.count_dislike}</div>
         </div>
-        <div id="comments">
 
+            <div id="titleComments">Comments:</div>
             <c:if test="${not empty child}">
                 <c:forEach items="${child}" var="child">
                     <c:if test="${child.id eq child.parentLink}">
@@ -77,14 +77,20 @@
                         </c:forEach>
                     </c:if>
 
-                    <span style="font-size: x-small; "><i> ${child.userLink}${child.dateComment}</i>&nbsp;<b>${child.note}</b> </span>
+                <div class="comments">
+                    <div class="row">
+                        <div id="usernameComments" class="row col-xs-8">${child.userLink} left a comment:</div>
+                        <div id="dateComments" class="row col-xs-4">${child.dateComment}</div>
+                    </div>
+                    <div id="textOfComment">${child.note}</div>
+                    <div class="row" id="replyComments">
                     <sec:authorize access="!isAnonymous()">
-                        <button onclick="setCommentId(${child.id})">reply</button>
+                        <button class="btn" onclick="setCommentId(${child.id})">reply</button>
                     </sec:authorize>
                     <br/>
                 </c:forEach>
             </c:if>
-        </div>
+                    </div>
 
 
         <sec:authorize access="!isAnonymous()">
@@ -100,7 +106,7 @@
             </tr>
             <tr>
                 <td><form:input id="commentField" path="note" maxlength="128"/></td>
-                <td><input type="submit" value="Submit"/></td>
+                <td><input class="btn" type="submit" value="Submit"/></td>
 
             </tr>
             <tr>
@@ -108,9 +114,9 @@
             </tr>
         </table>
         </form:form>
-        <button onclick="setCommentId(0)">root</button>
+        <button class="btn" onclick="setCommentId(0)">root</button>
         <br/>
 
         </sec:authorize>
-        <br/>
-${messageviewidea}
+        </div>
+</div>
