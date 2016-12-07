@@ -45,11 +45,9 @@
 
                 </c:if>
                 <c:if test="${check.video.length()>1}">
-
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/${check.video}" frameborder="0"
                             allowfullscreen></iframe>
                     <br/>
-
                 </c:if>
             </div>
             <%--End of media   --%>
