@@ -8,7 +8,6 @@
 <spring:message code="label_update" var="labelupdate"/>
 
 <div id="delete_update">
-
     <sec:authorize access="!isAnonymous()">
         <sec:authentication property="principal.username" var="username"/>
     </sec:authorize>
