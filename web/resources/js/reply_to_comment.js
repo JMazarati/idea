@@ -3,7 +3,8 @@
  */
 
 function setCommentId(k) {
-    document.getElementById('parentLink').value = k;
+    var parent_link = document.getElementById('parentLink');
+    parent_link.value = k;
 
     var input = document.getElementById('commentField');
     input.type='text';
