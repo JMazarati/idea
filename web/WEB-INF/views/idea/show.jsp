@@ -57,16 +57,31 @@
     <c:if test="${not empty child}">
         <c:forEach items="${child}" var="child">
             <c:if test="${child.id eq child.parentLink}">
-                <br/></c:if>
+                </div>
+                    <br />
+            </c:if>
             <c:if test="${child.id ne child.parentLink}">
                 <c:forEach var="cycle" begin="0" end="${child.depth}">
                     &nbsp;
                 </c:forEach>
             </c:if>
 
-            <span style="font-size: x-small; "><i> ${child.userLink}${child.dateComment}</i>&nbsp;<b>${child.note}</b> </span>
+            <span style="font-size: x-small; " id="reply_span"><i> ${child.userLink} ${child.dateComment}</i>&nbsp;</span><br />
+            <c:if test="${child.id ne child.parentLink}">
+                <c:forEach var="cycle" begin="0" end="${child.depth}">
+                    &nbsp;
+                </c:forEach>
+            </c:if>
+            ${child.note}
+            <c:if test="${child.id eq child.parentLink}">
+
+                      <a href="javascript:look('${child.id}');" title="Смотреть HOLY WAR">HOLY WAR</a><br />
+                <div id="${child.id}" style="display: none;">
+            </c:if>
+
+
             <sec:authorize access="!isAnonymous()">
-                <button onclick="setCommentId(${child.id})">reply</button>
+                <span class="reply_to" onclick="setCommentId(${child.id})">Reply</span>
             </sec:authorize>
             <br/>
         </c:forEach>
@@ -75,7 +90,7 @@
 
 
 <sec:authorize access="!isAnonymous()">
-
+<br />
     <form:form method="post" action="${pageContext.servletContext.contextPath}/addcomments" id="f2">
         <form:input type="hidden" path="ideaLink" value="${check.id}"/>
         <form:input type="hidden" path="userLink" value="${username}"/>
@@ -86,7 +101,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td><form:input id="commentField" path="note" maxlength="128"/></td>
+                <td><form:input id="commentField" path="note" maxlength="256"/></td>
                 <td><input type="submit" value="Submit"/></td>
             </tr>
             <tr>

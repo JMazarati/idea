@@ -52,3 +52,15 @@ h2 {
 #delete_update{
     float:right;
 }
+.reply_to{
+    color: blue;
+    /*border-bottom: 1px dotted dimgrey;*/
+}
+
+.reply_to:hover{
+    cursor: pointer;
+    color: red;
+}
+#reply_span{
+    background-color: #dddddd;
+}
