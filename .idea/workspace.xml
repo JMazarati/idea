@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f85692f-bba7-4975-88e2-78571ba6e466" name="Default" comment="">
+    <list default="true" id="3f85692f-bba7-4975-88e2-78571ba6e466" name="Default" comment="Updated styles, modified header">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp" />
     </list>
     <ignored path="idea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,21 +24,97 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/header.jsp">
+      <file leaf-file-name="viewidea.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/viewidea.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+            <state relative-caret-position="442">
+              <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+            <state relative-caret-position="1649">
+              <caret line="97" column="66" selection-start-line="97" selection-start-column="66" selection-end-line="97" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/layouts/default.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application_ru.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_ru.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="ResourceBundle">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application_en.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_en.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="ResourceBundle">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/header.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="121" column="53" selection-start-line="121" selection-start-column="53" selection-end-line="121" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/resources/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -139,7 +214,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -168,7 +242,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artifacts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea_war_exploded" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -186,60 +282,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemId" value="artifacts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="idea_war_exploded" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -257,16 +314,312 @@
     <property name="last_opened_file_path" value="F:/study/DataArt/project/Lumier.jpg" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\github\idea\web\resources\css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\github\idea" />
       <recent name="C:\JavaProject\idea\out\artifacts\idea_war_exploded\WEB-INF" />
       <recent name="F:\github\idea\web\resources\pict" />
       <recent name="F:\github\idea\web\resources\js" />
       <recent name="F:\github\idea\web\WEB-INF\views\idea" />
-      <recent name="F:\github\idea\web\WEB-INF\views" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\github\idea\web\resources\css" />
+    </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/web/WEB-INF/layouts/default.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/META-INF/MANIFEST.MF</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/applicationContext.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/controller/AdminController.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/controller/IdeaController.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/controller/SecurityController.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/CategoryDaoImpl.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/CommentDao.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/CommentDaoImpl.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/IdeaDao.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/IdeaDaoImpl.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/UserDao.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/UserDaoImpl.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/DeleteIdeaByID.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/InsertNewComment.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/InsertNewIdea.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/InsertUser.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/SelectAllCategory.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/SelectAllCommentByIdea.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/SelectAllIdea.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/SelectChildCommentsByParrentId.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/SelectIdeaById.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/SelectUser.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/SelectUserByEmail.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/UpdateIdeaByID.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/entity/Category.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/entity/Comment$1.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/entity/Comment.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/entity/Idea.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/entity/User.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/security/PasswordEncoderGenerator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/validator/AddcommentValidator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/validator/AddideaValidator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/validator/SignupValidator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/dispatcher-servlet.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/i18n/application_en.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/i18n/application_ru.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/i18n/message_en.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/i18n/message_ru.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/jdbc/jdbc.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/layouts/default.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/layouts/layouts.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/aopalliance-1.0.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/commons-beanutils-1.8.0.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/commons-digester-2.0.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/commons-fileupload-1.2.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/commons-io-2.5-javadoc.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/commons-io-2.5.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/commons-logging-1.2.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/jcl-over-slf4j-1.7.6.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/postgresql-9.2-1002.jdbc4.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/slf4j-api-1.7.6.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-aop-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-aspects-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-beans-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-context-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-context-support-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-core-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-expression-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-instrument-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-instrument-tomcat-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-jdbc-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-jms-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-messaging-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-orm-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-oxm-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-acl-3.2.5.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-aspects-3.2.5.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-cas-3.2.5.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-config-3.2.5.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-core-3.2.5.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-crypto-3.2.5.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-ldap-3.2.5.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-openid-3.2.5.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-remoting-3.2.5.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-taglibs-3.2.5.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-web-3.2.5.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-test-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-tx-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-web-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-webmvc-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-webmvc-portlet-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-websocket-4.3.3.RELEASE.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-api-3.0.7.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-autotag-core-runtime-1.2.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-compat-3.0.7.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-core-3.0.7.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-el-3.0.7.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-extras-3.0.7.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-freemarker-3.0.7.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-jsp-3.0.7.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-mvel-3.0.7.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-ognl-3.0.7.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-request-api-1.0.6.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-request-freemarker-1.0.6.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-request-jsp-1.0.6.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-request-mustache-1.0.6.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-request-servlet-1.0.6.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-request-servlet-wildcard-1.0.6.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-request-velocity-1.0.6.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-servlet-3.0.7.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-template-3.0.7.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-velocity-3.0.7.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/footer.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/header.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/addidea.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/admin.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/index.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/myoffice.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/reg.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/show.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/userregerror.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/viewidea.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/web.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/css/admin.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/css/bootstrap-3.3.7.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/css/bootstrap.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/css/main.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/bootstrap.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/external/jquery/jquery.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_diagonals-thick_18_b81900_40x40.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_diagonals-thick_20_666666_40x40.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_flat_10_000000_40x100.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_glass_100_f6f6f6_1x400.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_glass_100_fdf5ce_1x400.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_glass_65_ffffff_1x400.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_gloss-wave_35_f6a828_500x100.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_highlight-soft_100_eeeeee_1x100.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_highlight-soft_75_ffe45c_1x100.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-icons_222222_256x240.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-icons_228ef1_256x240.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-icons_ef8c08_256x240.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-icons_ffd27a_256x240.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-icons_ffffff_256x240.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/index.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-3.1.1.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-ui.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-ui.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-ui.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-ui.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-ui.structure.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-ui.structure.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-ui.theme.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-ui.theme.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/main.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/reply_to_comment.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/pict/10753921.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/pict/idea.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/sql/idea_03122016.backup</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/upload_image/user1_0_5AuebO6M8.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/upload_image/user_0_5AuebO6M8.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/upload_image/user_4R-fLd8pHEQ.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/upload_image/user_9Z38JB_6q3Y.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/upload_image/user_fNh6phzzwsM.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/controller/AdminController.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/controller/IdeaController.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/controller/SecurityController.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/CategoryDaoImpl.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/CommentDao.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/CommentDaoImpl.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/IdeaDao.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/IdeaDaoImpl.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/UserDao.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/UserDaoImpl.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/DeleteIdeaByID.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/InsertNewComment.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/InsertNewIdea.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/InsertUser.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/SelectAllCategory.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/SelectAllCommentByIdea.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/SelectAllIdea.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/SelectChildCommentsByParrentId.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/SelectIdeaById.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/SelectUser.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/SelectUserByEmail.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/UpdateIdeaByID.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/entity/Category.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/entity/Comment$1.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/entity/Comment.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/entity/Idea.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/entity/User.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/security/PasswordEncoderGenerator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/validator/AddcommentValidator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/validator/AddideaValidator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/idea/ua/pp/idea/validator/SignupValidator.class</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="GlassFish Server.GlassFish">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -904,7 +1257,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107460000" />
+    <option name="totallyTimeSpent" value="107671000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -921,20 +1274,19 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36497545" sideWeight="0.50907713" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26022914" sideWeight="0.49092284" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45171848" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27986908" sideWeight="0.49092284" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22692889" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22768533" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -946,6 +1298,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1015,23 +1368,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_en.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_ru.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/header.jsp" />
@@ -1080,23 +1433,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_en.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_ru.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/header.jsp" />
@@ -1214,29 +1567,30 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/message_en.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/message_ru.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/resources/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+        <state relative-caret-position="255">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1250,8 +1604,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/viewidea.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="14" selection-start-line="18" selection-start-column="7" selection-end-line="32" selection-end-column="14" />
+        <state relative-caret-position="442">
+          <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -1283,47 +1637,47 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_en.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+        <state relative-caret-position="289">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_ru.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+        <state relative-caret-position="17">
+          <caret line="121" column="53" selection-start-line="121" selection-start-column="53" selection-end-line="121" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/layouts/default.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+        <state relative-caret-position="1649">
+          <caret line="97" column="66" selection-start-line="97" selection-start-column="66" selection-end-line="97" selection-end-column="66" />
           <folding />
         </state>
       </provider>
