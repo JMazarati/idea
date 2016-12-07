@@ -15,14 +15,13 @@
     <script src="${pageContext.servletContext.contextPath}/resources/js/reply_to_comment.js"></script>
     <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/resources/css/main.css"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/resources/css/admin.css" />
-    <link rel="shortcut icon" href="${pageContext.servletContext.contextPath}/resources/pict/Lumier.jpg"/>
+    <link rel="logo" href="${pageContext.servletContext.contextPath}/resources/pict/logo.jpg"/>
     <link rel="shortcut icon" href="${pageContext.servletContext.contextPath}/resources/pict/idea.png"/>
 </head>
 <body class="spring">
 
 <div class="container">
     <div class="header"><tiles:insertAttribute name="header" ignore="true" /></div>
-    <div class="sidebar"><tiles:insertAttribute name="menu" ignore="true" /></div>
     <div class="content"><tiles:insertAttribute name="body" /></div>
     <div class="footer"><tiles:insertAttribute name="footer" ignore="true" /></div>
 </div>

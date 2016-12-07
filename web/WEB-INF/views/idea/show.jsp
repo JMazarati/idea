@@ -63,42 +63,44 @@
         </div>
         <div class="row" id="row3">
             <div class="col-xs-9" id="rating"> RATING: ${check.rating}</div>
-            <div class="text-center col-xs-3" id="likes"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"/>${check.count_like}<span class="glyphicon glyphicon-thumbs-down" aria-hidden="true" />${check.count_dislike}</div>
+            <div class="text-center col-xs-3">
+                <button type="button" class="likes">
+                <img src="/resources/pict/like.jpg" width="15"  height="25" alt="likes">${check.count_like}
+            </button>
+                <button type="button" class="likes">
+                    <img src="/resources/pict/dislike.jpg" width="15"  height="25" alt="dislikes">${check.count_dislike}
+                </button>
         </div>
+            </div>
 
-            <div id="titleComments">Comments:</div>
-            <c:if test="${not empty child}">
-                <c:forEach items="${child}" var="child">
-                    <c:if test="${child.id eq child.parentLink}">
-                        <br/></c:if>
-                    <c:if test="${child.id ne child.parentLink}">
-                        <c:forEach var="cycle" begin="0" end="${child.depth}">
-                            &nbsp;
-                        </c:forEach>
-                    </c:if>
+    <div id="titleComments">Comments:</div>
 
-                <div class="comments">
-                    <div class="row">
-                        <div id="usernameComments" class="row col-xs-8">${child.userLink} left a comment:</div>
-                        <div id="dateComments" class="row col-xs-4">${child.dateComment}</div>
-                    </div>
-                    <div id="textOfComment">${child.note}</div>
-                    <div class="row" id="replyComments">
-                    <sec:authorize access="!isAnonymous()">
-                        <button class="btn" onclick="setCommentId(${child.id})">reply</button>
-                    </sec:authorize>
-                    <br/>
+    <c:if test="${not empty child}">
+        <c:forEach items="${child}" var="child">
+            <c:if test="${child.id eq child.parentLink}">
+                <br/></c:if>
+            <c:if test="${child.id ne child.parentLink}">
+                <c:forEach var="cycle" begin="0" end="${child.depth}">
+                    &nbsp;
                 </c:forEach>
             </c:if>
-                    </div>
+
+            <span style="font-size: x-small; "><i> ${child.userLink}${child.dateComment}</i>&nbsp;<b>${child.note}</b> </span>
+            <sec:authorize access="!isAnonymous()">
+                <button onclick="setCommentId(${child.id})">reply</button>
+            </sec:authorize>
+            <br/>
+        </c:forEach>
+    </c:if>
+</div>
 
 
-        <sec:authorize access="!isAnonymous()">
+<sec:authorize access="!isAnonymous()">
 
-        <form:form method="post" action="${pageContext.servletContext.contextPath}/addcomments" id="f2">
-            <form:input type="hidden" path="ideaLink" value="${check.id}"/>
-            <form:input type="hidden" path="userLink" value="${username}"/>
-            <form:input id="parentLink" type="hidden" path="parentLink" value=""/>
+    <form:form method="post" action="${pageContext.servletContext.contextPath}/addcomments" id="f2">
+        <form:input type="hidden" path="ideaLink" value="${check.id}"/>
+        <form:input type="hidden" path="userLink" value="${username}"/>
+        <form:input id="parentLink" type="hidden" path="parentLink" value=""/>
         <table>
             <tr>
                 <td>Введите комментарий:</td>
@@ -106,17 +108,16 @@
             </tr>
             <tr>
                 <td><form:input id="commentField" path="note" maxlength="128"/></td>
-                <td><input class="btn" type="submit" value="Submit"/></td>
-
+                <td><input type="submit" value="Submit"/></td>
             </tr>
             <tr>
                 <td><span class="error"><form:errors path="note"/></span></td>
             </tr>
         </table>
-        </form:form>
-        <button class="btn" onclick="setCommentId(0)">root</button>
-        <br/>
+    </form:form>
+    <button onclick="setCommentId(0)">root</button>
+    <br/>
 
-        </sec:authorize>
-        </div>
-</div>
+</sec:authorize>
+<br/>
+${messageviewidea}

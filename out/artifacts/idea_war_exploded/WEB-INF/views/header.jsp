@@ -18,80 +18,140 @@
 <spring:message code="label_username" var="labelusername"/>
 <spring:message code="label_pwd" var="labelpwd"/>
 <spring:message code="label_registration" var="labelregistration"/>
+<spring:url value="/myoffice" var="addContactUrl"/>
+<spring:url value="/viewidea" var="viewidealink"/>
+<spring:url value="/addidea" var="addidealink"/>
+<spring:url value="/reg" var="registrationlink"/>
+<spring:url value="/" var="homelink"/>
+<spring:message code="label_login" var="labellogin"/>
+<spring:message code="label_logout" var="labellogout"/>
+<spring:message code="label_welcome" var="labelwelcome"/>
+<spring:message code="menu_header_text" var="labelmenu"/>
+<spring:message code="label_link_1" var="label_link_1"/>
+<spring:message code="label_link_2" var="label_link_2"/>
+<spring:message code="label_link_3" var="label_link_3"/>
+<spring:message code="label_link_4" var="label_link_4"/>
+<spring:message code="label_username" var="labelusername"/>
+<spring:message code="label_pwd" var="labelpwd"/>
+<spring:message code="label_registration" var="labelregistration"/>
+
 <c:url value="/login" var="loginUrl"/>
 
-
-<nav>
 <div class="container">
-
-<div class="row col-xs-3">
-            <a class="logo" href="/index"><img src="/resources/pict/Lumier.jpg" width="50" height="75" alt="logo"></a>
-</div>
-    <div class="row col-xs-6">
-        <div class="text-center" id="containerHeader">J.A.V.A.I.T. ideas</div>
+<div class="row">
+    <div class="col-xs-2">
+        <a href="/index"><img id="logo" src="/resources/pict/logo.jpg" width="100"  height="130" alt="logo"></a>
     </div>
+    <div class="col-xs-10">
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="text-center" id="containerHeader">J.A.V.A.I.T. ideas</div>
+            </div>
+            <div class="col-xs-4">
+                <%-- Login --%>
+                <div class="pull-right" id="login1">
+                    <sec:authorize access="isAnonymous()">
+                        <button class="btn btn-default" onclick="document.getElementById('form').style.display='block'" style="width:auto;">Login</button>
+                        <div id="form" class="modal">
+                            <form class="modal-content animate" name="loginForm" action="${loginUrl}" method="post">
+                                <span onclick="document.getElementById('form').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <div class="containerLogin">
+                                    <input type="hidden" class="form-control" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                                    <table>
+                                        <tr><caption align="right">${labellogin}</caption>
+                                            <td>${labelusername}</td>
+                                            <td><input type="text" name="username" id="login" class="form-control"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>${labelpwd}</td>
+                                            <td><input type="password" name="password" id="password" class="form-control"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td><input type="checkbox" checked="checked"> Remember me</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input name="submit" type="submit" class="btn btn-default" id="submitBtn" value="${labellogin}"/></td>
+                                            <td><a href=${registrationlink}>${labelregistration}</a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
 
-<div class="text-right row col-xs-3" id="login1">
-    <sec:authorize access="isAnonymous()">
+                        <script>
+                            var modal = document.getElementById('form');
 
-        <button class="btn btn-default" onclick="document.getElementById('form').style.display='block'" style="width:auto;">Login</button>
-        <div id="form" class="modal">
-        <form class="modal-content animate" name="loginForm" action="${loginUrl}" method="post">
-            <span onclick="document.getElementById('form').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <div class="containerLogin">
-            <input type="hidden" class="form-control" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-            <table>
-                <tr><caption align="right">${labellogin}</caption>
-                    <td>${labelusername}</td>
-                    <td><input type="text" name="username" id="login" class="form-control"/></td>
-                </tr>
-                <tr>
-                    <td>${labelpwd}</td>
-                    <td><input type="password" name="password" id="password" class="form-control"/></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="checkbox" checked="checked"> Remember me</td>
-               </tr>
-                <tr>
-                    <td><input name="submit" type="submit" class="btn btn-default" id="submitBtn" value="${labellogin}"/></td>
-                    <td><a href=${registrationlink}>${labelregistration}</a></td>
-                </tr>
-            </table>
+                            window.onclick = function(event) {
+                                if (event.target == modal) {
+                                    modal.style.display = "none";
+                                }
+                            }
+                        </script>
+
+                        <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
+                <span style="color: red; ">
+                    Your login attempt was not successful due to <br/><br/>
+                    <c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}"/>.
+                </span>
+                        </c:if>
+                    </sec:authorize>
+
+                    <sec:authorize access="!isAnonymous()">
+                        <sec:authentication property="principal.username" var="username"/>
+                        <table>
+                            <tr>
+                                <td><div><a id="welcome" href="${addContactUrl}"><h4>${labelwelcome} ${username}</h4></a></div></td>
+                            </tr>
+                            <tr>
+                                <td><button id="logout" class="btn btn-default"><a href="<c:url value="/j_spring_security_logout"/>">${labellogout}</a></button></td>
+                            </tr>
+                        </table>
+                    </sec:authorize>
+                    ${lmnl}
                 </div>
-        </form>
+            </div>
         </div>
 
-        <script>
-            var modal = document.getElementById('form');
+        <%-- Menu --%>
+        <sec:authorize access="hasAnyRole('ROLE_USER','ROLE_OPERATOR', 'ROLE_ADMINISTRATOR')">
+            <nav class="nav nav-bar" id="menu" role="navigation">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="/index">${label_link_3}</a></li>
+                    <li role="presentation"><a href="/viewidea">${label_link_1}</a></li>
+                    <li role="presentation"><a href="/addidea">${label_link_2}</a></li>
+                    <li role="presentation"><a href="/myoffice">${label_link_4}</a></li>
+                    <li class="pull-right">
+                        <div class="form-group" id="search">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                    </li>
 
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        </script>
+                </ul>
+            </nav>
+        </sec:authorize>
 
-        <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
-    <span style="color: red; ">
-        Your login attempt was not successful due to <br/><br/>
-        <c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}"/>.
-    </span>
-        </c:if>
-    </sec:authorize>
-    <sec:authorize access="!isAnonymous()">
-        <sec:authentication property="principal.username" var="username"/>
-        <table>
-            <tr>
-                <td align="right"><a href="${addContactUrl}"><h3>${labelwelcome} ${username}</h3></a></td>
-            </tr>
-            <tr>
-                <td align="right"><b>${labellogin}: </b> ${username}<b>--></b><a
-                        href="<c:url value="/j_spring_security_logout"/>">${labellogout}</a></td>
-            </tr>
-        </table>
-    </sec:authorize>
-</div>
+        <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">
+            <a href="/admin">adminka</a><br/>
+        </sec:authorize>
+
+        <sec:authorize access="!isAnonymous()">
+
+        </sec:authorize>
+
+        <sec:authorize access="isAnonymous()">
+            <nav class="nav nav-bar" id="menu" role="navigation">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="/index">${label_link_3}</a></li>
+                    <li role="presentation"><a href="/viewidea">${label_link_1}</a></li>
+                    <li class="pull-right">
+                        <div class="form-group" id="search">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </sec:authorize>
     </div>
-</nav>
-        ${lmnl}
+</div>
+</div>
