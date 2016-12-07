@@ -4,8 +4,13 @@
  * and open the template in the editor.
  */
 
-jQuery(document).ready(function($) {
-
-	$('#msg').html("This is updated by jQuery")
-
-});
+// jQuery(document).ready(function($) {
+//
+// 	// $('#msg').html("This is updated by jQuery")
+// 	$('#myTabs a').click(function (e) {
+// 		console.log('hey!!');
+// 		e.preventDefault()
+// 		$(this).tab('show')
+// 	})
+//
+// });
