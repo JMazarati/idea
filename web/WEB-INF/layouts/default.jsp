@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/resources/css/admin.css" />
     <link rel="logo" href="${pageContext.servletContext.contextPath}/resources/pict/logo.jpg"/>
     <link rel="shortcut icon" href="${pageContext.servletContext.contextPath}/resources/pict/idea.png"/>
+
 </head>
 <body class="spring">
 
