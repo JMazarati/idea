@@ -1,17 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f85692f-bba7-4975-88e2-78571ba6e466" name="Default" comment="-изменён вид комментариев &#10;-изменён вид идеи &#10;-изменён вид хедера">
+    <list default="true" id="3f85692f-bba7-4975-88e2-78571ba6e466" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/applicationContext.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/controller/AdminController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/controller/IdeaController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/controller/SecurityController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/CategoryDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/CommentDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/CommentDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/IdeaDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/IdeaDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/UserDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/UserDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/DeleteIdeaByID.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/InsertNewComment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/InsertNewIdea.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/InsertUser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/SelectAllCategory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/SelectAllCommentByIdea.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/SelectAllIdea.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/SelectChildCommentsByParrentId.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/SelectIdeaById.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/SelectUser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/SelectUserByEmail.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/dao/crud/UpdateIdeaByID.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/entity/Category.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/entity/Comment$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/entity/Comment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/entity/Idea.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/entity/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/security/PasswordEncoderGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/validator/AddcommentValidator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/validator/AddideaValidator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/classes/ua/pp/idea/validator/SignupValidator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/dispatcher-servlet.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/i18n/application_en.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/i18n/application_ru.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/i18n/message_en.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/i18n/message_ru.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/jdbc/jdbc.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/layouts/default.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/layouts/layouts.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/aopalliance-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/commons-beanutils-1.8.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/commons-digester-2.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/commons-fileupload-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/commons-io-2.5-javadoc.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/commons-io-2.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/jcl-over-slf4j-1.7.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/postgresql-9.2-1002.jdbc4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/slf4j-api-1.7.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-aop-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-aspects-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-beans-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-context-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-context-support-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-core-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-expression-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-instrument-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-instrument-tomcat-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-jdbc-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-jms-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-messaging-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-orm-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-oxm-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-acl-3.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-aspects-3.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-cas-3.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-config-3.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-core-3.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-crypto-3.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-ldap-3.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-openid-3.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-remoting-3.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-taglibs-3.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-security-web-3.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-test-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-tx-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-web-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-webmvc-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-webmvc-portlet-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/spring-websocket-4.3.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-api-3.0.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-autotag-core-runtime-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-compat-3.0.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-core-3.0.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-el-3.0.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-extras-3.0.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-freemarker-3.0.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-jsp-3.0.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-mvel-3.0.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-ognl-3.0.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-request-api-1.0.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-request-freemarker-1.0.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-request-jsp-1.0.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-request-mustache-1.0.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-request-servlet-1.0.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-request-servlet-wildcard-1.0.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-request-velocity-1.0.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-servlet-3.0.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-template-3.0.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/lib/tiles-velocity-3.0.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/footer.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/header.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/addidea.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/admin.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/header.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/myoffice.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/reg.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/show.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/userregerror.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/viewidea.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/menu.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/css/admin.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/css/bootstrap-3.3.7.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/external/jquery/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_diagonals-thick_18_b81900_40x40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_diagonals-thick_20_666666_40x40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_flat_10_000000_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_glass_100_f6f6f6_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_glass_100_fdf5ce_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_gloss-wave_35_f6a828_500x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-icons_222222_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-icons_228ef1_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-icons_ef8c08_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-icons_ffd27a_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/images/ui-icons_ffffff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-3.1.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-ui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-ui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-ui.structure.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-ui.structure.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-ui.theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/jquery-ui.theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/js/reply_to_comment.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/pict/10753921.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/pict/idea.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/sql/idea_03122016.backup" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/upload_image/user1_0_5AuebO6M8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/upload_image/user_0_5AuebO6M8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/upload_image/user_4R-fLd8pHEQ.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/upload_image/user_9Z38JB_6q3Y.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/resources/upload_image/user_fNh6phzzwsM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/controller/AdminController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/controller/IdeaController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/controller/SecurityController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/CategoryDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/CommentDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/CommentDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/IdeaDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/IdeaDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/UserDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/UserDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/DeleteIdeaByID.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/InsertNewComment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/InsertNewIdea.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/InsertUser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/SelectAllCategory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/SelectAllCommentByIdea.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/SelectAllIdea.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/SelectChildCommentsByParrentId.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/SelectIdeaById.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/SelectUser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/SelectUserByEmail.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/dao/crud/UpdateIdeaByID.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/entity/Category.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/entity/Comment$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/entity/Comment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/entity/Idea.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/entity/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/security/PasswordEncoderGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/validator/AddcommentValidator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/validator/AddideaValidator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/idea/ua/pp/idea/validator/SignupValidator.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/layouts/default.jsp" afterPath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/layouts/default.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/show.jsp" afterPath="$PROJECT_DIR$/out/artifacts/idea_war_exploded/WEB-INF/views/idea/show.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/layouts/default.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/layouts/default.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/footer.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/footer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/header.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/idea/index.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/idea/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/css/main.css" afterPath="$PROJECT_DIR$/web/resources/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/js/reply_to_comment.js" afterPath="$PROJECT_DIR$/web/resources/js/reply_to_comment.js" />
     </list>
     <ignored path="idea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +224,7 @@
       <file leaf-file-name="show.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="517">
               <caret line="87" column="27" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
               <folding />
             </state>
@@ -57,7 +235,7 @@
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/layouts/default.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="278">
-              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="83" />
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -86,7 +264,7 @@
       <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
+            <state relative-caret-position="493">
               <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
               <folding />
             </state>
@@ -97,7 +275,7 @@
         <entry file="file://$PROJECT_DIR$/web/resources/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="139">
-              <caret line="154" column="28" selection-start-line="154" selection-start-column="28" selection-end-line="154" selection-end-column="28" />
+              <caret line="155" column="20" selection-start-line="155" selection-start-column="20" selection-end-line="155" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -119,6 +297,15 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <push-targets>
+      <push-target-info repo="$PROJECT_DIR$" source="__idea" target-remote="origin" target-branch="julia_idea" />
+    </push-targets>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -211,202 +398,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -970,7 +961,7 @@
       <workItem from="1480855212945" duration="5107000" />
       <workItem from="1480862756328" duration="363000" />
       <workItem from="1480958026230" duration="5845000" />
-      <workItem from="1481105388310" duration="20911000" />
+      <workItem from="1481105388310" duration="22905000" />
     </task>
     <task id="LOCAL-00001" summary="первый комит">
       <created>1479902116558</created>
@@ -1049,11 +1040,25 @@
       <option name="project" value="LOCAL" />
       <updated>1480857610462</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="-изменён вид комментариев &#10;-изменён вид идеи &#10;-изменён вид хедера">
+      <created>1481139237727</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1481139237727</updated>
+    </task>
+    <task id="LOCAL-00013" summary="without  &quot;out&quot;">
+      <created>1481140823787</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1481140823787</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101163000" />
+    <option name="totallyTimeSpent" value="103157000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1074,10 +1079,10 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36497545" sideWeight="0.50907713" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15615141" sideWeight="0.50738555" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32492113" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3643533" sideWeight="0.49261448" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2082019" sideWeight="0.49092284" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1098,6 +1103,24 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1120,7 +1143,8 @@
     <MESSAGE value="changes in header" />
     <MESSAGE value="Merge Master" />
     <MESSAGE value="-изменён вид комментариев &#10;-изменён вид идеи &#10;-изменён вид хедера" />
-    <option name="LAST_COMMIT_MESSAGE" value="-изменён вид комментариев &#10;-изменён вид идеи &#10;-изменён вид хедера" />
+    <MESSAGE value="without  &quot;out&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="without  &quot;out&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1488,7 +1512,7 @@
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/layouts/default.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="83" />
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -1503,7 +1527,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
+        <state relative-caret-position="493">
           <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
           <folding />
         </state>
@@ -1520,14 +1544,14 @@
     <entry file="file://$PROJECT_DIR$/web/resources/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
-          <caret line="154" column="28" selection-start-line="154" selection-start-column="28" selection-end-line="154" selection-end-column="28" />
+          <caret line="155" column="20" selection-start-line="155" selection-start-column="20" selection-end-line="155" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="517">
           <caret line="87" column="27" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
           <folding />
         </state>
