@@ -183,6 +183,7 @@ public class IdeaController {
             redirectAttributes.addFlashAttribute("b1", bindingResult);
             return "redirect:/viewidea/" + comment.getIdeaLink();
         }
+        comment.setNote(Smile(comment.getNote()));
         cdi.createNewComments(comment);
         return "redirect:/viewidea/" + comment.getIdeaLink();
     }
@@ -217,5 +218,33 @@ public class IdeaController {
 
         return "redirect:/userregerror?error=7";
 
+    }
+
+    static String Smile(String smile){
+        String aa = smile.replaceAll(":aa:", "<img src=\"/resources/smiles/aa.gif\"/>");
+        String ab = aa.replaceAll(":ab:", "<img src=\"/resources/smiles/ab.gif\"/>");
+        String ac = ab.replaceAll(":ac:", "<img src=\"/resources/smiles/ac.gif\"/>");
+        String ad = ac.replaceAll(":ad:", "<img src=\"/resources/smiles/ad.gif\"/>");
+        String ae = ad.replaceAll(":ae:", "<img src=\"/resources/smiles/ae.gif\"/>");
+        String af = ae.replaceAll(":af:", "<img src=\"/resources/smiles/af.gif\"/>");
+        String ag = af.replaceAll(":ag:", "<img src=\"/resources/smiles/ag.gif\"/>");
+        String ah = ag.replaceAll(":ah:", "<img src=\"/resources/smiles/ah.gif\"/>");
+        String ai = ah.replaceAll(":ai:", "<img src=\"/resources/smiles/ai.gif\"/>");
+        String aj = ai.replaceAll(":aj:", "<img src=\"/resources/smiles/aj.gif\"/>");
+        String ak = aj.replaceAll(":ak:", "<img src=\"/resources/smiles/ak.gif\"/>");
+        String al = ak.replaceAll(":al:", "<img src=\"/resources/smiles/al.gif\"/>");
+        String am = al.replaceAll(":am:", "<img src=\"/resources/smiles/am.gif\"/>");
+        String an = am.replaceAll(":an:", "<img src=\"/resources/smiles/an.gif\"/>");
+        String ao = an.replaceAll(":ao:", "<img src=\"/resources/smiles/ao.gif\"/>");
+        String ap = ao.replaceAll(":ap:", "<img src=\"/resources/smiles/ap.gif\"/>");
+        String aq = ap.replaceAll(":aq:", "<img src=\"/resources/smiles/aq.gif\"/>");
+        String at = aq.replaceAll(":at:", "<img src=\"/resources/smiles/at.gif\"/>");
+        String au = at.replaceAll(":au:", "<img src=\"/resources/smiles/au.gif\"/>");
+        String av = au.replaceAll(":av:", "<img src=\"/resources/smiles/av.gif\"/>");
+        String aw = av.replaceAll(":aw:", "<img src=\"/resources/smiles/aw.gif\"/>");
+        String ax = aw.replaceAll(":ax:", "<img src=\"/resources/smiles/ax.gif\"/>");
+        String ay = ax.replaceAll(":ay:", "<img src=\"/resources/smiles/ay.gif\"/>");
+        String az = ay.replaceAll(":az:", "<img src=\"/resources/smiles/az.gif\"/>");
+        return az;
     }
 }

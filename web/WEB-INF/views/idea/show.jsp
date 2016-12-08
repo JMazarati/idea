@@ -14,11 +14,13 @@
     </sec:authorize>
     <sec:authorize access="hasRole('ROLE_USER')">
         <c:if test="${username eq check.username}">
-            <b>${labelupdate}</b><br/><a href="/deleteIdea?id=${check.id}">${labeldelete}</a>
+            <b>${labelupdate}</b><br/><a href="/deleteIdea?id=${check.id}"
+                                         onclick="return confirmDelete();">${labeldelete}</a>
         </c:if>
     </sec:authorize>
     <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">
-        <b>${labelupdate}</b><br/><a href="/deleteIdea?id=${check.id}">${labeldelete}</a>
+        <b>${labelupdate}</b><br/><a href="/deleteIdea?id=${check.id}"
+                                     onclick="return confirmDelete();">${labeldelete}</a>
     </sec:authorize>
 </div>
 
@@ -29,7 +31,18 @@
     <h1>
         ${check.username} added IDEA
         ID: ${check.id} <br/>
-        Caption: ${check.caption} <br/>RATING: ${check.rating}<br/>
+        Caption: ${check.caption} <br/>RATING: ${check.rating}
+        <sec:authorize access="!isAnonymous()">
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <button>Vote</button>
+        </sec:authorize>
+        <br/>
     </h1>
     <!-- spring:message code="${check.category}" var="labelcategory"/ -->
     Category: ${check.category} &nbsp; Tags:${check.tags}&nbsp;
@@ -54,43 +67,44 @@
 
 <div id="comments">
 
-    <c:if test="${not empty child}">
-        <c:forEach items="${child}" var="child">
-            <c:if test="${child.id eq child.parentLink}">
-                </div>
-                    <br />
-            </c:if>
-            <c:if test="${child.id ne child.parentLink}">
-                <c:forEach var="cycle" begin="0" end="${child.depth}">
-                    &nbsp;
-                </c:forEach>
-            </c:if>
-
-            <span style="font-size: x-small; " id="reply_span"><i> ${child.userLink} ${child.dateComment}</i>&nbsp;</span><br />
-            <c:if test="${child.id ne child.parentLink}">
-                <c:forEach var="cycle" begin="0" end="${child.depth}">
-                    &nbsp;
-                </c:forEach>
-            </c:if>
-            ${child.note}
-            <c:if test="${child.id eq child.parentLink}">
-
-                      <a href="javascript:look('${child.id}');" title="Смотреть HOLY WAR">HOLY WAR</a><br />
-                <div id="${child.id}" style="display: none;">
-            </c:if>
-
-
-            <sec:authorize access="!isAnonymous()">
-                <span class="reply_to" onclick="setCommentId(${child.id})">Reply</span>
-            </sec:authorize>
+<c:if test="${not empty child}">
+    <c:forEach items="${child}" var="child">
+        <c:if test="${child.id eq child.parentLink}">
+            </div>
             <br/>
-        </c:forEach>
-    </c:if>
+        </c:if>
+        <c:if test="${child.id ne child.parentLink}">
+            <c:forEach var="cycle" begin="0" end="${child.depth}">
+                &nbsp;
+            </c:forEach>
+        </c:if>
+
+        <span style="font-size: x-small; "
+              id="reply_span"><i> ${child.userLink} ${child.dateComment}</i>&nbsp;</span><br/>
+        <c:if test="${child.id ne child.parentLink}">
+            <c:forEach var="cycle" begin="0" end="${child.depth}">
+                &nbsp;
+            </c:forEach>
+        </c:if>
+        ${child.note}
+        <c:if test="${child.id eq child.parentLink}">
+
+            <a href="javascript:look('${child.id}');" title="Смотреть HOLY WAR">HOLY WAR</a><br/>
+            <div id="${child.id}" style="display: none;">
+        </c:if>
+
+
+        <sec:authorize access="!isAnonymous()">
+            <span class="reply_to" onclick="setCommentId(${child.id})">Reply</span>
+        </sec:authorize>
+        <br/>
+    </c:forEach>
+</c:if>
 </div>
 
 
 <sec:authorize access="!isAnonymous()">
-<br />
+    <br/>
     <form:form method="post" action="${pageContext.servletContext.contextPath}/addcomments" id="f2">
         <form:input type="hidden" path="ideaLink" value="${check.id}"/>
         <form:input type="hidden" path="userLink" value="${username}"/>

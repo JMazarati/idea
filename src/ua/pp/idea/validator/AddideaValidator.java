@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
  */
 public class AddideaValidator implements Validator {
     private final static Pattern EMAIL_PATTERN = Pattern.compile(".+@.+\\.[a-z]+");
-    private final static Pattern NOHTML_PATTERN = Pattern.compile("[0-9a-zA-Zа-яА-ЯёЁіІЄєїЇ/:\\Q.'!;:?$@*+&_,\\E\\- ()\\r\\n\\s]*");
+    private final static Pattern NOHTML_PATTERN = Pattern.compile("[0-9a-zA-Zа-яА-ЯёЁіІЄєїЇ/\\Q.'!;:=?$@*+&_,\\E\\- ()\\r\\n\\s]*");
     private final static Pattern NOYOUTUBE_PATTERN = Pattern.compile("[0-9a-zA-Z_\\- ()]*");
     @Override
     public boolean supports(Class<?> aClass) {

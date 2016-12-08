@@ -14,6 +14,7 @@
     <link rel="shortcut icon" href="${pageContext.servletContext.contextPath}/resources/pict/idea.png" />
     <script type="text/javascript" src="${pageContext.servletContext.contextPath}/resources/js/reply_to_comment.js"></script>
     <script type="text/javascript" src="${pageContext.servletContext.contextPath}/resources/js/spoiler.js"></script>
+    <script type="text/javascript" src="${pageContext.servletContext.contextPath}/resources/js/confirm_delete.js"></script>
 </head>
 <body class="spring">
 
