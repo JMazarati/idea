@@ -3,13 +3,10 @@
     padding:0;
     box-sizing: border-box;
 }
-.spring {
-    background-color: rgba(147, 12, 225, 0.23);
-}
 .container {
     background-color: white;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    width: 100%;
+    height: 100%;
 }
 /* HEADER */
 #logo{
@@ -95,7 +92,15 @@
     margin: 3px 5px 5px 5px;
 }
 #carousel-example-generic{
-    height: 400px;
+    height: 300px;
+    width: 60%;
+    margin: auto;
+}
+.carousel-indicators li {
+    background-color: rgba(108, 4, 158, 0.24);
+}
+.carousel-indicators .active {
+    background-color: rgba(49, 14, 98, 0.69);;
 }
 .content {
     margin-top: 20px;
@@ -188,6 +193,69 @@
 #mediaItems{
     text-align: center;
 }
+/*Rating*/
+#reviewLightbulb-input input:checked ~ label, #reviewLightbulb-input label, #reviewLightbulb-input label:hover, #reviewLightbulb-input label:hover ~ label {
+    background: url(/resources/pict/dislike.jpg) no-repeat;
+}
+#reviewLightbulb-input {
+    overflow: hidden;
+    zoom: 1;
+    position: relative;
+    float: left;
+}
+#reviewLightbulb-input input {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    width: 30px;
+    height: 19px;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+#reviewLightbulb-input input:checked ~ label {
+    background: url(/resources/pict/like.jpg);
+    height: 30px;
+    width: 19px;
+}
+#reviewLightbulb-input label {
+    background: url(/resources/pict/dislike.jpg);
+    height: 30px;
+    width: 19px;
+    float: right;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+    z-index: 1;
+}
+#reviewLightbulb-input label:hover, #reviewLightbulb-input label:hover ~ label {
+    background: url(/resources/pict/like.jpg);
+    height: 30px;
+    width: 19px;
+}
+#reviewLightbulb-input #lightbulb-0 {
+    left: 0;
+}
+#reviewLightbulb-input #lightbulb-1 {
+    left: 19px;
+}
+#reviewLightbulb-input #lightbulb-2 {
+    left: 38px;
+}
+#reviewLightbulb-input #lightbulb-3 {
+    left: 57px;
+}
+#reviewLightbulb-input #lightbulb-4 {
+    left: 76px;
+}
+#reviewLightbulb-input #star-5 {
+    left: 95px;
+}
+/*End Of Rating*/
+#totalRating, #nameLikes{
+    color: #696969;
+    font-size: 12px;
+    padding: 5px;
+}
 .likes{
     border-style: none;
     background-color: #ffffff;
@@ -200,7 +268,6 @@
 #usernameComments, #dateComments{
     color: #696969;
     font-size: 12px;
-
 }
 #dateComments{
     text-align: right;

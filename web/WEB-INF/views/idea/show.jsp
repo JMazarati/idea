@@ -59,16 +59,39 @@
             </div>
         </div>
         <div class="row" id="row3">
-            <div class="col-xs-9" id="rating"> RATING: ${check.rating}</div>
-            <div class="text-center col-xs-3">
+            <div class="col-xs-8" id="rating">
+                <div id="reviewLightbulb-input">
+                    <input id="lightbulb-4" type="radio" name="reviewLightbulb"/>
+                    <label title="gorgeous" for="lightbulb-4"></label>
+
+                    <input id="lightbulb-3" type="radio" name="reviewLightbulb"/>
+                    <label title="good" for="lightbulb-3"></label>
+
+                    <input id="lightbulb-2" type="radio" name="reviewLightbulb"/>
+                    <label title="regular" for="lightbulb-2"></label>
+
+                    <input id="lightbulb-1" type="radio" name="reviewLightbulb"/>
+                    <label title="poor" for="lightbulb-1"></label>
+
+                    <input id="lightbulb-0" type="radio" name="reviewLightbulb"/>
+                    <label title="bad" for="lightbulb-0"></label>
+                </div>
+               <div id="totalRating"> total rating: ${check.rating}</div>
+            </div>
+
+            <div class="text-center col-xs-4">
+                <div class="col-xs-4" id="nameLikes"> like/dislike </div>
+                <div class="col-xs-8">
                 <button type="button" class="likes">
-                <img src="/resources/pict/like.jpg" width="15"  height="25" alt="likes">${check.count_like}
+                <img src="/resources/pict/like.jpg" width="19"  height="30" alt="likes">${check.count_like}
             </button>
                 <button type="button" class="likes">
-                    <img src="/resources/pict/dislike.jpg" width="15"  height="25" alt="dislikes">${check.count_dislike}
+                    <img src="/resources/pict/dislike.jpg" width="19"  height="30" alt="dislikes">${check.count_dislike}
                 </button>
         </div>
             </div>
+            </div>
+
 
     <div id="titleComments">Comments:</div>
 
@@ -118,3 +141,5 @@
 </sec:authorize>
 <br/>
 ${messageviewidea}
+
+</div>
