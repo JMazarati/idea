@@ -14,8 +14,9 @@
 }
 #containerHeader{
     font-size: 2em;
+    color: #390457;
+    font-weight: bold;
     text-transform: uppercase;
-    text-shadow: 1px 1px 1px;
     margin: 12px auto;
 }
 #menu {
@@ -108,7 +109,6 @@
     min-height: 400px;
 }
 
-
 /*My Account*/
 #registration, #myOffice{
     margin: 5px auto;
@@ -121,7 +121,7 @@
 }
 /*View idea*/
 #list{
-    padding: 10px;
+    padding: 15px 30px 15px 0px;
 }
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
     color: #080808;
@@ -139,8 +139,7 @@
     width:80%;
 }
 .row1{
-    height:30px;
-
+    height:30px
 }
 #row3{
     height:30px;
@@ -151,7 +150,7 @@
     border-top: 1px solid rgba(108, 4, 158, 0.24);
     text-align: justify;
     word-wrap: break-word;
-
+    overflow: hidden;
 }
 #textOfIdeaShow{
     border-bottom: 1px solid rgba(108, 4, 158, 0.24);
