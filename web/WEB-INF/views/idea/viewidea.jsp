@@ -26,8 +26,25 @@
         </div>
         <div id="textOfIdea" class="text-center">${list.txt}</div>
         <div class="row row1">
-            <div id="rating" class="col-xs-5">${list.rating}</div>
-            <div id="comments" class="col-xs-5">Comments</div>
+            <div id="rating" class="col-xs-10">
+                <div id="reviewLightbulb-input">
+                    <input id="lightbulb-4" type="radio" name="reviewLightbulb"/>
+                    <label title="gorgeous" for="lightbulb-4"></label>
+
+                    <input id="lightbulb-3" type="radio" name="reviewLightbulb"/>
+                    <label title="good" for="lightbulb-3"></label>
+
+                    <input id="lightbulb-2" type="radio" name="reviewLightbulb"/>
+                    <label title="regular" for="lightbulb-2"></label>
+
+                    <input id="lightbulb-1" type="radio" name="reviewLightbulb"/>
+                    <label title="poor" for="lightbulb-1"></label>
+
+                    <input id="lightbulb-0" type="radio" name="reviewLightbulb"/>
+                    <label title="bad" for="lightbulb-0"></label>
+                </div>
+                    ${list.rating}
+            </div>
             <div id="view" class="col-xs-2"><a href="viewidea/${list.id}">View more</a></div>
         </div>
         </div>
