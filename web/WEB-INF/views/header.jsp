@@ -117,10 +117,10 @@
         <sec:authorize access="hasAnyRole('ROLE_USER','ROLE_OPERATOR', 'ROLE_ADMINISTRATOR')">
             <nav class="nav nav-bar" id="menu" role="navigation">
                 <ul class="nav nav-tabs">
-                    <li role="presentation" class="active"><a href="/index">${label_link_3}</a></li>
-                    <li role="presentation"><a href="/viewidea">${label_link_1}</a></li>
-                    <li role="presentation"><a href="/addidea">${label_link_2}</a></li>
-                    <li role="presentation"><a href="/myoffice">${label_link_4}</a></li>
+                    <li role="presentation" id="tab1" class="active"><a href="/index">${label_link_3}</a></li>
+                    <li role="presentation" id="tab2"><a href="/viewidea">${label_link_1}</a></li>
+                    <li role="presentation" id="tab3"><a href="/addidea">${label_link_2}</a></li>
+                    <li role="presentation" id="tab4"><a href="/myoffice">${label_link_4}</a></li>
                     <li class="pull-right">
                         <div class="form-group" id="search">
                             <input type="text" class="form-control" placeholder="Search">
@@ -142,10 +142,10 @@
         <sec:authorize access="isAnonymous()">
             <nav class="nav nav-bar" id="menu" role="navigation">
                 <ul class="nav nav-tabs">
-                    <li role="presentation" class="active"><a href="/index">${label_link_3}</a></li>
-                    <li role="presentation"><a href="/viewidea">${label_link_1}</a></li>
+                    <li role="presentation" id="tab1Anon" class="active"><a href="/index">${label_link_3}</a></li>
+                    <li role="presentation" id="tab2Anon" ><a href="/viewidea">${label_link_1}</a></li>
                     <li class="pull-right">
-                        <div class="form-group" id="search">
+                        <div class="form-group" id="searchAnon">
                             <input type="text" class="form-control" placeholder="Search">
                         </div>
                     </li>

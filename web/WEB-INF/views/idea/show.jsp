@@ -7,21 +7,27 @@
 <spring:message code="label_delete" var="labeldelete"/>
 <spring:message code="label_update" var="labelupdate"/>
 
-<div id="delete_update">
-    <sec:authorize access="!isAnonymous()">
-        <sec:authentication property="principal.username" var="username"/>
-    </sec:authorize>
-    <sec:authorize access="hasRole('ROLE_USER')">
-        <c:if test="${username eq check.username}">
-            <b>${labelupdate}</b><br/><b>${labeldelete}</b>
-        </c:if>
-    </sec:authorize>
-    <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">
-        <b>${labelupdate}</b><br/><b>${labeldelete}</b>
-    </sec:authorize>
-</div>
+
 
 <div id="idea" class="showIdea">
+    <div id="delete_update">
+        <sec:authorize access="!isAnonymous()">
+            <sec:authentication property="principal.username" var="username"/>
+        </sec:authorize>
+        <sec:authorize access="hasRole('ROLE_USER')">
+            <c:if test="${username eq check.username}">
+                <b><span id="glyphicons" class="glyphicon glyphicon-edit" aria-hidden="true"/>${labelupdate}</b>
+                <br/><span id="glyphicons" class="glyphicon glyphicon-trash" aria-hidden="true"/><a href="/deleteIdea?id=${check.id}"
+                                                                                                    onclick="return confirmDelete();">${labeldelete}</a>
+            </c:if>
+        </sec:authorize>
+        <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">
+            <b><span id="glyphicons" class="glyphicon glyphicon-edit" aria-hidden="true"/>${labelupdate}</b>
+            <br/><span id="glyphicons" class="glyphicon glyphicon-trash" aria-hidden="true"/><a href="/deleteIdea?id=${check.id}"
+                                                                                                onclick="return confirmDelete();">${labeldelete}</a>
+            <b>${labelupdate}</b><br/><b>${labeldelete}</b>
+        </sec:authorize>
+    </div>
     <font color="red">${err}</font><br/>
         <div class="header-panel">
             <div class="row row2">
