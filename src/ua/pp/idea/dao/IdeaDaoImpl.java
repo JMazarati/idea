@@ -1,11 +1,11 @@
 package ua.pp.idea.dao;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Repository;
-import ua.pp.idea.dao.crud.DeleteIdeaByID;
-import ua.pp.idea.dao.crud.InsertNewIdea;
-import ua.pp.idea.dao.crud.SelectAllIdea;
-import ua.pp.idea.dao.crud.SelectIdeaById;
+import ua.pp.idea.dao.crud.*;
 import ua.pp.idea.entity.Idea;
 
 import javax.annotation.Resource;
@@ -19,12 +19,13 @@ import java.util.Map;
  * Created by Dark on 07.11.2016.
  */
 @Repository
-public class IdeaDaoImpl implements Serializable,IdeaDao{
+public class IdeaDaoImpl implements Serializable, IdeaDao {
     private DataSource dataSource;
     private SelectAllIdea selectAllIdea;
     private SelectIdeaById selectIdeaById;
     private InsertNewIdea insertNewIdea;
     private DeleteIdeaByID deleteIdeaByID;
+    private UpdateIdeaByID updateIdeaByID;
 
 
     @Resource(name = "dataSource")
@@ -34,13 +35,17 @@ public class IdeaDaoImpl implements Serializable,IdeaDao{
         this.selectIdeaById = new SelectIdeaById(dataSource);
         this.insertNewIdea = new InsertNewIdea(dataSource);
         this.deleteIdeaByID = new DeleteIdeaByID(dataSource);
+        this.updateIdeaByID = new UpdateIdeaByID(dataSource);
     }
 
+
+    @Override
     public List<Idea> getAll() {
 
         return selectAllIdea.execute();
     }
 
+    @Override
     public Idea findIdeaByID(int id) {
         Map<String, Object> paramMap = new HashMap<String, Object>();
         paramMap.put("id", id);
@@ -57,25 +62,40 @@ public class IdeaDaoImpl implements Serializable,IdeaDao{
 
 
     }
-
+    @PreAuthorize("isAuthenticated()")
+    @Override
     public void createIdea(Idea idea) {
-        Map<String,Object> paramMap = new HashMap<String,Object>();
-        paramMap.put("txt",idea.getTxt());
-        paramMap.put("pict",idea.getPict());
-        paramMap.put("video",idea.getVideo());
-        paramMap.put("caption",idea.getCaption());
-        paramMap.put("category",idea.getCategory());
-        paramMap.put("tags",idea.getTags());
-        paramMap.put("username",idea.getUsername());
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        paramMap.put("txt", idea.getTxt());
+        paramMap.put("pict", idea.getPict());
+        paramMap.put("video", idea.getVideo());
+        paramMap.put("caption", idea.getCaption());
+        paramMap.put("category", idea.getCategory());
+        paramMap.put("tags", idea.getTags());
+        paramMap.put("username", idea.getUsername());
         insertNewIdea.updateByNamedParam(paramMap);
 
 
     }
-
-    public void deleteIdeaById(Idea idea){
+    @PreAuthorize("isAuthenticated()")
+    @Override
+    public void deleteIdeaById(Idea idea) {
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        paramMap.put("id", idea.getId());
+        deleteIdeaByID.updateByNamedParam(paramMap);
+    }
+    @Override
+    @PreAuthorize("isAuthenticated()")
+    public void updateIdeaById(Idea idea){
         Map<String,Object> paramMap = new HashMap<String,Object>();
         paramMap.put("id",idea.getId());
-        deleteIdeaByID.updateByNamedParam(paramMap);
+        paramMap.put("txt",idea.getTxt());
+        paramMap.put("pict", idea.getPict());
+        paramMap.put("video", idea.getVideo());
+        paramMap.put("caption", idea.getCaption());
+        //paramMap.put("category", idea.getCategory());
+        paramMap.put("tags", idea.getTags());
+        updateIdeaByID.updateByNamedParam(paramMap);
     }
 
 }

@@ -14,13 +14,13 @@
     </sec:authorize>
     <sec:authorize access="hasRole('ROLE_USER')">
         <c:if test="${username eq check.username}">
-            <b>${labelupdate}</b><br/><a href="/deleteIdea?id=${check.id}"
-                                         onclick="return confirmDelete();">${labeldelete}</a>
+            <a href="/editidea/${check.id}">${labelupdate}</a><br/>
+            <a href="/deleteIdea?id=${check.id}" onclick="return confirmDelete();">${labeldelete}</a>
         </c:if>
     </sec:authorize>
     <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">
-        <b>${labelupdate}</b><br/><a href="/deleteIdea?id=${check.id}"
-                                     onclick="return confirmDelete();">${labeldelete}</a>
+        <a href="/editidea/${check.id}">${labelupdate}</a><br/>
+        <a href="/deleteIdea?id=${check.id}" onclick="return confirmDelete();">${labeldelete}</a>
     </sec:authorize>
 </div>
 
