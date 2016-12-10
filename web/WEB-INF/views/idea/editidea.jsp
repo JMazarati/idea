@@ -20,6 +20,7 @@
 <form:form method="POST" action="${pageContext.servletContext.contextPath}/editideapost" enctype="multipart/form-data">
     <form:hidden path="id"></form:hidden>
     <form:hidden path="username"></form:hidden>
+    <form:hidden path="pict"></form:hidden>
     <table>
         <tr>
             <td><form:label path="caption">caption</form:label></td>
