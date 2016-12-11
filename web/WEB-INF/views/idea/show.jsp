@@ -33,14 +33,11 @@
         ID: ${check.id} <br/>
         Caption: ${check.caption} <br/>RATING: ${check.rating}
         <sec:authorize access="!isAnonymous()">
-            <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-            <button>Vote</button>
+            <form:form action="${pageContext.servletContext.contextPath}/vote" method="post" id="f1" commandName="rcommand">
+                <input name="idea_link" type="hidden" value="${check.id}" />
+                <form:select path="rating" items="${votelist}"/>
+                <input type="submit" value="Submit"/>
+            </form:form>
         </sec:authorize>
         <br/>
     </h1>
