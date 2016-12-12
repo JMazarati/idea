@@ -9,6 +9,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <spring:message code="label_link_2" var="labellink2" />
+<spring:message code="error_nothing_found" var="enf" />
 <h1>${labelcontactlist}</h1>
 <c:if test="${not empty list}">
     <table border="1">
@@ -39,6 +40,6 @@
 <c:if test="${empty list}">
 
     <img src="<c:url value="/resources/pict/10753921.jpg" />" /> <br />
-   Ну введи хоть что нибудь! <a href="/addidea">${labellink2}</a><br/>
+   ${enf} <a href="/addidea">${labellink2}</a><br/>
 
 </c:if>

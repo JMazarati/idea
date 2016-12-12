@@ -26,6 +26,8 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
     private InsertNewIdea insertNewIdea;
     private DeleteIdeaByID deleteIdeaByID;
     private UpdateIdeaByID updateIdeaByID;
+    private SelectIdeaByTag selectIdeaByTag;
+    private SelectIdeaByCategory selectIdeaByCategory;
 
 
     @Resource(name = "dataSource")
@@ -36,6 +38,9 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
         this.insertNewIdea = new InsertNewIdea(dataSource);
         this.deleteIdeaByID = new DeleteIdeaByID(dataSource);
         this.updateIdeaByID = new UpdateIdeaByID(dataSource);
+        this.selectIdeaByTag = new SelectIdeaByTag(dataSource);
+        this.selectIdeaByCategory = new SelectIdeaByCategory(dataSource);
+
     }
 
 
@@ -59,9 +64,25 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
             return i1;
 
         }
+    }
 
+    @Override
+    public List<Idea> findIdeaByTag(String tag) {
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        paramMap.put("tags", tag.toLowerCase());
+
+        return selectIdeaByTag.executeByNamedParam(paramMap);
 
     }
+    @Override
+    public List<Idea> findIdeaByCategory(int category_link) {
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        paramMap.put("category_link", category_link);
+
+        return selectIdeaByCategory.executeByNamedParam(paramMap);
+
+    }
+
     @PreAuthorize("isAuthenticated()")
     @Override
     public void createIdea(Idea idea) {
@@ -77,6 +98,7 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
 
 
     }
+
     @PreAuthorize("isAuthenticated()")
     @Override
     public void deleteIdeaById(Idea idea) {
@@ -84,12 +106,13 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
         paramMap.put("id", idea.getId());
         deleteIdeaByID.updateByNamedParam(paramMap);
     }
+
     @Override
     @PreAuthorize("isAuthenticated()")
-    public void updateIdeaById(Idea idea){
-        Map<String,Object> paramMap = new HashMap<String,Object>();
-        paramMap.put("id",idea.getId());
-        paramMap.put("txt",idea.getTxt());
+    public void updateIdeaById(Idea idea) {
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        paramMap.put("id", idea.getId());
+        paramMap.put("txt", idea.getTxt());
         paramMap.put("pict", idea.getPict());
         paramMap.put("video", idea.getVideo());
         paramMap.put("caption", idea.getCaption());

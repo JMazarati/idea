@@ -42,10 +42,15 @@ public class SecurityController {
 
 
     @RequestMapping("/userregerror")
-    public String userregerror(@RequestParam(value = "error", defaultValue = "0") String error, @RequestParam(value = "lang", defaultValue = "en") String lang, Model uiModel, Locale locale) {
-
+    public String userregerror(@RequestParam(value = "error", defaultValue = "0") String error, Model uiModel, Locale locale) {
+        String flashpatam="";
         uiModel.addAttribute("error", error);
-        uiModel.addAttribute("message", uiModel.asMap().get("usererror").toString());
+        try {
+            flashpatam = uiModel.asMap().get("usererror").toString();
+        }catch (NullPointerException ex){
+
+        }
+        uiModel.addAttribute("message", flashpatam);
         return "userregerror";
     }
 
@@ -65,22 +70,22 @@ public class SecurityController {
         String serverName = httpServletRequest.getServerName();
         String serverPort = (httpServletRequest.getServerPort() == 80) ? "" : ":" + httpServletRequest.getServerPort();
         String contextPath = httpServletRequest.getContextPath();
-        String rdrct="redirect:"+scheme+serverName+serverPort;
+        String rdrct = "redirect:" + scheme + serverName + serverPort;
         signupValidator.validate(myUser, bindingResult);
         if (bindingResult.hasErrors()) {
 
             model.asMap().clear();
             redirectAttributes.addFlashAttribute("b", bindingResult);
-            return rdrct+"/reg";
+            return rdrct + "/reg";
         } else {
             myUser.setUserpwd(passwordEncoder.encode(myUser.getUserpwd()));
             myUser.setDatereg(LocalDate.now());
             try {
                 udi.createUser(myUser);
             } catch (Exception e) {
-                return rdrct+"/userregerror?error=3";
+                return rdrct + "/userregerror?error=3";
             }
-            return rdrct+"/userregerror?error=4";
+            return rdrct + "/userregerror?error=4";
         }
 
 
@@ -94,7 +99,6 @@ public class SecurityController {
         model.addAttribute(BindingResult.class.getName() + ".command", bindingResult);
         return "reg";
     }
-
 
 
 }

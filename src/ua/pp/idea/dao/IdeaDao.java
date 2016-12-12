@@ -14,9 +14,13 @@ public interface IdeaDao {
 
     Idea findIdeaByID(int id);
 
+    List<Idea> findIdeaByCategory(int category_link);
+
     void createIdea(Idea idea);
 
     void deleteIdeaById(Idea idea);
 
     void updateIdeaById(Idea idea);
+
+    List<Idea> findIdeaByTag(String tag);
 }

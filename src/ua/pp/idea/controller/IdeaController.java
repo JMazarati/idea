@@ -65,6 +65,27 @@ public class IdeaController {
 
         return "viewidea";
     }
+    @RequestMapping(value = "/tags", method = RequestMethod.GET)
+    public String ViewIdeaByTag(@RequestParam(value = "tag",defaultValue = "") String tag,@ModelAttribute() Idea myidea, Model uiModel) {
+        List<Idea> list = ide.findIdeaByTag("%"+tag+"%");
+        uiModel.addAttribute("list", list);
+
+        return "viewidea";
+    }
+
+    @RequestMapping(value = "/category", method = RequestMethod.GET)
+    public String ViewIdeaByCat(@RequestParam(value = "cat",defaultValue = "0") String cat,@ModelAttribute() Idea myidea, Model uiModel) {
+        List<Idea>list;
+        try{
+            list = ide.findIdeaByCategory(Integer.parseInt(cat));
+       }catch (NumberFormatException ex) {
+            return "redirect:/userregerror?error=6";
+
+       }
+        uiModel.addAttribute("list", list);
+        return "viewidea";
+    }
+
 
     @RequestMapping(value = "/addidea", method = RequestMethod.GET)
     public String updateForm(@ModelAttribute Idea myIdea, Model model) {
