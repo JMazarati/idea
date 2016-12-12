@@ -1,7 +1,9 @@
 package ua.pp.idea.controller;
 
 import org.apache.commons.io.FileUtils;
+import org.postgresql.util.PSQLException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,21 +11,19 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import ua.pp.idea.dao.CategoryDaoImpl;
-import ua.pp.idea.dao.CommentDao;
-import ua.pp.idea.dao.IdeaDaoImpl;
-import ua.pp.idea.dao.UserDaoImpl;
+import ua.pp.idea.dao.*;
 import ua.pp.idea.entity.Category;
 import ua.pp.idea.entity.Comment;
 import ua.pp.idea.entity.Idea;
+import ua.pp.idea.entity.Rating;
 import ua.pp.idea.validator.AddcommentValidator;
 import ua.pp.idea.validator.AddideaValidator;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
-import java.awt.*;
 import java.io.File;
 import java.lang.reflect.Method;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.List;
@@ -35,13 +35,15 @@ import java.util.List;
 @Controller
 public class IdeaController {
     @Autowired
-    IdeaDaoImpl ide;
+    IdeaDao ide;
     @Autowired
     UserDaoImpl udi;
     @Autowired
     CommentDao cdi;
     @Autowired
     CategoryDaoImpl catdi;
+    @Autowired
+    VoteDao voteDao;
     @Autowired
     ServletContext context;
     @Autowired
@@ -81,7 +83,7 @@ public class IdeaController {
         return "addidea";
 
     }
-
+    @PreAuthorize("isAuthenticated()")
     @RequestMapping(value = "/addideapost", method = RequestMethod.POST)
     public String update(@ModelAttribute Idea myIdea, HttpServletRequest httpServletRequest, Model model, RedirectAttributes redirectAttributes, BindingResult bindingResult,
                          @RequestParam(value = "p", required = false) MultipartFile image) {
@@ -135,37 +137,51 @@ public class IdeaController {
 
     }
 
+    //------------------------------------------------------------------------------------------------------------------
+    // SHOW IDEA PAGE BLOCK AND SHOW COMMENTS BLOCK
+
     @RequestMapping(value = "/viewidea/{id}", method = RequestMethod.GET)
-    public String showid(@PathVariable("id") String s, Model uiModel, Comment myComment) {
+    public String showid(@PathVariable("id") String s, Model myModel, Comment myComment,Rating rating) {
 
 
         ArrayList<Comment> allComments = new ArrayList<>();
-        BindingResult bindingResult = (BindingResult) uiModel.asMap().get("b1");
-
-        uiModel.addAttribute(BindingResult.class.getName() + ".command", bindingResult);
+        Map<Integer, String> voteList = new LinkedHashMap<>();
+        for(int i=1;i<6;i++){voteList.put(i,i+"");}
+        myModel.addAttribute("votelist",voteList);
 
 
         try {
-            uiModel.addAttribute("check", ide.findIdeaByID(Integer.parseInt(s)));
+            if (ide.findIdeaByID(Integer.parseInt(s)).getId() != 0) {
+                myModel.addAttribute("check", ide.findIdeaByID(Integer.parseInt(s)));
 
 
-            allComments.addAll(cdi.getAllCommentsByIdeaLink(Integer.parseInt(s)));
+                allComments.addAll(cdi.getAllCommentsByIdeaLink(Integer.parseInt(s)));
 
 
-            uiModel.addAttribute("child", allComments);
-            uiModel.addAttribute("count", cdi.getCnt());
+                myModel.addAttribute("child", allComments);
+                myModel.addAttribute("count", cdi.getCnt());
+            } else {
+                return "redirect:/viewidea";
+            }
 
 
         } catch (Exception e) {
-            uiModel.addAttribute("check", ide.findIdeaByID(1));
-            uiModel.addAttribute("err", e + "getStackTrace() " + e.getStackTrace() + "getMessage " + e.getMessage());
+
+            myModel.addAttribute("err", e + "getStackTrace() " + e.getStackTrace() + "getMessage " + e.getMessage());
             //uiModel.addAttribute("comments", cdi.getAllCommentsByIdeaLink(1));
             //uiModel.addAttribute("comments1", cdi.getAllCommentsByIdeaLink(1));
+            return "show";
         }
 
-        uiModel.addAttribute("command", myComment);
+
+        BindingResult bindingResult = (BindingResult) myModel.asMap().get("b1");
+        myModel.addAttribute("command", myComment);
+        myModel.addAttribute("rcommand",rating);
+        myModel.addAttribute(BindingResult.class.getName() + ".command", bindingResult);
         return "show";
     }
+
+    // ADD COMMENTS BLOCK POST
 
     @RequestMapping(value = "/addcomments", method = RequestMethod.POST)
     public String addComments(@ModelAttribute Comment comment, RedirectAttributes redirectAttributes, BindingResult bindingResult) {
@@ -175,6 +191,7 @@ public class IdeaController {
             redirectAttributes.addFlashAttribute("b1", bindingResult);
             return "redirect:/viewidea/" + comment.getIdeaLink();
         }
+        comment.setNote(Smile(comment.getNote()));
         cdi.createNewComments(comment);
         return "redirect:/viewidea/" + comment.getIdeaLink();
     }
@@ -191,4 +208,143 @@ public class IdeaController {
 
     }
 
+    //END OF COMMENTS ADD BLOCK
+    // END OF IDEA PAGE BLOCK AND SHOW COMMENTS BLOCK
+    //------------------------------------------------------------------------------------------------------------------
+    //DELETE IDEA BLOCK
+
+    @RequestMapping(value = "/deleteIdea")
+    public String deleteIdea(Model myModel, @RequestParam(value = "id", defaultValue = "0") String id) {
+
+        try {
+            Idea checkIdea = ide.findIdeaByID(Integer.parseInt(id));
+            if (checkIdea.getUsername().toLowerCase().equals(SecurityContextHolder.getContext().getAuthentication().getName().toString().toLowerCase()) ||
+                    SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString().equals("[ROLE_ADMINISTRATOR]")) {
+                ide.deleteIdeaById(checkIdea);
+                return "redirect:/userregerror?error=5";
+            }
+
+        } catch (Exception e) {
+            myModel.addAttribute("e", e);
+            return "redirect:/userregerror?error=6";
+        }
+
+        return "redirect:/userregerror?error=7";
+
+    }
+
+    //END OF DELETE IDEA BLOCK
+    //------------------------------------------------------------------------------------------------------------------
+    // UPDATE IDEA BLOCK
+
+    @RequestMapping(value = "/editidea/{id}", method = RequestMethod.GET)
+    public String editidea(@PathVariable("id") String id, Model myModel, Idea myIdea) {
+        try {
+            myIdea = ide.findIdeaByID(Integer.parseInt(id));
+        } catch (Exception e) {
+            return "viewidea"; //обработать ошибку.
+        }
+        if (myIdea.getUsername().toLowerCase().equals(SecurityContextHolder.getContext().getAuthentication().getName().toString().toLowerCase()) ||
+                SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString().equals("[ROLE_ADMINISTRATOR]")) {
+
+            if (myIdea.getId() == 0) {
+                return "redirect:/userregerror?error=2";
+            }
+            Map<Integer, String> cat = new HashMap<Integer, String>();
+            cat.put(1, myIdea.getCategory());
+            myModel.addAttribute("cat", cat);
+            BindingResult bindingResult = (BindingResult) myModel.asMap().get("b1");
+            myModel.addAttribute("command", myIdea);
+            myModel.addAttribute(BindingResult.class.getName() + ".command", bindingResult);
+            return "editidea";
+        }
+        else return "redirect:/userregerror?error=7";
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    @RequestMapping(value = "/editideapost", method = RequestMethod.POST)
+    public String editideaupd(@ModelAttribute Idea myIdea, HttpServletRequest httpServletRequest,
+                              RedirectAttributes redirectAttributes, RedirectAttributes uerror,BindingResult bindingResult, @RequestParam(value = "p", required = false) MultipartFile image) {
+        myIdea.setFile(image);
+        String scheme = httpServletRequest.getScheme() + "://";
+        String serverName = httpServletRequest.getServerName();
+        String serverPort = (httpServletRequest.getServerPort() == 80) ? "" : ":" + httpServletRequest.getServerPort();
+        String rdrct = "redirect:" + scheme + serverName + serverPort;
+        if (!image.isEmpty()) {
+            saveImage(SecurityContextHolder.getContext().getAuthentication().getName() + "_" + image.getOriginalFilename(), image);
+            myIdea.setPict(SecurityContextHolder.getContext().getAuthentication().getName() + "_" + image.getOriginalFilename());
+            myIdea.setFile(image);
+        }
+
+        addideaValidator.validate(myIdea, bindingResult);
+        if (bindingResult.hasErrors()) {
+            redirectAttributes.addFlashAttribute("b1", bindingResult);
+            return rdrct + "/editidea/" + myIdea.getId();
+        }
+
+        try {
+            if (myIdea.getUsername().toLowerCase().equals(SecurityContextHolder.getContext().getAuthentication().getName().toString().toLowerCase()) ||
+                    SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString().equals("[ROLE_ADMINISTRATOR]"))
+            ide.updateIdeaById(myIdea);
+            return rdrct + "/viewidea/" + myIdea.getId();
+        } catch (Exception e) {
+
+            uerror.addFlashAttribute("usererror",e);
+            return rdrct + "/userregerror?error=3";
+        }
+
+
+    }
+    //END OF UPDATE IDEA BLOCK
+    //------------------------------------------------------------------------------------------------------------------
+    //INSERT UPDATE RATING BLOCK
+    @PreAuthorize("isAuthenticated()")
+    @RequestMapping(value = "/vote",method = RequestMethod.POST)
+    public String vote(HttpServletRequest httpServletRequest, Rating rating,@RequestParam(value = "idea_link", required = false) int idea_link){
+        String scheme = httpServletRequest.getScheme() + "://";
+        String serverName = httpServletRequest.getServerName();
+        String serverPort = (httpServletRequest.getServerPort() == 80) ? "" : ":" + httpServletRequest.getServerPort();
+        String rdrct = "redirect:" + scheme + serverName + serverPort;
+        rating.setUser_creator(SecurityContextHolder.getContext().getAuthentication().getName().toString());
+        rating.setIdea_link(idea_link);
+        try{
+            voteDao.InsertRating(rating);
+        }catch (Exception ex){
+            voteDao.UpdateRating(rating);
+        }
+        return rdrct+"/viewidea/"+rating.getIdea_link();
+    }
+
+    //END OF INSERT UPDATE RATING BLOCK
+    //------------------------------------------------------------------------------------------------------------------
+
+    static String Smile(String smile) {
+        String aa = smile.replaceAll(":aa:", "<img src=\"/resources/smiles/aa.gif\"/>");
+        String ab = aa.replaceAll(":ab:", "<img src=\"/resources/smiles/ab.gif\"/>");
+        String ac = ab.replaceAll(":ac:", "<img src=\"/resources/smiles/ac.gif\"/>");
+        String ad = ac.replaceAll(":ad:", "<img src=\"/resources/smiles/ad.gif\"/>");
+        String ae = ad.replaceAll(":ae:", "<img src=\"/resources/smiles/ae.gif\"/>");
+        String af = ae.replaceAll(":af:", "<img src=\"/resources/smiles/af.gif\"/>");
+        String ag = af.replaceAll(":ag:", "<img src=\"/resources/smiles/ag.gif\"/>");
+        String ah = ag.replaceAll(":ah:", "<img src=\"/resources/smiles/ah.gif\"/>");
+        String ai = ah.replaceAll(":ai:", "<img src=\"/resources/smiles/ai.gif\"/>");
+        String aj = ai.replaceAll(":aj:", "<img src=\"/resources/smiles/aj.gif\"/>");
+        String ak = aj.replaceAll(":ak:", "<img src=\"/resources/smiles/ak.gif\"/>");
+        String al = ak.replaceAll(":al:", "<img src=\"/resources/smiles/al.gif\"/>");
+        String am = al.replaceAll(":am:", "<img src=\"/resources/smiles/am.gif\"/>");
+        String an = am.replaceAll(":an:", "<img src=\"/resources/smiles/an.gif\"/>");
+        String ao = an.replaceAll(":ao:", "<img src=\"/resources/smiles/ao.gif\"/>");
+        String ap = ao.replaceAll(":ap:", "<img src=\"/resources/smiles/ap.gif\"/>");
+        String aq = ap.replaceAll(":aq:", "<img src=\"/resources/smiles/aq.gif\"/>");
+        String ar = aq.replaceAll(":ar:", "<img src=\"/resources/smiles/ar.gif\"/>");
+        String as = ar.replaceAll(":as:", "<img src=\"/resources/smiles/as.gif\"/>");
+        String at = as.replaceAll(":at:", "<img src=\"/resources/smiles/at.gif\"/>");
+        String au = at.replaceAll(":au:", "<img src=\"/resources/smiles/au.gif\"/>");
+        String av = au.replaceAll(":av:", "<img src=\"/resources/smiles/av.gif\"/>");
+        String aw = av.replaceAll(":aw:", "<img src=\"/resources/smiles/aw.gif\"/>");
+        String ax = aw.replaceAll(":ax:", "<img src=\"/resources/smiles/ax.gif\"/>");
+        String ay = ax.replaceAll(":ay:", "<img src=\"/resources/smiles/ay.gif\"/>");
+        String az = ay.replaceAll(":az:", "<img src=\"/resources/smiles/az.gif\"/>");
+        return az;
+    }
 }

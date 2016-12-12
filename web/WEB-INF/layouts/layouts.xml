@@ -38,4 +38,7 @@
     <definition extends="default" name="admin">
         <put-attribute name="body" value="/WEB-INF/views/idea/admin.jsp" />
     </definition>
+    <definition extends="default" name="editidea">
+        <put-attribute name="body" value="/WEB-INF/views/idea/editidea.jsp" />
+    </definition>
 </tiles-definitions>

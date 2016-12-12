@@ -13,6 +13,8 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="${pageContext.servletContext.contextPath}/resources/js/bootstrap.min.js"></script>
     <script src="${pageContext.servletContext.contextPath}/resources/js/reply_to_comment.js"></script>
+    <script type="text/javascript" src="${pageContext.servletContext.contextPath}/resources/js/spoiler.js"></script>
+    <script type="text/javascript" src="${pageContext.servletContext.contextPath}/resources/js/confirm_delete.js"></script>
     <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/resources/css/main.css"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/resources/css/admin.css" />
     <link rel="logo" href="${pageContext.servletContext.contextPath}/resources/pict/logo.jpg"/>

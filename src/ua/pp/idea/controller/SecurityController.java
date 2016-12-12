@@ -45,7 +45,7 @@ public class SecurityController {
     public String userregerror(@RequestParam(value = "error", defaultValue = "0") String error, @RequestParam(value = "lang", defaultValue = "en") String lang, Model uiModel, Locale locale) {
 
         uiModel.addAttribute("error", error);
-        //uiModel.addAttribute("message", "Error");
+        uiModel.addAttribute("message", uiModel.asMap().get("usererror").toString());
         return "userregerror";
     }
 

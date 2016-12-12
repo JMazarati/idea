@@ -9,20 +9,23 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <c:if test="${error==0}" >
-    <b>ИМЯ слишком мало</b>
-    <a href="/reg">Попробовать еще раз</a>
+    <b>Вернуться на главную</b>
+    <a href="/">Вернуться на главную</a>
 </c:if>
 <c:if test="${error==1}" >
     <b>ИМЯ ЗАНЯТО</b>
     <a href="/reg">Попробовать еще раз</a>
 </c:if>
 <c:if test="${error==2}" >
-    <b>Пароли не совпадают, либо отсутствуют.</b>
-    <a href="/reg">Попробовать еще раз</a>
+    <b>Идея отсутствует либо была удалена до Вас</b>
+    <a href="/addidea">Создать идею?</a>
 </c:if>
 
 <c:if test="${error==3}" >
-    Не возможно записать данные в базу. Попробуйте позже.
+    <iframe src="//coub.com/embed/4jfpl?muted=false&autostart=true&originalSize=false&startWithHD=false" allowfullscreen="true" frameborder="0" width="498" height="314"></iframe><br />
+    Не возможно записать данные в базу. Попробуйте позже.<br>
+    ${message}
+
 </c:if>
 <c:if test="${error==4}" >
     ПОЗДРАВЛЯЕМ! Теперь осталось только войти под своим паролем!
@@ -32,11 +35,27 @@
     Идея удалена!
 
 </c:if>
+<c:if test="${error==6}" >
+    Не верный параметр!
+
+</c:if>
+<c:if test="${error==7}" >
+    У Вас нет прав на выполнение данной операции!
+
+</c:if>
 <c:if test="${error==400}" >
-    Ой! Что-то не получилось ничего сделать. <b>ERROR 400.</b><br />
-    <a href="/index">Вернуться на главную</a>
+    <iframe src="//coub.com/embed/4jfpl?muted=false&autostart=true&originalSize=false&startWithHD=false" allowfullscreen="true" frameborder="0" width="498" height="314"></iframe><br />
+    <b>ERROR 400.</b><br />
+    <a href="/index">Go back to the main page</a>
 </c:if>
 <c:if test="${error==404}" >
-    Ой! Не могу найти, но я таки старался!. <b>ERROR 404.</b><br />
-    <a href="/index">Вернуться на главную</a>
+    <iframe src="//coub.com/embed/4jfpl?muted=false&autostart=true&originalSize=false&startWithHD=false" allowfullscreen="true" frameborder="0" width="498" height="314"></iframe><br />
+    <b>ERROR 404.</b>
+    <a href="/index">Go back to the main page</a>
 </c:if>
+<c:if test="${error==500}" >
+    <iframe src="//coub.com/embed/4jfpl?muted=false&autostart=true&originalSize=false&startWithHD=false" allowfullscreen="true" frameborder="0" width="498" height="314"></iframe><br />
+    <b>ERROR 500.</b> <a href="/index">Go back to the main page</a>
+</c:if>
+<br />
+${e}

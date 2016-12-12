@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
  * Created by idea on 02.12.2016.
  */
 public class AddcommentValidator implements Validator{
-    private final static Pattern NOHTML_PATTERN = Pattern.compile("[0-9a-zA-Zа-яА-ЯёЁіІЄєїЇ.'!?$:@*+&_,\\- ()\\r\\n\\s]*");
+    private final static Pattern NOHTML_PATTERN = Pattern.compile("[0-9a-zA-Zа-яА-ЯёЁіІЄєїЇ.'!?$:=;@*+&_,\\- ()\\r\\n\\s]*");
 
 
     @Override

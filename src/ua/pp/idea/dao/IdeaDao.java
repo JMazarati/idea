@@ -1,5 +1,6 @@
 package ua.pp.idea.dao;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import ua.pp.idea.entity.Idea;
 import java.util.List;
 
@@ -8,7 +9,14 @@ import java.util.List;
  */
 public interface IdeaDao {
 
-    public String findLastIdeaById(Long id);
 
-    public List<Idea> findAllIdeaSortByDate();
+    List<Idea> getAll();
+
+    Idea findIdeaByID(int id);
+
+    void createIdea(Idea idea);
+
+    void deleteIdeaById(Idea idea);
+
+    void updateIdeaById(Idea idea);
 }
