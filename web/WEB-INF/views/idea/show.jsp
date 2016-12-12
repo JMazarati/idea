@@ -106,9 +106,8 @@
             </div>
 
 
-    <div id="titleComments">Comments:</div>
+    <div class="pull-left col-xs-12" id="titleComments">Comments:</div>
     <div id="comments">
-
         <c:if test="${not empty child}">
         <c:forEach items="${child}" var="child">
         <c:if test="${child.id eq child.parentLink}">
@@ -121,8 +120,7 @@
         </c:forEach>
     </c:if>
 
-    <span style="font-size: x-small; "
-          id="reply_span"><i> ${child.userLink} ${child.dateComment}</i>&nbsp;</span><br/>
+    <span id="reply_span"><i> ${child.userLink} ${child.dateComment}</i>&nbsp;</span><br/>
     <c:if test="${child.id ne child.parentLink}">
         <c:forEach var="cycle" begin="0" end="${child.depth}">
             &nbsp;
@@ -144,28 +142,28 @@
         </c:if>
     </div>
 
-
     <sec:authorize access="!isAnonymous()">
         <br/>
         <form:form method="post" action="${pageContext.servletContext.contextPath}/addcomments" id="f2">
             <form:input type="hidden" path="ideaLink" value="${check.id}"/>
             <form:input type="hidden" path="userLink" value="${username}"/>
             <form:input id="parentLink" type="hidden" path="parentLink" value=""/>
-            <table>
+            <table id="inputComments">
                 <tr>
-                    <td>Введите комментарий:</td>
-                    <td></td>
+                    Введите комментарий:
                 </tr>
                 <tr>
-                    <td><form:textarea id="commentField" path="note" maxlength="256"/></td>
-                    <td><input type="submit" value="Submit"/></td>
+                    <form:textarea id="commentField" class="form-control" path="note" maxlength="256" rows="3"/>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="btnComments" class="btn btn-default" value="Submit"/></td>
                 </tr>
                 <tr>
                     <td><span class="error"><form:errors path="note"/></span></td>
                 </tr>
             </table>
         </form:form>
-        <button onclick="setCommentId(0)">root</button>
+        <button id="commentIdea" class="btn btn-default" onclick="setCommentId(0)">Comment idea</button>
         <br/>
 
     </sec:authorize>

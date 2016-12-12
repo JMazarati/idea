@@ -12,6 +12,12 @@
 #logo{
     margin: 0px 50px;
 }
+a{
+    color: #390457;
+}
+a:hover{
+    color: #9819c1;
+}
 #containerHeader{
     font-size: 2em;
     color: #390457;
@@ -166,7 +172,6 @@
 #title{
     font-size: 16px;
     font-weight: bold;
-    text-decoration: underline;
     color: #390457;
 }
 #username, #date, #checkID{
@@ -180,10 +185,9 @@
     text-decoration: underline;
 }
 /*Show idea*/
-#delete_update{
-    text-align: right;
+.glyphicon{
+    float:right;
     margin: auto 10px;
-    color: #696969;
     font-size: 12px;
 }
 .showIdea{
@@ -270,26 +274,42 @@
     border-style: none;
     background-color: #ffffff;
 }
+/*Comments*/
 #titleComments{
     font-weight: bold;
-    border-bottom: 1px solid rgba(108, 4, 158, 0.24);
-    border-top: 1px solid rgba(108, 4, 158, 0.24);
-}
-#usernameComments, #dateComments{
-    color: #696969;
-    font-size: 12px;
-}
-#dateComments{
-    text-align: right;
-}
-#textOfComment{
-    text-align: justify;
     border-bottom: 1px solid rgba(108, 4, 158, 0.24);
     border-top: 1px solid rgba(108, 4, 158, 0.24);
 }
 #replyComments{
     text-align: right;
 }
+.reply_to{
+    color: #390457;
+    border-bottom: 1px dotted dimgrey;
+}
+.reply_to:hover{
+    cursor: pointer;
+    color: rgba(38, 16, 232, 0.71);
+}
+#reply_span{
+    background-color: rgba(104, 9, 159, 0.2);
+    color: #24062e;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(108, 4, 158, 0.24);
+    border-top: 1px solid rgba(108, 4, 158, 0.24);
+}
+#btnComments{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 715px;
+}
+#inputComments{
+    float: left;
+}
+#commentIdea{
+    float: right;
+}
+/*End of Comments*/
 #tableAddIdea{
     margin: auto;
     width: 70%;
@@ -298,21 +318,6 @@
     position: relative;
     margin-left: 800px;
     margin-top: 20px;
-}
-#delete_update{
-    float:right;
-}
-.reply_to{
-    color: blue;
-    /*border-bottom: 1px dotted dimgrey;*/
-}
-
-.reply_to:hover{
-    cursor: pointer;
-    color: red;
-}
-#reply_span{
-    background-color: #dddddd;
 }
 /* Footer */
 #foo {

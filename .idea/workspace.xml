@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3f85692f-bba7-4975-88e2-78571ba6e466" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/idea/editidea.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/idea/editidea.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/css/main.css" afterPath="$PROJECT_DIR$/web/resources/css/main.css" />
     </list>
     <ignored path="idea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,44 +36,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application_en.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_en.properties">
-          <provider editor-type-id="ResourceBundle">
-            <state />
-          </provider>
+      <file leaf-file-name="reg.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/reg.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+            <state relative-caret-position="289">
+              <caret line="29" column="60" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="79" column="66" selection-start-line="79" selection-start-column="66" selection-end-line="79" selection-end-column="66" />
+            <state relative-caret-position="916">
+              <caret line="171" column="3" selection-start-line="171" selection-start-column="3" selection-end-line="171" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addidea.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/addidea.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-27">
-              <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/resources/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
+            <state relative-caret-position="125">
+              <caret line="281" column="1" selection-start-line="281" selection-start-column="1" selection-end-line="281" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -117,9 +104,9 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/i18n/application_en.properties" />
         <option value="$PROJECT_DIR$/web/WEB-INF/i18n/application_ru.properties" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/viewidea.jsp" />
-        <option value="$PROJECT_DIR$/web/resources/css/main.css" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/editidea.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp" />
+        <option value="$PROJECT_DIR$/web/resources/css/main.css" />
       </list>
     </option>
   </component>
@@ -944,7 +931,7 @@
       <workItem from="1481277552780" duration="702000" />
       <workItem from="1481296237890" duration="1265000" />
       <workItem from="1481540877684" duration="2226000" />
-      <workItem from="1481543450833" duration="4383000" />
+      <workItem from="1481543450833" duration="10313000" />
     </task>
     <task id="LOCAL-00001" summary="первый комит">
       <created>1479902116558</created>
@@ -1065,11 +1052,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481288131492</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Merge with Master">
+      <created>1481549265588</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1481549265588</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144628000" />
+    <option name="totallyTimeSpent" value="150558000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1094,7 +1088,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07255521" sideWeight="0.49092284" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2700491" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26971608" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.02618658" sideWeight="0.4924357" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1159,7 +1153,8 @@
     <MESSAGE value="Updated Home, added rating" />
     <MESSAGE value="rm workspace.xml" />
     <MESSAGE value="Categories added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Categories added" />
+    <MESSAGE value="Merge with Master" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge with Master" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1357,14 +1352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/reg.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp" />
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/footer.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -1438,14 +1425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_en.properties">
       <provider editor-type-id="ResourceBundle">
         <state />
@@ -1461,14 +1440,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-107">
           <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/viewidea.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1497,10 +1468,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/viewidea.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/reg.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="29" column="60" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="79" column="66" selection-start-line="79" selection-start-column="66" selection-end-line="79" selection-end-column="66" />
+        <state relative-caret-position="916">
+          <caret line="171" column="3" selection-start-line="171" selection-start-column="3" selection-end-line="171" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="281" column="1" selection-start-line="281" selection-start-column="1" selection-end-line="281" selection-end-column="1" />
           <folding />
         </state>
       </provider>
