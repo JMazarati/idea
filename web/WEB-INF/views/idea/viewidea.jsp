@@ -1,5 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="dmf" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Dark
@@ -10,7 +12,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <spring:message code="label_link_2" var="labellink2" />
 <spring:message code="error_nothing_found" var="enf" />
-<h1>${labelcontactlist}</h1>
+
+Sort by: <a href="${date}">Date</a> <a href="${rating}">Rating</a>
 <c:if test="${not empty list}">
     <table border="1">
         <thead>
@@ -18,6 +21,7 @@
             <th>ID</th>
             <th>User name</th>
             <th>Caption of idea</th>
+            <th>Rating</th>
             <th>View</th>
 
         </tr>
@@ -29,6 +33,7 @@
                 <th><a href="viewidea/${list.id}">${list.id}</a></th>
                 <th>${list.username}</th>
                 <th>${list.caption}</th>
+                <th>${list.rating}</th>
                 <th><a href="viewidea/${list.id}">view</a></th>
 
             </tr>

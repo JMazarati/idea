@@ -1,8 +1,6 @@
 package ua.pp.idea.dao;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Repository;
 import ua.pp.idea.dao.crud.*;
@@ -21,33 +19,41 @@ import java.util.Map;
 @Repository
 public class IdeaDaoImpl implements Serializable, IdeaDao {
     private DataSource dataSource;
-    private SelectAllIdea selectAllIdea;
+    private SelectAllIdeaOrderByRating selectAllIdeaOrderByRating;
+    private SelectAllIdeaOrderByDate selectAllIdeaOrderByDate;
     private SelectIdeaById selectIdeaById;
     private InsertNewIdea insertNewIdea;
     private DeleteIdeaByID deleteIdeaByID;
     private UpdateIdeaByID updateIdeaByID;
-    private SelectIdeaByTag selectIdeaByTag;
-    private SelectIdeaByCategory selectIdeaByCategory;
+    private SelectIdeaByTagOrderByDate selectIdeaByTagOrderByDate;
+    private SelectIdeaByTagOrderByRating selectIdeaByTagOrderByRating;
+    private SelectIdeaByCategoryOrderByDate selectIdeaByCategoryOrderByDate;
+    private SelectIdeaByCategoryOrderByRating selectIdeaByCategoryOrderByRating;
 
 
     @Resource(name = "dataSource")
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
-        this.selectAllIdea = new SelectAllIdea(dataSource);
+        this.selectAllIdeaOrderByRating = new SelectAllIdeaOrderByRating(dataSource);
+        this.selectAllIdeaOrderByDate = new SelectAllIdeaOrderByDate(dataSource);
         this.selectIdeaById = new SelectIdeaById(dataSource);
         this.insertNewIdea = new InsertNewIdea(dataSource);
         this.deleteIdeaByID = new DeleteIdeaByID(dataSource);
         this.updateIdeaByID = new UpdateIdeaByID(dataSource);
-        this.selectIdeaByTag = new SelectIdeaByTag(dataSource);
-        this.selectIdeaByCategory = new SelectIdeaByCategory(dataSource);
+        this.selectIdeaByTagOrderByDate = new SelectIdeaByTagOrderByDate(dataSource);
+        this.selectIdeaByTagOrderByRating = new SelectIdeaByTagOrderByRating(dataSource);
+        this.selectIdeaByCategoryOrderByDate = new SelectIdeaByCategoryOrderByDate(dataSource);
+        this.selectIdeaByCategoryOrderByRating = new SelectIdeaByCategoryOrderByRating(dataSource);
+
 
     }
 
 
     @Override
-    public List<Idea> getAll() {
-
-        return selectAllIdea.execute();
+    public List<Idea> getAll(Boolean sort) {
+        if(sort)
+        return selectAllIdeaOrderByDate.execute();
+        else return selectAllIdeaOrderByRating.execute();
     }
 
     @Override
@@ -67,20 +73,22 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
     }
 
     @Override
-    public List<Idea> findIdeaByTag(String tag) {
+    public List<Idea> findIdeaByTag(String tag,Boolean sort) {
         Map<String, Object> paramMap = new HashMap<String, Object>();
         paramMap.put("tags", tag.toLowerCase());
-
-        return selectIdeaByTag.executeByNamedParam(paramMap);
+        if(sort)
+        return selectIdeaByTagOrderByDate.executeByNamedParam(paramMap);
+        else return selectIdeaByTagOrderByRating.executeByNamedParam(paramMap);
 
     }
     @Override
-    public List<Idea> findIdeaByCategory(int category_link) {
+    public List<Idea> findIdeaByCategory(int category_link,Boolean sort) {
         Map<String, Object> paramMap = new HashMap<String, Object>();
+
         paramMap.put("category_link", category_link);
-
-        return selectIdeaByCategory.executeByNamedParam(paramMap);
-
+        if(sort)
+        return selectIdeaByCategoryOrderByDate.executeByNamedParam(paramMap);
+        else return selectIdeaByCategoryOrderByRating.executeByNamedParam(paramMap);
     }
 
     @PreAuthorize("isAuthenticated()")

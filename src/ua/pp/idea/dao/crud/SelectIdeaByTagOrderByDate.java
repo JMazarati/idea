@@ -12,11 +12,11 @@ import java.sql.Types;
 /**
  * Created by Dark on 15.11.2016.
  */
-public class SelectIdeaByTag extends MappingSqlQuery<Idea> {
+public class SelectIdeaByTagOrderByDate extends MappingSqlQuery<Idea> {
     private static final String SQL_SELECT_IDEA_BY_ID = "SELECT i.id, i.txt, i.pict,i.video, i.caption, i.rating, i.count_like, i.count_dislike, u.username, i.date_create, cat.title,i.tags FROM user_table u " +
-            "INNER JOIN idea_table i ON(i.owner=u.id) INNER JOIN category_table cat ON (cat.id=i.category_link)  WHERE lower(i.tags) LIKE :tags";
+            "INNER JOIN idea_table i ON(i.owner=u.id) INNER JOIN category_table cat ON (cat.id=i.category_link)  WHERE lower(i.tags) LIKE :tags ORDER BY date_create";
 
-    public SelectIdeaByTag(DataSource dataSource) {
+    public SelectIdeaByTagOrderByDate(DataSource dataSource) {
         super(dataSource, SQL_SELECT_IDEA_BY_ID);
         super.declareParameter(new SqlParameter("tags", Types.VARCHAR));
     }

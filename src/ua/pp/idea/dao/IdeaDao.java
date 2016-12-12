@@ -10,11 +10,11 @@ import java.util.List;
 public interface IdeaDao {
 
 
-    List<Idea> getAll();
+    List<Idea> getAll(Boolean sort);
 
     Idea findIdeaByID(int id);
 
-    List<Idea> findIdeaByCategory(int category_link);
+    List<Idea> findIdeaByCategory(int category_link,Boolean sort);
 
     void createIdea(Idea idea);
 
@@ -22,5 +22,5 @@ public interface IdeaDao {
 
     void updateIdeaById(Idea idea);
 
-    List<Idea> findIdeaByTag(String tag);
+    List<Idea> findIdeaByTag(String tag,Boolean sort);
 }
