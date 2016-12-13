@@ -6,6 +6,10 @@
 <%--<spring:message code="message_viewidea" var="messageviewidea"/>--%>
 <spring:message code="label_delete" var="labeldelete"/>
 <spring:message code="label_update" var="labelupdate"/>
+<spring:message code="label_button_submit" var="label_button_submit"/>
+<spring:message code="label_comments" var="label_comments"/>
+<spring:message code="label_reply" var="label_reply"/>
+<spring:message code="label_comment_idea" var="label_comment_idea"/>
 
 <div id="delete_update">
 
@@ -106,7 +110,7 @@
             </div>
 
 
-    <div class="pull-left col-xs-12" id="titleComments">Comments:</div>
+    <div class="pull-left col-xs-12" id="titleComments">${label_comments}:</div>
     <div id="comments">
         <c:if test="${not empty child}">
         <c:forEach items="${child}" var="child">
@@ -135,7 +139,7 @@
 
 
         <sec:authorize access="!isAnonymous()">
-            <span class="reply_to" onclick="setCommentId(${child.id})">Reply</span>
+            <span class="reply_to" onclick="setCommentId(${child.id})">${label_reply}</span>
         </sec:authorize>
         <br/>
         </c:forEach>
@@ -156,14 +160,14 @@
                     <form:textarea id="commentField" class="form-control" path="note" maxlength="256" rows="3"/>
                 </tr>
                 <tr>
-                    <td><input type="submit" id="btnComments" class="btn btn-default" value="Submit"/></td>
+                    <td><input type="submit" id="btnComments" class="btn btn-default" value="${label_button_submit}"/></td>
                 </tr>
                 <tr>
                     <td><span class="error"><form:errors path="note"/></span></td>
                 </tr>
             </table>
         </form:form>
-        <button id="commentIdea" class="btn btn-default" onclick="setCommentId(0)">Comment idea</button>
+        <button id="commentIdea" class="btn btn-default" onclick="setCommentId(0)">${label_comment_idea}</button>
         <br/>
 
     </sec:authorize>

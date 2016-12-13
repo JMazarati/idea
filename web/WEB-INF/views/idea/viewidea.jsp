@@ -140,3 +140,7 @@
     <%--End of Categories--%>
 
 </div>
+
+<div>
+    <a class="back-to-top glyphicon glyphicon-arrow-up" href="/viewidea" title="Top">Back to top</a>
+</div>
