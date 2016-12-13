@@ -31,6 +31,7 @@
 <spring:message code="label_link_2" var="label_link_2"/>
 <spring:message code="label_link_3" var="label_link_3"/>
 <spring:message code="label_link_4" var="label_link_4"/>
+<spring:message code="label_link_5" var="label_link_5"/>
 <spring:message code="label_username" var="labelusername"/>
 <spring:message code="label_pwd" var="labelpwd"/>
 <spring:message code="label_registration" var="labelregistration"/>
@@ -132,7 +133,20 @@
         </sec:authorize>
 
         <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">
-            <a href="/admin">adminka</a><br/>
+            <nav class="nav nav-bar" id="menu" role="navigation">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" id="tab1Admin" class="active"><a href="/index">${label_link_3}</a></li>
+                    <li role="presentation" id="tab2Admin"><a href="/viewidea">${label_link_1}</a></li>
+                    <li role="presentation" id="tab3Admin"><a href="/addidea">${label_link_2}</a></li>
+                    <li role="presentation" id="tab4Admin"><a href="/myoffice">${label_link_4}</a></li>
+                    <li role="presentation" id="tab5Admin"><a href="/admin">${label_link_5}</a></li>
+                    <li class="pull-right">
+                        <div class="form-group" id="searchAdmin">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                    </li>
+                </ul>
+            </nav>
         </sec:authorize>
 
         <sec:authorize access="!isAnonymous()">
