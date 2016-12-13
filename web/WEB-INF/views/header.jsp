@@ -115,7 +115,7 @@
         </div>
 
         <%-- Menu --%>
-        <sec:authorize access="hasAnyRole('ROLE_USER','ROLE_OPERATOR', 'ROLE_ADMINISTRATOR')">
+        <sec:authorize access="hasAnyRole('ROLE_USER','ROLE_OPERATOR')">
             <nav class="nav nav-bar" id="menu" role="navigation">
                 <ul class="nav nav-tabs">
                     <li role="presentation" id="tab1" class="active"><a href="/index">${label_link_3}</a></li>
@@ -147,10 +147,6 @@
                     </li>
                 </ul>
             </nav>
-        </sec:authorize>
-
-        <sec:authorize access="!isAnonymous()">
-
         </sec:authorize>
 
         <sec:authorize access="isAnonymous()">
