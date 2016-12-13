@@ -10,7 +10,7 @@
 }
 /* HEADER */
 #logo{
-    margin: 0px 50px;
+    margin: 0 50px;
 }
 a{
     color: #390457;
@@ -127,7 +127,7 @@ a:hover{
 }
 /*View idea*/
 #list{
-    padding: 15px 30px 15px 0px;
+    padding: 15px 30px 15px 0;
 }
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
     color: #080808;
@@ -136,6 +136,9 @@ a:hover{
 }
 .page-header{
     margin: 10px 0 10px;
+}
+#sort{
+   margin: 20px auto;
 }
 .idea{
     border: 1px solid rgba(108, 4, 158, 0.24);
