@@ -57,22 +57,22 @@
 
 <form:form method="POST" action="${pageContext.servletContext.contextPath}/addideapost" enctype="multipart/form-data">
     <h4 class="text-center page-header">${label_add_your_idea}</h4>
-    <table class="form-horizontal" id="tableAddIdea">
+    <table class="form-horizontal" id="tableAddIdea" >
         <tr>
             <td><form:label path="caption">${label_title}</form:label></td>
             <td><form:input path="caption" class="form-control" maxlength="128"/></td>
             <td><span class="error" ><form:errors path="caption" /></span></td>
         </tr>
         <tr>
-            <td><form:label path="category">${label_category}</form:label></td>
-            <td><form:select path="category" items="${cat}">
+            <td><form:label path="category" >${label_category}</form:label></td>
+            <td><form:select path="category" items="${cat}" id="sel">
 
 
             </form:select></td>
         </tr>
         <tr>
             <td><form:label path="txt">${label_text}</form:label></td>
-            <td><form:textarea  class="form-control" path="txt" cols="30" rows="5"/></td>
+            <td><form:textarea  class="form-control" path="txt" cols="30" rows="5" /></td>
             <td><span class="error" ><form:errors path="txt" /></span></td>
         </tr>
         <tr>

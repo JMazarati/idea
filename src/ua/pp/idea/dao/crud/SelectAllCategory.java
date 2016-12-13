@@ -11,7 +11,7 @@ import java.sql.SQLException;
  * Created by Dark on 03.12.2016.
  */
 public class SelectAllCategory extends MappingSqlQuery<Category> {
-    private static final String SQL_SELECT_ALL_CATEGORY="SELECT id,parent,title FROM category_table";
+    private static final String SQL_SELECT_ALL_CATEGORY="SELECT id,parent,title FROM category_table ORDER BY id";
 
     public SelectAllCategory(DataSource ds) {
         super(ds, SQL_SELECT_ALL_CATEGORY);
