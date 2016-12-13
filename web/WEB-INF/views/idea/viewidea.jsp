@@ -11,6 +11,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <spring:message code="label_link_2" var="labellink2" />
+<spring:message code="error_nothing_found" var="enf" />
 <spring:message code="label_categories" var="label_categories" />
 <spring:message code="label_viewideas_title" var="label_viewideas_title" />
 <spring:message code="IT" var="IT" />
@@ -47,79 +48,57 @@
 
 <div class="row">
 
-        <div class="col-xs-10">
-            <h4 class="page-header text-center">${label_viewideas_title}</h4>
-            <c:if test="${not empty list}">
-<spring:message code="error_nothing_found" var="enf" />
+    <div class="col-xs-10">
+        <h4 class="page-header text-center">${label_viewideas_title}</h4>
+        Sort by: <a href="${date}">Date</a> <a href="${rating}">Rating</a>
+        <c:if test="${not empty list}">
 
-Sort by: <a href="${date}">Date</a> <a href="${rating}">Rating</a>
-<c:if test="${not empty list}">
-    <table border="1">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>User name</th>
-            <th>Caption of idea</th>
-            <th>Rating</th>
-            <th>View</th>
+            <c:forEach items="${list}" var="list">
 
-                <c:forEach items="${list}" var="list">
-        </tr>
-        </thead>
-
-        <tbody>
-        <c:forEach items="${list}" var="list">
-            <tr>
-                <th><a href="viewidea/${list.id}">${list.id}</a></th>
-                <th>${list.username}</th>
-                <th>${list.caption}</th>
-                <th>${list.rating}</th>
-                <th><a href="viewidea/${list.id}">view</a></th>
-
-                    <div class="idea">
-                        <div class="row row1">
-                            <div id="tags" class="col-xs-4">${list.tags}</div>
-                            <div id="title" class="col-xs-8">${list.caption}</div>
-                        </div>
-                        <div class="row row1">
-                            <div id="username" class="col-xs-4">${list.username}</div>
-                            <div id="date" class="col-xs-8">${list.date_create}</div>
-                        </div>
-                        <div id="textOfIdea" class="text-center">${list.txt}</div>
-                        <div class="row row1">
-                            <div id="rating" class="col-xs-10">
-                                <div id="reviewLightbulb-input">
-                                    <input id="lightbulb-4" type="radio" name="reviewLightbulb"  value ="5"/>
-                                    <label title="gorgeous" for="lightbulb-4"></label>
-
-                                    <input id="lightbulb-3" type="radio" name="reviewLightbulb"  value ="4"/>
-                                    <label title="good" for="lightbulb-3"></label>
-
-                                    <input id="lightbulb-2" type="radio" name="reviewLightbulb"  value ="3"/>
-                                    <label title="regular" for="lightbulb-2"></label>
-
-                                    <input id="lightbulb-1" type="radio" name="reviewLightbulb"  value ="2"/>
-                                    <label title="poor" for="lightbulb-1"></label>
-
-                                    <input id="lightbulb-0" type="radio" name="reviewLightbulb" value ="1"/>
-                                    <label title="bad" for="lightbulb-0"></label>
-                                </div>
-                                    ${list.rating}
-                            </div>
-                            <div id="view" class="col-xs-2"><a href="viewidea/${list.id}">View more</a></div>
-                        </div>
+                <div class="idea">
+                    <div class="row row1">
+                        <div id="tags" class="col-xs-4">${list.tags}</div>
+                        <div id="title" class="col-xs-8">${list.caption}</div>
                     </div>
+                    <div class="row row1">
+                        <div id="username" class="col-xs-4">${list.username}</div>
+                        <div id="date" class="col-xs-8">${list.date_create}</div>
+                    </div>
+                    <div id="textOfIdea" class="text-center">${list.txt}</div>
+                    <div class="row row1">
+                        <div id="rating" class="col-xs-10">
+                            <div id="reviewLightbulb-input">
+                                <input id="lightbulb-4" type="radio" name="reviewLightbulb"  value ="5"/>
+                                <label title="gorgeous" for="lightbulb-4"></label>
 
-                </c:forEach>
+                                <input id="lightbulb-3" type="radio" name="reviewLightbulb"  value ="4"/>
+                                <label title="good" for="lightbulb-3"></label>
 
-            </c:if>
-            <c:if test="${empty list}">
+                                <input id="lightbulb-2" type="radio" name="reviewLightbulb"  value ="3"/>
+                                <label title="regular" for="lightbulb-2"></label>
 
-    <img src="<c:url value="/resources/pict/10753921.jpg" />" /> <br />
-   ${enf} <a href="/addidea">${labellink2}</a><br/>
+                                <input id="lightbulb-1" type="radio" name="reviewLightbulb"  value ="2"/>
+                                <label title="poor" for="lightbulb-1"></label>
 
-            </c:if>
-</div>
+                                <input id="lightbulb-0" type="radio" name="reviewLightbulb" value ="1"/>
+                                <label title="bad" for="lightbulb-0"></label>
+                            </div>
+                                ${list.rating}
+                        </div>
+                        <div id="view" class="col-xs-2"><a href="viewidea/${list.id}">View more</a></div>
+                    </div>
+                </div>
+
+            </c:forEach>
+
+        </c:if>
+        <c:if test="${empty list}">
+
+            <img src="<c:url value="/resources/pict/10753921.jpg" />" /> <br />
+            ${enf} <a href="/addidea">${labellink2}</a><br/>
+
+        </c:if>
+    </div>
 
     <%--Categories--%>
     <div id="list" class="list-group col-xs-2">
