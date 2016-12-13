@@ -1,7 +1,6 @@
 package ua.pp.idea.controller;
 
 import org.apache.commons.io.FileUtils;
-import org.postgresql.util.PSQLException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -22,8 +21,6 @@ import ua.pp.idea.validator.AddideaValidator;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
-import java.lang.reflect.Method;
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.List;
@@ -59,12 +56,55 @@ public class IdeaController {
     }
 
     @RequestMapping(value = "/viewidea", method = RequestMethod.GET)
-    public String ViewIdea(@ModelAttribute() Idea myidea, Model uiModel) {
-        List<Idea> list = ide.getAll();
+    public String ViewIdea(@RequestParam(defaultValue = "true") String sort, Model uiModel, RedirectAttributes redirectAttributes) {
+        List<Idea> list;
+        try {
+            list = ide.getAll(Boolean.valueOf(sort));
+        } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("e", e);
+            return "redirect:/userregerror?error=6";
+        }
+        uiModel.addAttribute("date", "/viewidea?sort=true");
+        uiModel.addAttribute("rating", "/viewidea?sort=false");
         uiModel.addAttribute("list", list);
 
         return "viewidea";
     }
+    //END OF BLOCK
+    //------------------------------------------------------------------------------------------------------------------
+    //SELECT IDEA BY TAG
+    @RequestMapping(value = "/tags", method = RequestMethod.GET)
+    public String ViewIdeaByTag(@RequestParam(value = "tag", defaultValue = "") String tag, @RequestParam(defaultValue = "true") String sort, Model uiModel) {
+        List<Idea> list;
+        try {
+            list = ide.findIdeaByTag("%" + tag + "%", Boolean.valueOf(sort));
+        } catch (Exception e) {
+            return "redirect:/userregerror?error=6";
+        }
+
+        uiModel.addAttribute("date", "/tags?tag=" + tag + "&sort=true");
+        uiModel.addAttribute("rating", "/tags?tag=" + tag + "&sort=false");
+        uiModel.addAttribute("list", list);
+        return "viewidea";
+    }
+    //END OF BLOCK
+    //------------------------------------------------------------------------------------------------------------------
+    //SELECT IDEA BY CATEGORY
+    @RequestMapping(value = "/category", method = RequestMethod.GET)
+    public String ViewIdeaByCat(@RequestParam(value = "cat", defaultValue = "0") String cat, @RequestParam(defaultValue = "true") String sort, Model uiModel) {
+        List<Idea> list;
+        try {
+            list = ide.findIdeaByCategory(Integer.parseInt(cat), Boolean.valueOf(sort));
+        } catch (NumberFormatException ex) {
+            return "redirect:/userregerror?error=6";
+
+        }
+        uiModel.addAttribute("date", "/category?cat=" + cat + "&sort=true");
+        uiModel.addAttribute("rating", "/category?cat=" + cat + "&sort=false");
+        uiModel.addAttribute("list", list);
+        return "viewidea";
+    }
+
 
     @RequestMapping(value = "/addidea", method = RequestMethod.GET)
     public String updateForm(@ModelAttribute Idea myIdea, Model model) {
@@ -83,6 +123,7 @@ public class IdeaController {
         return "addidea";
 
     }
+
     @PreAuthorize("isAuthenticated()")
     @RequestMapping(value = "/addideapost", method = RequestMethod.POST)
     public String update(@ModelAttribute Idea myIdea, HttpServletRequest httpServletRequest, Model model, RedirectAttributes redirectAttributes, BindingResult bindingResult,
@@ -141,13 +182,15 @@ public class IdeaController {
     // SHOW IDEA PAGE BLOCK AND SHOW COMMENTS BLOCK
 
     @RequestMapping(value = "/viewidea/{id}", method = RequestMethod.GET)
-    public String showid(@PathVariable("id") String s, Model myModel, Comment myComment,Rating rating) {
+    public String showid(@PathVariable("id") String s, Model myModel, Comment myComment, Rating rating) {
 
 
         ArrayList<Comment> allComments = new ArrayList<>();
         Map<Integer, String> voteList = new LinkedHashMap<>();
-        for(int i=1;i<6;i++){voteList.put(i,i+"");}
-        myModel.addAttribute("votelist",voteList);
+        for (int i = 1; i < 6; i++) {
+            voteList.put(i, i + "");
+        }
+        myModel.addAttribute("votelist", voteList);
 
 
         try {
@@ -176,7 +219,7 @@ public class IdeaController {
 
         BindingResult bindingResult = (BindingResult) myModel.asMap().get("b1");
         myModel.addAttribute("command", myComment);
-        myModel.addAttribute("rcommand",rating);
+        myModel.addAttribute("rcommand", rating);
         myModel.addAttribute(BindingResult.class.getName() + ".command", bindingResult);
         return "show";
     }
@@ -257,14 +300,13 @@ public class IdeaController {
             myModel.addAttribute("command", myIdea);
             myModel.addAttribute(BindingResult.class.getName() + ".command", bindingResult);
             return "editidea";
-        }
-        else return "redirect:/userregerror?error=7";
+        } else return "redirect:/userregerror?error=7";
     }
 
     @PreAuthorize("isAuthenticated()")
     @RequestMapping(value = "/editideapost", method = RequestMethod.POST)
     public String editideaupd(@ModelAttribute Idea myIdea, HttpServletRequest httpServletRequest,
-                              RedirectAttributes redirectAttributes, RedirectAttributes uerror,BindingResult bindingResult, @RequestParam(value = "p", required = false) MultipartFile image) {
+                              RedirectAttributes redirectAttributes, RedirectAttributes uerror, BindingResult bindingResult, @RequestParam(value = "p", required = false) MultipartFile image) {
         myIdea.setFile(image);
         String scheme = httpServletRequest.getScheme() + "://";
         String serverName = httpServletRequest.getServerName();
@@ -285,34 +327,35 @@ public class IdeaController {
         try {
             if (myIdea.getUsername().toLowerCase().equals(SecurityContextHolder.getContext().getAuthentication().getName().toString().toLowerCase()) ||
                     SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString().equals("[ROLE_ADMINISTRATOR]"))
-            ide.updateIdeaById(myIdea);
+                ide.updateIdeaById(myIdea);
             return rdrct + "/viewidea/" + myIdea.getId();
         } catch (Exception e) {
 
-            uerror.addFlashAttribute("usererror",e);
+            uerror.addFlashAttribute("usererror", e);
             return rdrct + "/userregerror?error=3";
         }
 
 
     }
+
     //END OF UPDATE IDEA BLOCK
     //------------------------------------------------------------------------------------------------------------------
     //INSERT UPDATE RATING BLOCK
     @PreAuthorize("isAuthenticated()")
-    @RequestMapping(value = "/vote",method = RequestMethod.POST)
-    public String vote(HttpServletRequest httpServletRequest, Rating rating,@RequestParam(value = "idea_link", required = false) int idea_link){
+    @RequestMapping(value = "/vote", method = RequestMethod.POST)
+    public String vote(HttpServletRequest httpServletRequest, Rating rating, @RequestParam(value = "idea_link", required = false) int idea_link) {
         String scheme = httpServletRequest.getScheme() + "://";
         String serverName = httpServletRequest.getServerName();
         String serverPort = (httpServletRequest.getServerPort() == 80) ? "" : ":" + httpServletRequest.getServerPort();
         String rdrct = "redirect:" + scheme + serverName + serverPort;
         rating.setUser_creator(SecurityContextHolder.getContext().getAuthentication().getName().toString());
         rating.setIdea_link(idea_link);
-        try{
+        try {
             voteDao.InsertRating(rating);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             voteDao.UpdateRating(rating);
         }
-        return rdrct+"/viewidea/"+rating.getIdea_link();
+        return rdrct + "/viewidea/" + rating.getIdea_link();
     }
 
     //END OF INSERT UPDATE RATING BLOCK

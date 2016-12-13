@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: Dark
@@ -7,7 +8,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<spring:message code="error_6" var="e6" />
 <c:if test="${error==0}" >
     <b>Вернуться на главную</b>
     <a href="/">Вернуться на главную</a>
@@ -36,7 +37,7 @@
 
 </c:if>
 <c:if test="${error==6}" >
-    Не верный параметр!
+    ${e6}
 
 </c:if>
 <c:if test="${error==7}" >

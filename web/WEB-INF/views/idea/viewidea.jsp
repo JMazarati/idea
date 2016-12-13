@@ -1,5 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="dmf" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Dark
@@ -48,8 +50,31 @@
         <div class="col-xs-10">
             <h4 class="page-header text-center">${label_viewideas_title}</h4>
             <c:if test="${not empty list}">
+<spring:message code="error_nothing_found" var="enf" />
+
+Sort by: <a href="${date}">Date</a> <a href="${rating}">Rating</a>
+<c:if test="${not empty list}">
+    <table border="1">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>User name</th>
+            <th>Caption of idea</th>
+            <th>Rating</th>
+            <th>View</th>
 
                 <c:forEach items="${list}" var="list">
+        </tr>
+        </thead>
+
+        <tbody>
+        <c:forEach items="${list}" var="list">
+            <tr>
+                <th><a href="viewidea/${list.id}">${list.id}</a></th>
+                <th>${list.username}</th>
+                <th>${list.caption}</th>
+                <th>${list.rating}</th>
+                <th><a href="viewidea/${list.id}">view</a></th>
 
                     <div class="idea">
                         <div class="row row1">
@@ -90,8 +115,8 @@
             </c:if>
             <c:if test="${empty list}">
 
-                <img src="<c:url value="/resources/pict/10753921.jpg" />" /> <br />
-                Ну введи хоть что нибудь! <a href="/addidea">${labellink2}</a><br/>
+    <img src="<c:url value="/resources/pict/10753921.jpg" />" /> <br />
+   ${enf} <a href="/addidea">${labellink2}</a><br/>
 
             </c:if>
 </div>
