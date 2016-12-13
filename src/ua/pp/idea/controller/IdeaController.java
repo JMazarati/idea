@@ -64,6 +64,13 @@ public class IdeaController {
             redirectAttributes.addFlashAttribute("e", e);
             return "redirect:/userregerror?error=6";
         }
+        Map<Integer, String> category = new LinkedHashMap<Integer, String>();
+
+        for (Category item : catdi.getAllCategory()) {
+            category.put(item.getId(), item.getTitle());
+        }
+
+        uiModel.addAttribute("cat", category);
         uiModel.addAttribute("date", "/viewidea?sort=true");
         uiModel.addAttribute("rating", "/viewidea?sort=false");
         uiModel.addAttribute("list", list);
@@ -81,7 +88,12 @@ public class IdeaController {
         } catch (Exception e) {
             return "redirect:/userregerror?error=6";
         }
+        Map<Integer, String> category = new LinkedHashMap<Integer, String>();
 
+        for (Category item : catdi.getAllCategory()) {
+            category.put(item.getId(), item.getTitle());
+        }
+        uiModel.addAttribute("cat", category);
         uiModel.addAttribute("date", "/tags?tag=" + tag + "&sort=true");
         uiModel.addAttribute("rating", "/tags?tag=" + tag + "&sort=false");
         uiModel.addAttribute("list", list);
@@ -99,6 +111,12 @@ public class IdeaController {
             return "redirect:/userregerror?error=6";
 
         }
+        Map<Integer, String> category = new LinkedHashMap<Integer, String>();
+
+        for (Category item : catdi.getAllCategory()) {
+            category.put(item.getId(), item.getTitle());
+        }
+        uiModel.addAttribute("cat", category);
         uiModel.addAttribute("date", "/category?cat=" + cat + "&sort=true");
         uiModel.addAttribute("rating", "/category?cat=" + cat + "&sort=false");
         uiModel.addAttribute("list", list);
