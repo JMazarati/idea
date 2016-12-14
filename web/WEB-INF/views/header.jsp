@@ -25,6 +25,7 @@
 <spring:url value="/" var="homelink"/>
 <spring:message code="label_login" var="labellogin"/>
 <spring:message code="label_logout" var="labellogout"/>
+<spring:message code="label_remember_me" var="label_remember_me"/>
 <spring:message code="label_welcome" var="labelwelcome"/>
 <spring:message code="menu_header_text" var="labelmenu"/>
 <spring:message code="label_link_1" var="label_link_1"/>
@@ -70,7 +71,7 @@
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td><input type="checkbox" checked="checked"> Remember me</td>
+                                            <td><input type="checkbox" checked="checked">${label_remember_me}</td>
                                         </tr>
                                         <tr>
                                             <td><input name="submit" type="submit" class="btn btn-default" id="submitBtn" value="${labellogin}"/></td>
