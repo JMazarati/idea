@@ -18,34 +18,34 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="..." width="150px" height="150px" alt="...">
+                <img src="..." width="100%" height="300px" alt="picture">
                 <div class="carousel-caption">
 
                 </div>
             </div>
             <div class="item">
-                <img src="..." alt="...">
-                <div class="carousel-caption">
-
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="..." alt="...">
+                <img src="..." alt="picture">
                 <div class="carousel-caption">
 
                 </div>
             </div>
 
             <div class="item">
-                <img src="..." alt="...">
+                <img src="..." alt="picture">
                 <div class="carousel-caption">
 
                 </div>
             </div>
 
             <div class="item">
-                <img src="..." alt="...">
+                <img src="..." alt="picture">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="..." alt="picture">
                 <div class="carousel-caption">
 
                 </div>

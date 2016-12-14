@@ -32,6 +32,7 @@
 <spring:message code="label_link_3" var="label_link_3"/>
 <spring:message code="label_link_4" var="label_link_4"/>
 <spring:message code="label_link_5" var="label_link_5"/>
+<spring:message code="label_search" var="label_search"/>
 <spring:message code="label_username" var="labelusername"/>
 <spring:message code="label_pwd" var="labelpwd"/>
 <spring:message code="label_registration" var="labelregistration"/>
@@ -124,7 +125,7 @@
                     <li role="presentation" id="tab4"><a href="/myoffice">${label_link_4}</a></li>
                     <li class="pull-right">
                         <div class="form-group" id="search">
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" placeholder="${label_search}">
                         </div>
                     </li>
 
@@ -142,7 +143,7 @@
                     <li role="presentation" id="tab5Admin"><a href="/admin">${label_link_5}</a></li>
                     <li class="pull-right">
                         <div class="form-group" id="searchAdmin">
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" placeholder="${label_search}">
                         </div>
                     </li>
                 </ul>
@@ -156,7 +157,7 @@
                     <li role="presentation" id="tab2Anon" ><a href="/viewidea">${label_link_1}</a></li>
                     <li class="pull-right">
                         <div class="form-group" id="searchAnon">
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" placeholder="${label_search}">
                         </div>
                     </li>
                 </ul>

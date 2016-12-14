@@ -191,7 +191,7 @@ a:hover{
 .glyphicon{
     float:right;
     margin: auto 10px;
-    font-size: 12px;
+    font-size: 14px;
 }
 .showIdea{
     margin: auto;
@@ -242,7 +242,7 @@ a:hover{
     cursor: pointer;
     margin-right: 10px;
     position: relative;
-    z-index: 1;
+    z-index: 0;
 }
 #reviewLightbulb-input label:hover, #reviewLightbulb-input label:hover ~ label {
     background: url(/resources/pict/like.jpg);
@@ -301,17 +301,12 @@ a:hover{
     border-bottom: 1px solid rgba(108, 4, 158, 0.24);
     border-top: 1px solid rgba(108, 4, 158, 0.24);
 }
-#btnComments{
-    position: relative;
-    margin-top: 10px;
-    margin-left: 690px;
-    float: right;
-}
 #inputComments{
     float: left;
 }
 #commentIdea{
-    float: right;
+    position: relative;
+    margin-left: 250px;
 }
 /*End of Comments*/
 #tableAddIdea{

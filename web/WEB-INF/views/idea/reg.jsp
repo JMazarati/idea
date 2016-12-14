@@ -12,6 +12,8 @@
 <spring:message code="label_button_reset" var="label_button_reset"/>
 <spring:message code="label_button_submit" var="label_button_submit"/>
 <spring:message code="label_registration" var="label_registration"/>
+<spring:message code="label_email" var="label_email"/>
+<spring:message code="label_username" var="label_username"/>
 <spring:message code="label_login" var="label_login"/>
 <spring:message code="label_pwd" var="label_pwd"/>
 <spring:message code="label_pwd_confirm" var="label_pwd_confirm"/>
@@ -26,7 +28,7 @@
 
     <table class="form-horizontal" id="registration">
         <tr>
-            <td><form:label path="username">${label_login}</form:label></td>
+            <td><form:label path="username">${label_username}</form:label></td>
             <td><form:input path="username"  class="form-control" maxlength="50"/></td>
             <td><span class="error" >
                 <form:errors path="username" element="div"/>
@@ -34,7 +36,7 @@
             </td>
         </tr>
         <tr>
-            <td><form:label path="useremail">Email</form:label></td>
+            <td><form:label path="useremail">${label_email}</form:label></td>
             <td><form:input path="useremail"  class="form-control" maxlength="50"/></td>
             <td><span class="error" ><form:errors path="useremail" /></span></td>
         </tr>

@@ -14,6 +14,7 @@
 <spring:message code="label_sort" var="label_sort" />
 <spring:message code="label_rating" var="label_rating" />
 <spring:message code="label_date" var="label_date" />
+<spring:message code="label_more" var="label_more" />
 <spring:message code="error_nothing_found" var="enf" />
 <spring:message code="label_categories" var="label_categories" />
 <spring:message code="label_viewideas_title" var="label_viewideas_title" />
@@ -57,7 +58,7 @@
                             </div>
                                 ${list.rating}
                         </div>
-                        <div id="view" class="col-xs-2"><a href="viewidea/${list.id}">View more</a></div>
+                        <div id="view" class="col-xs-2"><a href="viewidea/${list.id}">${label_more}</a></div>
                     </div>
                 </div>
 

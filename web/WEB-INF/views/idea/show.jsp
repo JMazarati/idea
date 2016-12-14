@@ -159,15 +159,15 @@
                 <tr>
                     <form:textarea id="commentField" class="form-control" path="note" maxlength="256" rows="3"/>
                 </tr>
-                <tr>
-                    <td><input type="submit" id="btnComments" class="btn btn-default" value="${label_button_submit}"/></td>
+                <tr id="commentIdea" class="pull-right">
+                    <td><button class="btn btn-default" onclick="setCommentId(0)">${label_comment_idea}</button></td>
+                    <td><input type="submit" class="btn btn-default" value="${label_button_submit}"/></td>
                 </tr>
                 <tr>
                     <td><span class="error"><form:errors path="note"/></span></td>
                 </tr>
             </table>
         </form:form>
-        <button id="commentIdea" class="btn btn-default" onclick="setCommentId(0)">${label_comment_idea}</button>
         <br/>
 
     </sec:authorize>
