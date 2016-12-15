@@ -25,7 +25,7 @@
 
     <div class="col-xs-10">
         <h4 class="page-header text-center">${label_viewideas_title}</h4>
-        <h4 id="sort" class="text-center">${label_sort}: <a href="${date}">${lsdate}</a> <a href="${rating}">${lsrating}</a></h4>
+        <h4 id="sort" class="text-center">${label_sort}: <a href="${date}">${label_date}</a> / <a href="${rating}">${label_rating}</a></h4>
         <c:if test="${not empty list}">
 
             <c:forEach items="${list}" var="list">

@@ -3,7 +3,6 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<spring:message code="message_viewidea" var="messageviewidea"/>
 <spring:message code="label_delete" var="labeldelete"/>
 <spring:message code="label_update" var="labelupdate"/>
 <spring:message code="label_button_submit" var="label_button_submit"/>
