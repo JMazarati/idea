@@ -1,4 +1,5 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Dark
@@ -28,3 +29,21 @@
         </div>
     </div>
 </footer>
+<c:set var="prop_tag" value="<%=(request.getParameter("tag")) %>"/>
+<c:set var="prop_cat" value="<%=(request.getParameter("cat")) %>"/>
+<c:set var="prop_lang" value="<%=(request.getParameter("lang")) %>"/>
+
+<c:if test="${prop_tag eq null && prop_cat eq null}">
+    <a href="${currentUrl}?lang=en">${labelEn}</a>
+    <a href="${currentUrl}?lang=ru">${labelRu}</a>
+</c:if>
+<c:if test="${prop_tag ne null || prop_cat ne null}">
+
+    <c:set var="rquery" value="${pageContext.request.queryString}"/>
+    <c:if test="${prop_lang ne null}">
+        <c:set var="rquery" value='${rquery.replaceAll("&lang=en",null)}'/>
+        <c:set var="rquery" value='${rquery.replaceAll("&lang=ru",null)}'/>
+    </c:if>
+    <a href="?${rquery}&lang=en">${labelEn}</a>
+    <a href="?${rquery}&lang=ru">${labelRu}</a>
+</c:if>

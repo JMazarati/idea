@@ -12,6 +12,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <spring:message code="label_link_2" var="labellink2" />
 <spring:message code="label_sort" var="label_sort" />
+<spring:message code="label_sort_data" var="lsdate" />
+<spring:message code="label_sort_rating" var="lsrating" />
 <spring:message code="label_rating" var="label_rating" />
 <spring:message code="label_date" var="label_date" />
 <spring:message code="label_more" var="label_more" />
@@ -23,7 +25,7 @@
 
     <div class="col-xs-10">
         <h4 class="page-header text-center">${label_viewideas_title}</h4>
-        <h4 id="sort" class="text-center">${label_sort}: <a href="${date}">${label_date}</a> / <a href="${rating}">${label_rating}</a></h4>
+        <h4 id="sort" class="text-center">${label_sort}: <a href="${date}">${lsdate}</a> <a href="${rating}">${lsrating}</a></h4>
         <c:if test="${not empty list}">
 
             <c:forEach items="${list}" var="list">

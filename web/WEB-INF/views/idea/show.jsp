@@ -3,7 +3,7 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%--<spring:message code="message_viewidea" var="messageviewidea"/>--%>
+<spring:message code="message_viewidea" var="messageviewidea"/>
 <spring:message code="label_delete" var="labeldelete"/>
 <spring:message code="label_update" var="labelupdate"/>
 <spring:message code="label_button_submit" var="label_button_submit"/>
@@ -41,7 +41,11 @@
                 <div id="date" class="col-xs-3">added ${check.date_create}</div>
             </div>
             <div id="category"> <span id="nameCategory">Category: </span>${check.category}</div>
-            <div id="tags"> <span id="nameTags">Tags: </span> ${check.tags}</div>
+            <div id="tags"> <span id="nameTags">Tags: </span>
+                <%-- Выводим тэги как ссылки из backEnd-a--%>
+                 <c:forEach items="${tags_separated}" var="ts">
+                     <a href="/tags?tag=${ts}&sort=true">${ts}</a> &nbsp;
+                     </c:forEach></div>
         </div>
 
         <div class="contentOfIdea">
@@ -85,8 +89,8 @@
                     <label title="bad" for="lightbulb-0"></label>
                 </div>
                 <sec:authorize access="!isAnonymous()">
-                <form:form action="${pageContext.servletContext.contextPath}/vote" method="post" id="f1" commandName="rcommand">
-                    <input name="idea_link" type="hidden" value="${check.id}" />
+                    <form:form action="${pageContext.servletContext.contextPath}/vote" method="post" id="f1" commandName="rcommand">
+                     <input name="idea_link" type="hidden" value="${check.id}"/>
                     <form:select path="rating" items="${votelist}"/>
                     <input type="submit" value="Submit"/>
                 </form:form>
@@ -172,5 +176,4 @@
 
     </sec:authorize>
     <br/>
-
 </div>

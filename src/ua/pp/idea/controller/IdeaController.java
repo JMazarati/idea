@@ -81,11 +81,13 @@ public class IdeaController {
     //------------------------------------------------------------------------------------------------------------------
     //SELECT IDEA BY TAG
     @RequestMapping(value = "/tags", method = RequestMethod.GET)
-    public String ViewIdeaByTag(@RequestParam(value = "tag", defaultValue = "") String tag, @RequestParam(defaultValue = "true") String sort, Model uiModel) {
+    public String ViewIdeaByTag(@RequestParam(value = "tag", defaultValue = "") String tag, @RequestParam(defaultValue = "true") String sort,
+                                Model uiModel,RedirectAttributes redirectAttributes) {
         List<Idea> list;
         try {
             list = ide.findIdeaByTag("%" + tag + "%", Boolean.valueOf(sort));
         } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("e", e);
             return "redirect:/userregerror?error=6";
         }
         Map<Integer, String> category = new LinkedHashMap<Integer, String>();
@@ -200,7 +202,7 @@ public class IdeaController {
     // SHOW IDEA PAGE BLOCK AND SHOW COMMENTS BLOCK
 
     @RequestMapping(value = "/viewidea/{id}", method = RequestMethod.GET)
-    public String showid(@PathVariable("id") String s, Model myModel, Comment myComment, Rating rating) {
+    public String showid(@PathVariable("id") String s, Model myModel,Idea myIdea, Comment myComment, Rating rating) {
 
 
         ArrayList<Comment> allComments = new ArrayList<>();
@@ -213,7 +215,8 @@ public class IdeaController {
 
         try {
             if (ide.findIdeaByID(Integer.parseInt(s)).getId() != 0) {
-                myModel.addAttribute("check", ide.findIdeaByID(Integer.parseInt(s)));
+                myIdea = ide.findIdeaByID(Integer.parseInt(s));
+                myModel.addAttribute("check", myIdea);
 
 
                 allComments.addAll(cdi.getAllCommentsByIdeaLink(Integer.parseInt(s)));
@@ -221,6 +224,7 @@ public class IdeaController {
 
                 myModel.addAttribute("child", allComments);
                 myModel.addAttribute("count", cdi.getCnt());
+                myModel.addAttribute("tags_separated",myIdea.tagString());
             } else {
                 return "redirect:/viewidea";
             }

@@ -104,7 +104,7 @@
                         <sec:authentication property="principal.username" var="username"/>
                         <table>
                             <tr>
-                                <td><div><a id="welcome" href="${addContactUrl}"><h4>${labelwelcome} ${username}</h4></a></div></td>
+                                <td><div><a id="welcome" href="/myoffice"><h4>${labelwelcome} ${username}</h4></a></div></td>
                             </tr>
                             <tr>
                                 <td><button id="logout" class="btn btn-default"><a href="<c:url value="/j_spring_security_logout"/>">${labellogout}</a></button></td>

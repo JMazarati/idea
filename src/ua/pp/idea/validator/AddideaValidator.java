@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
 public class AddideaValidator implements Validator {
     private final static Pattern NOHTML_PATTERN = Pattern.compile("[0-9a-zA-Zа-яА-ЯёЁіІЄєїЇ/\\Q.'!;:=?$@*+&_,\\E\\- ()\\r\\n\\s]*");
     private final static Pattern NOYOUTUBE_PATTERN = Pattern.compile("[0-9a-zA-Z_\\- ()]*");
+    private final static Pattern NOSPACE_PATTERN = Pattern.compile("[0-9a-zA-Zа-яА-ЯёЁіІЄєїЇ/\\Q.'!;:=?$@*+&_,\\E\\-()\\r\\n]*");
     @Override
     public boolean supports(Class<?> aClass) {
 
@@ -38,18 +39,19 @@ public class AddideaValidator implements Validator {
         if(!isHtml(idea.getCaption())){errors.rejectValue("caption","txt.Toshort","No html");}
         if(!isHtml(idea.getTxt())){errors.rejectValue("txt","txt.Toshort","No html");}
         if(!isYOUTUBE(idea.getVideo())){errors.rejectValue("video","video.Toshort","No YOUTUBE CODE");}
-        if(!isHtml(idea.getTags())){errors.rejectValue("tags","txt.Toshort","No html");}
+        if(!isSPACE(idea.getTags())){errors.rejectValue("tags","txt.Toshort","No html, No Space"); }
+
     }
 
     private boolean isHtml(String value) {
-
         return NOHTML_PATTERN.matcher(value).matches();
-
     }
     private boolean isYOUTUBE(String value) {
-
         return NOYOUTUBE_PATTERN.matcher(value).matches();
-
     }
+    private boolean isSPACE(String value) {
+        return NOSPACE_PATTERN.matcher(value).matches();
+    }
+
 
 }

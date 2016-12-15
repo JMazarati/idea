@@ -23,8 +23,6 @@ public class SelectAllCategory extends MappingSqlQuery<Category> {
         category.setId(resultSet.getInt("id"));
         category.setParent(resultSet.getInt("parent"));
         category.setTitle(resultSet.getString("title"));
-
-
         return category;
     }
 }
