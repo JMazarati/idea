@@ -3,6 +3,8 @@ package ua.pp.idea.entity;
 import org.springframework.web.multipart.MultipartFile;
 import java.sql.Date;
 import java.time.LocalDateTime;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by Dark on 07.11.2016.
@@ -127,4 +129,9 @@ public class Idea {
     }
 
 
+    public List tagString() {
+       //String[] s = getTags().split(",");
+        List<String> items = Arrays.asList(getTags().split("\\s*,\\s*"));
+        return items;
+    }
 }

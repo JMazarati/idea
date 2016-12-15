@@ -12,9 +12,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <spring:message code="label_link_2" var="labellink2" />
 <spring:message code="error_nothing_found" var="enf" />
+<spring:message code="label_sort" var="lsb" />
+<spring:message code="label_sort_data" var="lsdate" />
+<spring:message code="label_sort_rating" var="lsrating" />
 
-Sort by: <a href="${date}">Date</a> <a href="${rating}">Rating</a>
+
 <c:if test="${not empty list}">
+    ${lsb}: <a href="${date}">${lsdate}</a> <a href="${rating}">${lsrating}</a>
     <table border="1">
         <thead>
         <tr>
@@ -42,6 +46,7 @@ Sort by: <a href="${date}">Date</a> <a href="${rating}">Rating</a>
         </tbody>
     </table>
 </c:if>
+
 <c:if test="${empty list}">
 
     <img src="<c:url value="/resources/pict/10753921.jpg" />" /> <br />

@@ -7,7 +7,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>JAVA IT WEB APP</title>
+    <title><spring:message code="application_name"/> </title>
     <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/resources/css/main.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/resources/css/admin.css" />
     <link rel="shortcut icon" href="${pageContext.servletContext.contextPath}/resources/pict/idea.png" />
