@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="idea" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3f85692f-bba7-4975-88e2-78571ba6e466" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/InsertLikeordislike.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/UpdateLikeordislike.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/layouts/default.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/layouts/default.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/pp/idea/controller/IdeaController.java" afterPath="$PROJECT_DIR$/src/ua/pp/idea/controller/IdeaController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/pp/idea/dao/VoteDao.java" afterPath="$PROJECT_DIR$/src/ua/pp/idea/dao/VoteDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/pp/idea/dao/VoteDaoImpl.java" afterPath="$PROJECT_DIR$/src/ua/pp/idea/dao/VoteDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp" />
     </list>
     <ignored path="idea.iws" />
@@ -26,47 +35,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application_en.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_en.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="ResourceBundle">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application_ru.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_ru.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1564">
-              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="ResourceBundle">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="footer.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/footer.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
+            <state relative-caret-position="59">
               <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="139" column="20" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
+            <state relative-caret-position="2184">
+              <caret line="141" column="52" selection-start-line="141" selection-start-column="52" selection-end-line="141" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/header.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="109" column="53" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VoteDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/VoteDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateLikeordislike.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/crud/UpdateLikeordislike.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="13" column="137" selection-start-line="13" selection-start-column="137" selection-end-line="13" selection-end-column="137" />
+              <folding>
+                <marker date="1481921919166" expanded="true" signature="324:612" ph="UPDATE ratin... " />
+                <marker date="1481921919166" expanded="true" signature="388:442" ph="SELECT id FR... user_table" />
+                <marker date="1481921919166" expanded="true" signature="532:586" ph="SELECT id FR... user_table" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsertRating.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/crud/InsertRating.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <marker date="1481921649570" expanded="true" signature="316:482" ph="INSERT INTO rating_personal_table... " />
+                <marker date="1481921649570" expanded="true" signature="407:461" ph="SELECT id FR... user_table" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateRating.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/crud/UpdateRating.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="20" column="74" selection-start-line="20" selection-start-column="74" selection-end-line="20" selection-end-column="74" />
+              <folding>
+                <marker date="1481921594383" expanded="true" signature="317:591" ph="UPDATE ratin... " />
+                <marker date="1481921594383" expanded="true" signature="381:435" ph="SELECT id FR... user_table" />
+                <marker date="1481921594383" expanded="true" signature="511:565" ph="SELECT id FR... user_table" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsertLikeordislike.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/crud/InsertLikeordislike.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="13" column="103" selection-start-line="13" selection-start-column="103" selection-end-line="13" selection-end-column="103" />
+              <folding>
+                <marker date="1481921919072" expanded="true" signature="323:503" ph="INSERT INTO rating_personal_table... " />
+                <marker date="1481921919072" expanded="true" signature="421:475" ph="SELECT id FR... user_table" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IdeaController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/controller/IdeaController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3459">
+              <caret line="410" column="120" selection-start-line="410" selection-start-column="120" selection-end-line="410" selection-end-column="120" />
               <folding />
             </state>
           </provider>
@@ -103,7 +170,6 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/layouts/default.jsp" />
         <option value="$PROJECT_DIR$/.idea/.gitignore" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/editidea.jsp" />
-        <option value="$PROJECT_DIR$/src/ua/pp/idea/controller/IdeaController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/myoffice.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/reg.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/index.jsp" />
@@ -113,6 +179,12 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/i18n/application_ru.properties" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/footer.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/viewidea.jsp" />
+        <option value="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/UpdateLikeordislike.java" />
+        <option value="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/UpdateRating.java" />
+        <option value="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/InsertLikeordislike.java" />
+        <option value="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/InsertRating.java" />
+        <option value="$PROJECT_DIR$/src/ua/pp/idea/dao/VoteDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/ua/pp/idea/controller/IdeaController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp" />
       </list>
     </option>
@@ -168,7 +240,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -266,12 +337,22 @@
               <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="i18n" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -285,39 +366,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="i18n" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resource Bundle 'application'" />
-              <option name="myItemType" value="com.intellij.lang.properties.projectView.ResourceBundleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -337,15 +401,18 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\github\idea\web\resources\css" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ua.pp.idea.dao.crud" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\github\idea" />
       <recent name="C:\JavaProject\idea\out\artifacts\idea_war_exploded\WEB-INF" />
       <recent name="F:\github\idea\web\resources\pict" />
       <recent name="F:\github\idea\web\resources\js" />
       <recent name="F:\github\idea\web\WEB-INF\views\idea" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\github\idea\web\resources\css" />
     </key>
   </component>
   <component name="RunManager" selected="GlassFish Server.GlassFish">
@@ -914,7 +981,8 @@
       <workItem from="1481626022853" duration="2194000" />
       <workItem from="1481709273729" duration="9228000" />
       <workItem from="1481817594757" duration="3189000" />
-      <workItem from="1481834244082" duration="1266000" />
+      <workItem from="1481834244082" duration="2565000" />
+      <workItem from="1481916723232" duration="8380000" />
     </task>
     <task id="LOCAL-00001" summary="первый комит">
       <created>1479902116558</created>
@@ -1098,11 +1166,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481720157877</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Исправлена ошибка с кнопкой comment idea - снята с формы, перенесена в виде ссылки в другое место.">
+      <created>1481835585672</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1481835585672</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179157000" />
+    <option name="totallyTimeSpent" value="188836000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1202,7 +1277,8 @@
     <MESSAGE value="updated admin tab" />
     <MESSAGE value="updated styles, translation" />
     <MESSAGE value="translation corrected" />
-    <option name="LAST_COMMIT_MESSAGE" value="translation corrected" />
+    <MESSAGE value="Исправлена ошибка с кнопкой comment idea - снята с формы, перенесена в виде ссылки в другое место." />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлена ошибка с кнопкой comment idea - снята с формы, перенесена в виде ссылки в другое место." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1215,46 +1291,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_ru.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/header.jsp" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/footer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/reg.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/layouts/default.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1407,15 +1443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="104" selection-start-line="20" selection-start-column="104" selection-end-line="20" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/controller/IdeaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="119" column="52" selection-start-line="119" selection-start-column="38" selection-end-line="119" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1479,14 +1506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/editidea.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1506,14 +1525,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/footer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/viewidea.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-306">
@@ -1524,7 +1535,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_en.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="561">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
@@ -1533,10 +1544,96 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/footer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/entity/Rating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/crud/UpdateRating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="74" selection-start-line="20" selection-start-column="74" selection-end-line="20" selection-end-column="74" />
+          <folding>
+            <marker date="1481921594383" expanded="true" signature="317:591" ph="UPDATE ratin... " />
+            <marker date="1481921594383" expanded="true" signature="381:435" ph="SELECT id FR... user_table" />
+            <marker date="1481921594383" expanded="true" signature="511:565" ph="SELECT id FR... user_table" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/crud/InsertLikeordislike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="103" selection-start-line="13" selection-start-column="103" selection-end-line="13" selection-end-column="103" />
+          <folding>
+            <marker date="1481921919072" expanded="true" signature="323:503" ph="INSERT INTO rating_personal_table... " />
+            <marker date="1481921919072" expanded="true" signature="421:475" ph="SELECT id FR... user_table" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/crud/InsertRating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <marker date="1481921649570" expanded="true" signature="316:482" ph="INSERT INTO rating_personal_table... " />
+            <marker date="1481921649570" expanded="true" signature="407:461" ph="SELECT id FR... user_table" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/crud/UpdateLikeordislike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="137" selection-start-line="13" selection-start-column="137" selection-end-line="13" selection-end-column="137" />
+          <folding>
+            <marker date="1481921919166" expanded="true" signature="324:612" ph="UPDATE ratin... " />
+            <marker date="1481921919166" expanded="true" signature="388:442" ph="SELECT id FR... user_table" />
+            <marker date="1481921919166" expanded="true" signature="532:586" ph="SELECT id FR... user_table" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/VoteDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/controller/IdeaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3459">
+          <caret line="410" column="120" selection-start-line="410" selection-start-column="120" selection-end-line="410" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="139" column="20" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
+        <state relative-caret-position="2184">
+          <caret line="141" column="52" selection-start-line="141" selection-start-column="52" selection-end-line="141" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="109" column="53" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="53" />
           <folding />
         </state>
       </provider>

@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -103,20 +104,49 @@
                     <input type="submit" value="Submit"/>
                 </form:form>
             </sec:authorize>
-            <div id="totalRating"> total rating: ${check.rating}
+
+            <div id="totalRating"> total rating:<fmt:formatNumber type="number" maxFractionDigits="2" value="${check.rating}" />
 
             </div>
         </div>
 
         <div class="text-center col-xs-4">
+
+
             <div class="col-xs-4" id="nameLikes"> like/dislike</div>
             <div class="col-xs-8">
-                <button type="button" class="likes">
-                    <img src="/resources/pict/like.jpg" width="19" height="30" alt="likes">${check.count_like}
-                </button>
-                <button type="button" class="likes">
-                    <img src="/resources/pict/dislike.jpg" width="19" height="30" alt="dislikes">${check.count_dislike}
-                </button>
+                <sec:authorize access="isAuthenticated()">
+                <table>
+                    <tr>
+                        <td>
+                            <form:form method="post" action="${pageContext.servletContext.contextPath}/like" id="like" commandName="rcommand">
+                                <input name="idea_link" type="hidden" value="${check.id}"/>
+                                <input name="likeordislike" type="hidden" value="1"/>
+                                <button class="likes" type="submit" >
+                                    <img src="/resources/pict/like.jpg" width="19" height="30" alt="likes">${check.count_like}
+                                </button>
+                            </form:form>
+                        </td>
+                        <td>
+                            <form:form method="post" action="${pageContext.servletContext.contextPath}/like" id="dislike" commandName="rcommand">
+                                <input name="idea_link" type="hidden" value="${check.id}"/>
+                                <input name="likeordislike" type="hidden" value="-1"/>
+                                <button class="likes" type="submit">
+                                    <img src="/resources/pict/dislike.jpg" width="19" height="30" alt="dislikes">${check.count_dislike}
+                                </button>
+                            </form:form>
+                        </td>
+                    </tr>
+                </table>
+                </sec:authorize>
+                <sec:authorize access="isAnonymous()">
+                    <button class="likes" type="button" >
+                        <img src="/resources/pict/like.jpg" width="19" height="30" alt="likes">${check.count_like}
+                    </button>
+                    <button class="likes" type="button">
+                        <img src="/resources/pict/dislike.jpg" width="19" height="30" alt="dislikes">${check.count_dislike}
+                    </button>
+                </sec:authorize>
             </div>
         </div>
     </div>

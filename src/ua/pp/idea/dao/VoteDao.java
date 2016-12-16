@@ -10,4 +10,8 @@ import java.sql.SQLException;
 public interface VoteDao {
     void InsertRating(Rating rating);
     void UpdateRating(Rating rating);
+
+    void Insertlikeordislike(Rating rating);
+
+    void Updatelikeordislike(Rating rating);
 }

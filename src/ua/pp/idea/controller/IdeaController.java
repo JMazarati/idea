@@ -77,12 +77,13 @@ public class IdeaController {
 
         return "viewidea";
     }
+
     //END OF BLOCK
     //------------------------------------------------------------------------------------------------------------------
     //SELECT IDEA BY TAG
     @RequestMapping(value = "/tags", method = RequestMethod.GET)
     public String ViewIdeaByTag(@RequestParam(value = "tag", defaultValue = "") String tag, @RequestParam(defaultValue = "true") String sort,
-                                Model uiModel,RedirectAttributes redirectAttributes) {
+                                Model uiModel, RedirectAttributes redirectAttributes) {
         List<Idea> list;
         try {
             list = ide.findIdeaByTag("%" + tag + "%", Boolean.valueOf(sort));
@@ -101,6 +102,7 @@ public class IdeaController {
         uiModel.addAttribute("list", list);
         return "viewidea";
     }
+
     //END OF BLOCK
     //------------------------------------------------------------------------------------------------------------------
     //SELECT IDEA BY CATEGORY
@@ -202,7 +204,7 @@ public class IdeaController {
     // SHOW IDEA PAGE BLOCK AND SHOW COMMENTS BLOCK
 
     @RequestMapping(value = "/viewidea/{id}", method = RequestMethod.GET)
-    public String showid(@PathVariable("id") String s, Model myModel,Idea myIdea, Comment myComment, Rating rating) {
+    public String showid(@PathVariable("id") String s, Model myModel, Idea myIdea, Comment myComment, Rating rating) {
 
 
         ArrayList<Comment> allComments = new ArrayList<>();
@@ -224,7 +226,7 @@ public class IdeaController {
 
                 myModel.addAttribute("child", allComments);
                 myModel.addAttribute("count", cdi.getCnt());
-                myModel.addAttribute("tags_separated",myIdea.tagString());
+                myModel.addAttribute("tags_separated", myIdea.tagString());
             } else {
                 return "redirect:/viewidea";
             }
@@ -372,6 +374,8 @@ public class IdeaController {
         String rdrct = "redirect:" + scheme + serverName + serverPort;
         rating.setUser_creator(SecurityContextHolder.getContext().getAuthentication().getName().toString());
         rating.setIdea_link(idea_link);
+
+
         try {
             voteDao.InsertRating(rating);
         } catch (Exception ex) {
@@ -382,7 +386,29 @@ public class IdeaController {
 
     //END OF INSERT UPDATE RATING BLOCK
     //------------------------------------------------------------------------------------------------------------------
+    //LIKE BLOCK
+    @PreAuthorize("isAuthenticated()")
+    @RequestMapping(value = "/like", method = RequestMethod.POST)
+    public String like(HttpServletRequest httpServletRequest, Rating rating, @RequestParam(value = "idea_link", required = false) int idea_link,
+                       @RequestParam (value = "likeordislike", required = false)int likeordislike) {
+        String scheme = httpServletRequest.getScheme() + "://";
+        String serverName = httpServletRequest.getServerName();
+        String serverPort = (httpServletRequest.getServerPort() == 80) ? "" : ":" + httpServletRequest.getServerPort();
+        String rdrct = "redirect:" + scheme + serverName + serverPort;
+        rating.setUser_creator(SecurityContextHolder.getContext().getAuthentication().getName().toString());
+        rating.setIdea_link(idea_link);
+        if(likeordislike == 1)rating.setLikeordislike(1);
+        if(likeordislike == -1)rating.setLikeordislike(-1);
 
+        try {
+            voteDao.Insertlikeordislike(rating);
+        } catch (Exception ex) {
+            voteDao.Updatelikeordislike(rating);
+        }
+        return rdrct + "/viewidea/" + rating.getIdea_link();
+    }
+    //END OF BLOCK LIKE
+    //------------------------------------------------------------------------------------------------------------------
     static String Smile(String smile) {
         String aa = smile.replaceAll(":aa:", "<img src=\"/resources/smiles/aa.gif\"/>");
         String ab = aa.replaceAll(":ab:", "<img src=\"/resources/smiles/ab.gif\"/>");
