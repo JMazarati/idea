@@ -11,6 +11,7 @@
     <bean id="categoryDaoImpl" class="ua.pp.idea.dao.CategoryDaoImpl"/>
     <bean id="voteDao" class="ua.pp.idea.dao.VoteDaoImpl" />
     <bean id="signupValidator" class="ua.pp.idea.validator.SignupValidator" />
+    <bean id="upduserValidator" class="ua.pp.idea.validator.UpduserValidator" />
     <bean id="addideaValidator" class="ua.pp.idea.validator.AddideaValidator"/>
     <bean id="addcommentValidator" class="ua.pp.idea.validator.AddcommentValidator"/>
 

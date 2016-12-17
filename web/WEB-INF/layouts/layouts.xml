@@ -41,4 +41,7 @@
     <definition extends="default" name="editidea">
         <put-attribute name="body" value="/WEB-INF/views/idea/editidea.jsp" />
     </definition>
+    <definition extends="default" name="editprofile">
+        <put-attribute name="body" value="/WEB-INF/views/idea/editprofile.jsp" />
+    </definition>
 </tiles-definitions>
