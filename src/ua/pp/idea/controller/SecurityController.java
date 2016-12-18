@@ -178,7 +178,7 @@ public class SecurityController {
 
             if(myUser.getUsername().toLowerCase().equals(checkUser.getUsername().toLowerCase()) && myUser.getUseremail().toLowerCase().equals(checkUser.getUseremail().toLowerCase())){
                 for(int i=0;i<10;i++){
-                    newPwd=newPwd+(int)(Math.random()*11);
+                    newPwd=newPwd+(int)(Math.random()*10);
                 }
                 myUser.setUserpwd(passwordEncoder.encode(newPwd));
                 udi.updateUser(myUser);

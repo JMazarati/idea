@@ -38,7 +38,10 @@ public class AddideaValidator implements Validator {
 
         if(!isHtml(idea.getCaption())){errors.rejectValue("caption","txt.Toshort","No html");}
         if(!isHtml(idea.getTxt())){errors.rejectValue("txt","txt.Toshort","No html");}
-        if(!isYOUTUBE(idea.getVideo())){errors.rejectValue("video","video.Toshort","No YOUTUBE CODE");}
+        if(!idea.getVideo().isEmpty()){
+            if((!isYOUTUBE(idea.getVideo())) || (idea.getVideo().length()!=11)){errors.rejectValue("video","video.Toshort","No YOUTUBE CODE");}
+        }
+
         if(!isSPACE(idea.getTags())){errors.rejectValue("tags","txt.Toshort","No html, No Space"); }
 
     }
