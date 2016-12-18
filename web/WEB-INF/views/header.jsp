@@ -37,7 +37,8 @@
 <spring:message code="label_username" var="labelusername"/>
 <spring:message code="label_pwd" var="labelpwd"/>
 <spring:message code="label_registration" var="labelregistration"/>
-
+<spring:message code="label_restore" var="labelrestore"/>
+<spring:message code="message_fail_login" var="mfl"/>
 <c:url value="/login" var="loginUrl"/>
 
 <div class="container">
@@ -75,7 +76,7 @@
                                         </tr>
                                         <tr>
                                             <td><input name="submit" type="submit" class="btn btn-default" id="submitBtn" value="${labellogin}"/></td>
-                                            <td><a href=${registrationlink}>${labelregistration}</a></td>
+                                            <td><a href=${registrationlink}>${labelregistration}</a>&nbsp;<a href="/restore">${labelrestore}</a> </td>
                                         </tr>
                                     </table>
                                 </div>
@@ -94,7 +95,7 @@
 
                         <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
                 <span style="color: red; ">
-                    Your login attempt was not successful due to <br/><br/>
+                    ${mfl} &nbsp;<a href="/restore">${labelrestore}</a><br/><br/>
                     <c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}"/>.
                 </span>
                         </c:if>

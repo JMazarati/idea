@@ -203,7 +203,7 @@
                     Введите комментарий:
                 </tr>
                 <tr>
-                    <form:textarea id="commentField" class="form-control" path="note" maxlength="256" rows="3"/>
+                    <form:textarea id="commentField" class="form-control" path="note" maxlength="256" rows="3" htmlEscape="true"/>
                 </tr>
                 <tr id="commentIdea" class="pull-right">
                     <td>

@@ -44,6 +44,10 @@
     У Вас нет прав на выполнение данной операции!
 
 </c:if>
+<c:if test="${error==8}" >
+    Пользователь или e-mail не найден.
+
+</c:if>
 <c:if test="${error==400}" >
     <iframe src="//coub.com/embed/4jfpl?muted=false&autostart=true&originalSize=false&startWithHD=false" allowfullscreen="true" frameborder="0" width="498" height="314"></iframe><br />
     <b>ERROR 400.</b><br />

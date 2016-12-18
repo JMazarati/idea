@@ -1,6 +1,9 @@
 package ua.pp.idea.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +22,8 @@ public class AdminController {
 
     @Autowired
     ServletContext context;
+    @Autowired
+    private JavaMailSender mailSender;
 
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     String viewAdmin(HttpServletRequest request, Model model){
@@ -41,5 +46,22 @@ public class AdminController {
         model.addAttribute("authorities1",SecurityContextHolder.getContext().getAuthentication().getAuthorities());
         model.addAttribute("user",SecurityContextHolder.getContext().getAuthentication().getPrincipal());
         return "admin";
+    }
+@PreAuthorize(value = "hasRole(ROLE_ADMINISTRATOR)")
+    @RequestMapping(value = "/sendmail",method = RequestMethod.GET)
+    public String sendMail(){
+        String recipientAddress = "alice_4@rambler.ru";
+        String subject = "testSubject";
+        String message = "testMessage";
+        // creates a simple e-mail object
+        SimpleMailMessage email = new SimpleMailMessage();
+        email.setTo(recipientAddress);
+        email.setSubject(subject);
+        email.setText(message);
+
+        // sends the e-mail
+        mailSender.send(email);
+
+        return "index";
     }
 }

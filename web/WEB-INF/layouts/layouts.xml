@@ -44,4 +44,7 @@
     <definition extends="default" name="editprofile">
         <put-attribute name="body" value="/WEB-INF/views/idea/editprofile.jsp" />
     </definition>
+    <definition extends="default" name="restore">
+        <put-attribute name="body" value="/WEB-INF/views/idea/restore.jsp" />
+    </definition>
 </tiles-definitions>

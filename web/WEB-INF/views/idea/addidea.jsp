@@ -1,14 +1,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: Dark
-  Date: 07.11.2016
-  Time: 14:46
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <style type="text/css">
     span.error {
         color: red;
@@ -24,43 +17,14 @@
 <spring:message code="label_picture" var="label_picture" />
 <spring:message code="label_video" var="label_video" />
 <spring:message code="label_tags" var="label_tags" />
-<%--<spring:message code="IT" var="IT" />--%>
-<%--<spring:message code="Architecture" var="Architecture" />--%>
-<%--<spring:message code="Business" var="Business" />--%>
-<%--<spring:message code="Charity" var="Charity" />--%>
-<%--<spring:message code="Design" var="Design" />--%>
-<%--<spring:message code="House" var="House" />--%>
-<%--<spring:message code="Health" var="Health" />--%>
-<%--<spring:message code="Engineering" var="Engineering" />--%>
-<%--<spring:message code="Internet" var="Internet" />--%>
-<%--<spring:message code="Interior" var="Interior" />--%>
-<%--<spring:message code="Art" var="Art" />--%>
-<%--<spring:message code="Cookery" var="Cookery" />--%>
-<%--<spring:message code="Love" var="Love" />--%>
-<%--<spring:message code="Marketing" var="Marketing" />--%>
-<%--<spring:message code="On_every_day" var="On every day" />--%>
-<%--<spring:message code="Clothing" var="Clothing" />--%>
-<%--<spring:message code="Rest" var="Rest" />--%>
-<%--<spring:message code="Politics" var="Politics" />--%>
-<%--<spring:message code="Celebration" var="Celebration" />--%>
-<%--<spring:message code="Production" var="Production" />--%>
-<%--<spring:message code="Travel" var="Travel" />--%>
-<%--<spring:message code="Sundry" var="Sundry" />--%>
-<%--<spring:message code="Joke" var="Joke" />--%>
-<%--<spring:message code="Sex" var="Sex" />--%>
-<%--<spring:message code="Social" var="Social" />--%>
-<%--<spring:message code="Sport" var="Sport" />--%>
-<%--<spring:message code="Equipment" var="Equipment" />--%>
-<%--<spring:message code="Product" var="Product" />--%>
-<%--<spring:message code="Photography" var="Photography" />--%>
-<%--<spring:message code="Finances" var="Finances" />--%>
+
 
 <form:form method="POST" action="${pageContext.servletContext.contextPath}/addideapost" enctype="multipart/form-data">
     <h4 class="text-center page-header">${label_add_your_idea}</h4>
     <table class="form-horizontal" id="tableAddIdea" >
         <tr>
             <td><form:label path="caption">${label_title}</form:label></td>
-            <td><form:input path="caption" class="form-control" maxlength="128"/></td>
+            <td><form:input htmlEscape="true" path="caption" class="form-control" maxlength="128"/></td>
             <td><span class="error" ><form:errors path="caption" /></span></td>
         </tr>
         <tr>
