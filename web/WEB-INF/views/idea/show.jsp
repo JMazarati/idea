@@ -7,6 +7,11 @@
 <spring:message code="label_delete" var="labeldelete"/>
 <spring:message code="label_update" var="labelupdate"/>
 <spring:message code="label_button_submit" var="label_button_submit"/>
+<spring:message code="label_category" var="label_category"/>
+<spring:message code="label_tags" var="label_tags"/>
+<spring:message code="label_added" var="label_added"/>
+<spring:message code="label_total_rating" var="label_total_rating"/>
+<spring:message code="label_like_dislike" var="label_like_dislike"/>
 <spring:message code="label_comments" var="label_comments"/>
 <spring:message code="label_reply" var="label_reply"/>
 <spring:message code="label_comment_idea" var="label_comment_idea"/>
@@ -45,11 +50,11 @@
             <div id="title" class="col-xs-10">${check.caption}</div>
         </div>
         <div class="row row2">
-            <div class="col-xs-9" id="username">By ${check.username}</div>
-            <div id="date" class="col-xs-3">added ${check.date_create}</div>
+            <div class="col-xs-9" id="username">${check.username}</div>
+            <div id="date" class="col-xs-3">${label_added} ${check.date_create}</div>
         </div>
-        <div id="category"><span id="nameCategory">Category: </span>${check.category}</div>
-        <div id="tags"><span id="nameTags">Tags: </span>
+        <div id="category"><span id="nameCategory">${label_category}: </span>${check.category}</div>
+        <div id="tags"><span id="nameTags">${label_tags}: </span>
             <%-- Выводим тэги как ссылки из backEnd-a--%>
             <c:forEach items="${tags_separated}" var="ts">
                 <a href="/tags?tag=${ts}&sort=true">${ts}</a> &nbsp;
@@ -105,7 +110,7 @@
                 </form:form>
             </sec:authorize>
 
-            <div id="totalRating"> total rating:<fmt:formatNumber type="number" maxFractionDigits="2" value="${check.rating}" />
+            <div id="totalRating">${label_total_rating}:<fmt:formatNumber type="number" maxFractionDigits="2" value="${check.rating}" />
 
             </div>
         </div>
@@ -113,7 +118,7 @@
         <div class="text-center col-xs-4">
 
 
-            <div class="col-xs-4" id="nameLikes"> like/dislike</div>
+            <div class="col-xs-4" id="nameLikes">${label_like_dislike}</div>
             <div class="col-xs-8">
                 <sec:authorize access="isAuthenticated()">
                 <table>
