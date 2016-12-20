@@ -170,7 +170,7 @@ a:hover{
 .item{
     overflow: hidden;
     height: 430px;
-    background-image: url("http://localhost:8080/resources/pict/space.jpg");
+    background-image: url(/resources/pict/space.jpg);
     background-size: cover;
     padding: 10px;
     /*background-color: #d5d5d5;*/
