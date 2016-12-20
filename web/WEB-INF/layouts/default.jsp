@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="${pageContext.servletContext.contextPath}/resources/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="${pageContext.servletContext.contextPath}/resources/js/main.js"></script>
     <script type="text/javascript" src="${pageContext.servletContext.contextPath}/resources/js/reply_to_comment.js"></script>
     <script type="text/javascript" src="${pageContext.servletContext.contextPath}/resources/js/default_category.js"></script>
     <script type="text/javascript" src="${pageContext.servletContext.contextPath}/resources/js/spoiler.js"></script>

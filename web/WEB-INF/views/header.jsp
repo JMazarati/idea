@@ -102,14 +102,14 @@
 
                     <sec:authorize access="!isAnonymous()">
                         <sec:authentication property="principal.username" var="username"/>
-                        <table>
-                            <tr>
-                                <td><div><a id="welcome" href="/myoffice"><h4>${labelwelcome} ${username}</h4></a></div></td>
-                            </tr>
-                            <tr>
-                                <td><button id="logout" class="btn btn-default"><a href="<c:url value="/j_spring_security_logout"/>">${labellogout}</a></button></td>
-                            </tr>
-                        </table>
+
+                                <a id="welcome" href="/myoffice"><span>${labelwelcome}</span> <span class="user_name">${username}</span></a>
+
+                                <%--<button id="logout" class="btn btn-default">--%>
+                                <a id="logout" href="<c:url value="/j_spring_security_logout"/>">${labellogout}</a>
+                        <%--</button>--%>
+
+
                     </sec:authorize>
                     ${lmnl}
                 </div>
@@ -118,8 +118,21 @@
 
         <%-- Menu --%>
         <sec:authorize access="hasAnyRole('ROLE_USER','ROLE_OPERATOR')">
+            <%--<nav >--%>
+                <%--<ul class="navigation">--%>
+                    <%--<li class="tabs"><a href="/index">${label_link_3}</a></li>--%>
+                    <%--<li class="tabs"><a href="/viewidea">${label_link_1}</a></li>--%>
+                    <%--<li class="tabs"><a href="/addidea">${label_link_2}</a></li>--%>
+                    <%--<li class="tabs"><a href="/myoffice">${label_link_4}</a></li>--%>
+                    <%--<li>--%>
+
+                            <%--<input type="text" class="form-control" placeholder="${label_search}">--%>
+                    <%--</li>--%>
+
+                <%--</ul>--%>
+            <%--</nav>--%>
             <nav class="nav nav-bar" id="menu" role="navigation">
-                <ul class="nav nav-tabs">
+                <ul class="nav nav-tabs conmenu-ul">
                     <li role="presentation" id="tab1" class="active"><a href="/index">${label_link_3}</a></li>
                     <li role="presentation" id="tab2"><a href="/viewidea">${label_link_1}</a></li>
                     <li role="presentation" id="tab3"><a href="/addidea">${label_link_2}</a></li>
@@ -135,8 +148,22 @@
         </sec:authorize>
 
         <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">
+            <%--<nav >--%>
+                <%--<ul class="navigation">--%>
+                    <%--<li class="tabs"><a href="/index">${label_link_3}</a></li>--%>
+                    <%--<li class="tabs"><a href="/viewidea">${label_link_1}</a></li>--%>
+                    <%--<li class="tabs"><a href="/addidea">${label_link_2}</a></li>--%>
+                    <%--<li class="tabs"><a href="/myoffice">${label_link_4}</a></li>--%>
+                    <%--<li class="tabs"><a href="/admin">${label_link_5}</a></li>--%>
+                    <%--<li>--%>
+
+                            <%--<input type="text" class="form-control" placeholder="${label_search}">--%>
+
+                    <%--</li>--%>
+                <%--</ul>--%>
+            <%--</nav>--%>
             <nav class="nav nav-bar" id="menu" role="navigation">
-                <ul class="nav nav-tabs">
+                <ul class="nav nav-tabs conmenu-ul">
                     <li role="presentation" id="tab1Admin" class="active"><a href="/index">${label_link_3}</a></li>
                     <li role="presentation" id="tab2Admin"><a href="/viewidea">${label_link_1}</a></li>
                     <li role="presentation" id="tab3Admin"><a href="/addidea">${label_link_2}</a></li>
@@ -149,13 +176,24 @@
                     </li>
                 </ul>
             </nav>
+
         </sec:authorize>
 
         <sec:authorize access="isAnonymous()">
+            <%--<nav>--%>
+                <%--<ul class="navigation">--%>
+                    <%--<li class="tabs"><a href="/index">${label_link_3}</a></li>--%>
+                    <%--<li class="tabs"><a href="/viewidea">${label_link_1}</a></li>--%>
+                    <%--<li >--%>
+                        <%--<input type="text" class="form-control" placeholder="${label_search}">--%>
+
+                    <%--</li>--%>
+                <%--</ul>--%>
+            <%--</nav>--%>
             <nav class="nav nav-bar" id="menu" role="navigation">
-                <ul class="nav nav-tabs">
-                    <li role="presentation" id="tab1Anon" class="active"><a href="/index">${label_link_3}</a></li>
-                    <li role="presentation" id="tab2Anon" ><a href="/viewidea">${label_link_1}</a></li>
+                <ul class="nav nav-tabs conmenu-ul">
+                    <li role="presentation" id="tab1Anon" class="tabs active"><a  href="/index">${label_link_3}</a></li>
+                    <li role="presentation" id="tab2Anon" class="tabs"><a href="/viewidea">${label_link_1}</a></li>
                     <li class="pull-right">
                         <div class="form-group" id="searchAnon">
                             <input type="text" class="form-control" placeholder="${label_search}">
