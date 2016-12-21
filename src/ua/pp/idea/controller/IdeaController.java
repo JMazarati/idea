@@ -330,7 +330,7 @@ public class IdeaController {
     @PreAuthorize("isAuthenticated()")
     @RequestMapping(value = "/editideapost", method = RequestMethod.POST)
     public String editideaupd(@ModelAttribute Idea myIdea, HttpServletRequest httpServletRequest,
-                              RedirectAttributes redirectAttributes, RedirectAttributes uerror, BindingResult bindingResult, @RequestParam(value = "p", required = false) MultipartFile image) {
+                              RedirectAttributes redirectAttributes, BindingResult bindingResult, @RequestParam(value = "p", required = false) MultipartFile image) {
         myIdea.setFile(image);
         String scheme = httpServletRequest.getScheme() + "://";
         String serverName = httpServletRequest.getServerName();
@@ -354,8 +354,8 @@ public class IdeaController {
                 ide.updateIdeaById(myIdea);
             return rdrct + "/viewidea/" + myIdea.getId();
         } catch (Exception e) {
-
-            uerror.addFlashAttribute("usererror", e);
+            //RedirectAttributes uerror=null;
+            //uerror.addFlashAttribute("usererror", e);
             return rdrct + "/userregerror?error=3";
         }
 
