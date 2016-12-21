@@ -7,9 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f85692f-bba7-4975-88e2-78571ba6e466" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/dsn-1.5.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gimap-1.5.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/imap-1.5.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/javax.mail-1.5.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/javax.mail-api-1.5.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/logging-mailhandler-1.5.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mailapi-1.5.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/pop3-1.5.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/smtp-1.5.6.jar" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/javax.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/pp/idea/controller/SecurityController.java" afterPath="$PROJECT_DIR$/src/ua/pp/idea/controller/SecurityController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/pp/idea/validator/AddideaValidator.java" afterPath="$PROJECT_DIR$/src/ua/pp/idea/validator/AddideaValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idea.iml" afterPath="$PROJECT_DIR$/idea.iml" />
     </list>
     <ignored path="idea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,8 +43,8 @@
       <file leaf-file-name="SecurityController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/controller/SecurityController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="180" column="56" selection-start-line="180" selection-start-column="56" selection-end-line="180" selection-end-column="56" />
+            <state relative-caret-position="488">
+              <caret line="194" column="35" selection-start-line="194" selection-start-column="35" selection-end-line="194" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -44,7 +53,7 @@
       <file leaf-file-name="AddideaValidator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/validator/AddideaValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
+            <state relative-caret-position="612">
               <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
               <folding />
             </state>
@@ -73,7 +82,7 @@
       <GitPushTagMode />
     </option>
     <push-targets>
-      <push-target-info repo="$PROJECT_DIR$" source="tanya_idea" target-remote="origin" target-branch="tanya_idea" />
+      <push-target-info repo="$PROJECT_DIR$" source="tanya_idea" target-remote="origin" target-branch="master" />
     </push-targets>
   </component>
   <component name="GradleLocalSettings">
@@ -176,6 +185,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
@@ -272,9 +282,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -288,24 +311,24 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lib/javax.mail" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/logging-mailhandler-1.5.6.jar!/" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Archiv\Java_Project\idea\web\resources\upload_image" />
-      <recent name="E:\Archiv\Java_Project\idea\out\artifacts\idea_war_exploded\WEB-INF\lib" />
-      <recent name="E:\Archiv\Java_Project\idea\lib" />
-      <recent name="F:\github\idea" />
-      <recent name="C:\JavaProject\idea\out\artifacts\idea_war_exploded\WEB-INF" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\github\idea\web\resources\css" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ua.pp.idea.validator" />
       <recent name="ua.pp.idea.dao.crud" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\github\idea\web\resources\css" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Archiv\Java_Project\idea\lib" />
+      <recent name="E:\Archiv\Java_Project\idea\web\resources\upload_image" />
+      <recent name="E:\Archiv\Java_Project\idea\out\artifacts\idea_war_exploded\WEB-INF\lib" />
+      <recent name="F:\github\idea" />
+      <recent name="C:\JavaProject\idea\out\artifacts\idea_war_exploded\WEB-INF" />
     </key>
   </component>
   <component name="RunManager" selected="GlassFish Server.GlassFish">
@@ -876,7 +899,8 @@
       <workItem from="1481817594757" duration="3189000" />
       <workItem from="1481834244082" duration="2565000" />
       <workItem from="1481916723232" duration="19437000" />
-      <workItem from="1482007747736" duration="23151000" />
+      <workItem from="1482007747736" duration="24261000" />
+      <workItem from="1482320610623" duration="148000" />
     </task>
     <task id="LOCAL-00001" summary="первый комит">
       <created>1479902116558</created>
@@ -1095,11 +1119,18 @@
       <option name="project" value="LOCAL" />
       <updated>1482086862836</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Add Idea Validator was modify">
+      <created>1482090701981</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1482090701981</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223044000" />
+    <option name="totallyTimeSpent" value="224302000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1116,7 +1147,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32751092" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1141,6 +1171,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32751092" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1175,7 +1206,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="View Idea and Show  updated" />
     <MESSAGE value="Login &amp; password color changed" />
     <MESSAGE value="changes in header" />
     <MESSAGE value="Merge Master" />
@@ -1200,7 +1230,8 @@
     <MESSAGE value="добавлена функция смены пароля" />
     <MESSAGE value="добавлена функция востановления пароля" />
     <MESSAGE value="New version DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="New version DB" />
+    <MESSAGE value="Add Idea Validator was modify" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Idea Validator was modify" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1234,7 +1265,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1243,7 +1273,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="104" selection-start-line="20" selection-start-column="104" selection-end-line="20" selection-end-column="104" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1251,28 +1280,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-55">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/message_ru.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="106" selection-start-line="9" selection-start-column="106" selection-end-line="9" selection-end-column="106" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/message_en.properties">
       <provider editor-type-id="ResourceBundle">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/message_en.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
         </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/resources/css/main.css">
@@ -1294,7 +1322,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-306">
           <caret line="27" column="95" selection-start-line="27" selection-start-column="95" selection-end-line="27" selection-end-column="95" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1302,7 +1329,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="59">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1310,7 +1336,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="22" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1318,10 +1343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="13" column="103" selection-start-line="13" selection-start-column="103" selection-end-line="13" selection-end-column="103" />
-          <folding>
-            <marker date="1481921919072" expanded="true" signature="323:503" ph="INSERT INTO rating_personal_table... " />
-            <marker date="1481921919072" expanded="true" signature="421:475" ph="SELECT id FR... user_table" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1329,10 +1350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <marker date="1481921649570" expanded="true" signature="316:482" ph="INSERT INTO rating_personal_table... " />
-            <marker date="1481921649570" expanded="true" signature="407:461" ph="SELECT id FR... user_table" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1340,11 +1357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="13" column="137" selection-start-line="13" selection-start-column="137" selection-end-line="13" selection-end-column="137" />
-          <folding>
-            <marker date="1481921919166" expanded="true" signature="324:612" ph="UPDATE ratin... " />
-            <marker date="1481921919166" expanded="true" signature="388:442" ph="SELECT id FR... user_table" />
-            <marker date="1481921919166" expanded="true" signature="532:586" ph="SELECT id FR... user_table" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1359,7 +1371,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="122" column="43" selection-start-line="122" selection-start-column="43" selection-end-line="122" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1367,7 +1378,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1375,7 +1385,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="34" column="12" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1383,11 +1392,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="13" column="86" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="86" />
-          <folding>
-            <marker date="1481921594383" expanded="true" signature="317:591" ph="UPDATE ratin... " />
-            <marker date="1481921594383" expanded="true" signature="381:435" ph="SELECT id FR... user_table" />
-            <marker date="1481921594383" expanded="true" signature="511:565" ph="SELECT id FR... user_table" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1395,7 +1399,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1417,10 +1420,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="13" column="71" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
-          <folding>
-            <marker date="1482005405943" expanded="true" signature="320:379" ph="UPDATE user_... " />
-            <marker date="1482005405943" expanded="true" signature="326:337" ph="INSERT INTO user_table... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1452,7 +1451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1460,37 +1458,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="65" column="48" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_ru.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
           <caret line="107" column="20" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_en.properties">
       <provider editor-type-id="ResourceBundle">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/i18n/application_en.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="105" column="31" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="97" column="81" selection-start-line="97" selection-start-column="76" selection-end-line="97" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1498,9 +1492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
-          <folding>
-            <marker date="1482080291237" expanded="true" signature="542:608" ph="SELECT usern... user_table" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1534,7 +1525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="45" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1566,7 +1556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="215" column="21" selection-start-line="215" selection-start-column="21" selection-end-line="215" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1599,7 +1588,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/validator/AddideaValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
+        <state relative-caret-position="612">
           <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
           <folding />
         </state>
@@ -1607,8 +1596,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/controller/SecurityController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="180" column="56" selection-start-line="180" selection-start-column="56" selection-end-line="180" selection-end-column="56" />
+        <state relative-caret-position="488">
+          <caret line="194" column="35" selection-start-line="194" selection-start-column="35" selection-end-line="194" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1679,7 +1668,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>javax</last-edited>
+          <last-edited>javax.mail-1.5.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
