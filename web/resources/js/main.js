@@ -7,9 +7,10 @@
     //     $(this).parent().addClass("active"); // добавляем к пункту, содержащему нажатую ссылку
     // });
 
-
+    $('ul.conmenu-ul li:nth-child(1)').addClass('active');
     (function($) {
         $(function() {
+
 
             $('ul.conmenu-ul').each(function(i) {
                 var storage = localStorage.getItem('tab' + i);
@@ -18,6 +19,8 @@
 
                 }
             });
+
+
 
             $('ul.conmenu-ul').on('click', 'li:not(.active)', function() {
                 $(this)
