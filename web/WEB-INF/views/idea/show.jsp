@@ -60,8 +60,16 @@
         <%--Media--%>
         <div id="mediaItems">
             <c:if test="${check.pict.length()>1}">
+                <a href="#img1">
+                    <img src="/resources/upload_image/${check.pict}" width="560" class="thumbnail">
+                </a>
 
-                <img src="/resources/upload_image/${check.pict}" width="560"/> <br/>
+                <!-- lightbox container hidden with CSS -->
+                <a href="#_" class="lightbox" id="img1">
+                    <img src="/resources/upload_image/${check.pict}" width="560">
+                </a>
+
+                <%--<img class="pop-img" src="/resources/upload_image/${check.pict}" width="560"/> <br/>--%>
 
             </c:if>
             <c:if test="${check.video.length()>1}">

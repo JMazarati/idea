@@ -21,7 +21,7 @@
 <spring:message code="label_categories" var="label_categories" />
 <spring:message code="label_viewideas_title" var="label_viewideas_title" />
 
-<div class="row">
+<div class="row" id="top">
 
     <div class="col-xs-10">
         <h4 class="page-header text-center">${label_viewideas_title}</h4>
@@ -87,5 +87,5 @@
 </div>
 
 <div>
-    <a class="back-to-top glyphicon glyphicon-arrow-up" href="/viewidea" title="Top">Back to top</a>
+    <a class="back-to-top glyphicon glyphicon-arrow-up" href="#top" title="Top">Back to top</a>
 </div>
