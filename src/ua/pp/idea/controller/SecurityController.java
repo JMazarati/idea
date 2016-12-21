@@ -192,7 +192,7 @@ public class SecurityController {
                 email.setSubject(subject);
                 email.setText(message);
 
-                // sends the e-mail
+                // sends the e-mail.
                 mailSender.send(email);
                 return rdrct+"/index";
             }
