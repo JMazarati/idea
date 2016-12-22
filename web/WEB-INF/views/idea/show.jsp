@@ -61,7 +61,14 @@
         <div id="mediaItems">
             <c:if test="${check.pict.length()>1}">
 
-                <img src="/resources/upload_image/${check.pict}" width="560"/> <br/>
+                <a href="#img1">
+                    <img src="/resources/upload_image/${check.pict}"  class="thumbnail"/>
+                </a>
+
+                <!-- lightbox container hidden with CSS -->
+                <a href="#_" class="lightbox" id="img1">
+                    <img src="/resources/upload_image/${check.pict}" />
+                </a>
 
             </c:if>
             <c:if test="${check.video.length()>1}">

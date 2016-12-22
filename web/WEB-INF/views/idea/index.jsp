@@ -18,36 +18,59 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="..." width="100%" height="300px" alt="picture">
-                <div class="carousel-caption">
-
+                <img src="http://placehold.it/350x350"  alt="picture"/>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, adipisci architecto beatae deserunt distinctio facere
+                        laboriosam molestiae mollitia, nesciunt, nisi nobis officiis quidem quis quisquam quod repellendus similique totam voluptatibus?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, adipisci architecto beatae deserunt distinctio facere
+                        laboriosam molestiae mollitia, nesciunt, nisi nobis officiis quidem quis quisquam quod repellendus similique totam voluptatibus?
+                    </p>
                 </div>
             </div>
             <div class="item">
-                <img src="..." alt="picture">
-                <div class="carousel-caption">
-
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="..." alt="picture">
-                <div class="carousel-caption">
-
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="..." alt="picture">
-                <div class="carousel-caption">
-
+                <img src="http://placehold.it/350x350/ff0000"  alt="picture"/>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, adipisci architecto beatae deserunt distinctio facere
+                        laboriosam molestiae mollitia, nesciunt, nisi nobis officiis quidem quis quisquam quod repellendus similique totam voluptatibus?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, adipisci architecto beatae deserunt distinctio facere
+                        laboriosam molestiae mollitia, nesciunt, nisi nobis officiis quidem quis quisquam quod repellendus similique totam voluptatibus?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, adipisci architecto beatae deserunt distinctio facere
+                        laboriosam molestiae mollitia, nesciunt, nisi nobis officiis quidem quis quisquam quod repellendus similique totam voluptatibus?
+                    </p>
                 </div>
             </div>
 
             <div class="item">
-                <img src="..." alt="picture">
-                <div class="carousel-caption">
+                <img src="http://placehold.it/350x350/00ff00" alt="picture" />
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, adipisci architecto beatae deserunt distinctio facere
+                        laboriosam molestiae mollitia, nesciunt, nisi nobis officiis quidem quis quisquam quod repellendus similique totam voluptatibus?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, adipisci architecto beatae deserunt distinctio facere
+                        laboriosam molestiae mollitia, nesciunt, nisi nobis officiis quidem quis quisquam quod repellendus similique totam voluptatibus?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, adipisci architecto beatae deserunt distinctio facere
+                        laboriosam molestiae mollitia, nesciunt, nisi nobis officiis quidem quis quisquam quod repellendus similique totam voluptatibus?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, adipisci architecto beatae deserunt distinctio facere
+                        laboriosam molestiae mollitia, nesciunt, nisi nobis officiis quidem quis quisquam quod repellendus similique totam voluptatibus?
+                    </p>
+                </div>
 
+            </div>
+
+            <div class="item">
+                <img src="http://placehold.it/350x350/0000ff"  alt="picture"/>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, adipisci architecto beatae deserunt distinctio facere
+                        laboriosam molestiae mollitia, nesciunt, nisi nobis officiis quidem quis quisquam quod repellendus similique totam voluptatibus?
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="http://placehold.it/350x350"  alt="picture"/>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, adipisci architecto beatae deserunt distinctio facere
+                        laboriosam molestiae mollitia, nesciunt, nisi nobis officiis quidem quis quisquam quod repellendus similique totam voluptatibus?
+                    </p>
                 </div>
             </div>
         </div>

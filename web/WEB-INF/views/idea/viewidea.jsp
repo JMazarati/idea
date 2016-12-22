@@ -60,7 +60,7 @@
                             </div>
                                 ${list.rating}
                         </div>
-                        <div id="view" class="col-xs-2"><a href="viewidea/${list.id}">${label_more}</a></div>
+                        <div id="view" class="col-xs-2"><a class="view-idea" href="viewidea/${list.id}">${label_more} ⇨</a></div>
                     </div>
                 </div>
 
@@ -87,5 +87,5 @@
 </div>
 
 <div>
-    <a class="back-to-top glyphicon glyphicon-arrow-up" href="/viewidea" title="Top">Back to top</a>
+    <a class="back-to-top glyphicon glyphicon-arrow-up" href="#top" title="Top"> </a>
 </div>

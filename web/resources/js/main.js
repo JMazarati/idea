@@ -1,11 +1,29 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+(function($) {
+	$(function() {
 
-jQuery(document).ready(function($) {
 
-	$('#msg').html("This is updated by jQuery")
+		$('ul.conmenu-ul').each(function(i) {
+			var storage = localStorage.getItem('tab' + i);
+			if (storage) {
+				$(this).find('li').removeClass('active').eq(storage).addClass('active');
 
-});
+			}
+		});
+
+
+
+		$('ul.conmenu-ul').on('click', 'li:not(.active)', function() {
+			$(this)
+				.addClass('active').siblings().removeClass('active');
+
+			var ulIndex = $('ul.conmenu-ul').index($(this).parents('ul.conmenu-ul'));
+			localStorage.removeItem('tab' + ulIndex);
+			localStorage.setItem('tab' + ulIndex, $(this).index());
+		});
+
+	});
+
+	$('.reset').on('click',function(){
+		$('.form-control').val('');
+	})
+})(jQuery);

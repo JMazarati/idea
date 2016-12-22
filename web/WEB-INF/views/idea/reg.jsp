@@ -29,7 +29,7 @@
     <table class="form-horizontal" id="registration">
         <tr>
             <td><form:label path="username">${label_username}</form:label></td>
-            <td><form:input path="username"  class="form-control" maxlength="50"/></td>
+            <td><form:input path="username"  class="form-control" placeholder="${label_username}" maxlength="50" required="required"/></td>
             <td><span class="error" >
                 <form:errors path="username" element="div"/>
                 </span>
@@ -37,23 +37,23 @@
         </tr>
         <tr>
             <td><form:label path="useremail">${label_email}</form:label></td>
-            <td><form:input path="useremail"  class="form-control" maxlength="50"/></td>
+            <td><form:input path="useremail"  class="form-control" placeholder="youremail@gmail.com" maxlength="50" required="required"/></td>
             <td><span class="error" ><form:errors path="useremail" /></span></td>
         </tr>
         <tr>
             <td><form:label path="userpwd" >${label_pwd}</form:label></td>
-            <td><form:input path="userpwd" type="password"  class="form-control" maxlength="64"/></td>
+            <td><form:input path="userpwd" type="password"  class="form-control" placeholder="******" maxlength="64" required="required" title="Your password is less than 6 symbols" pattern=".{6,60}"/></td>
             <td><span class="error" ><form:errors path="userpwd" /></span></td>
         </tr>
         <tr>
             <td><form:label path="userkpwd">${label_pwd_confirm}</form:label></td>
-            <td><form:input path="userkpwd" type="password"  class="form-control" maxlength="64"/></td>
+            <td><form:input path="userkpwd" type="password"  class="form-control" placeholder="******" maxlength="64" required="required" title="Your password is less than 6 symbols" pattern=".{6,60}"/></td>
             <td><span class="error" ><form:errors path="userkpwd" /></span></td>
         </tr>
         <tr>
             <td colspan="2" id="button">
                 <input type="submit" class="btn btn-default" value="${label_button_submit}"/>
-                <input type="reset" class="btn btn-default" value="${label_button_reset}"/>
+                <input type="reset" class="btn btn-default resetbtn" value="${label_button_reset}"/>
             </td>
         </tr>
     </table>

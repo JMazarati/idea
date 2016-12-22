@@ -87,20 +87,23 @@ a:hover{
     margin: 4px 4px;
     cursor: pointer;
 }
-#welcome{
-    font-weight: bold;
-    color: #390457;
-}
-#logout{
-    padding: 4px 8px;
-    margin: 4px 4px;
-}
+/*#welcome{*/
+    /*font-weight: bold;*/
+    /*color: #390457;*/
+/*}*/
+/*#logout{*/
+    /*padding: 4px 8px;*/
+    /*margin: 4px 4px;*/
+/*}*/
 #search, #searchAnon{
     margin: 3px 5px 5px 5px;
 }
+.carousel-control{
+    width: 2% !important;
+}
 #carousel-example-generic{
-    height: 300px;
-    width: 60%;
+    height: 430px;
+    width: 100%;
     margin: auto;
 }
 .carousel-indicators li {
@@ -108,6 +111,35 @@ a:hover{
 }
 .carousel-indicators .active {
     background-color: rgba(49, 14, 98, 0.69);;
+}
+.item{
+    overflow: hidden;
+    height: 430px;
+    background-color: lightgrey;
+    background-size: cover;
+    padding: 10px;
+    /*background-color: #d5d5d5;*/
+    /*display: flex !important;*/
+}
+.item img{
+    /*margin: 0 auto;*/
+    /*height: 35% !important;*/
+    width: 45% !important;
+    height: 350px !important;
+    display: inline-block !important;
+
+}
+.item div {
+    position: absolute;
+    top: 10px;
+    padding: 10px;
+    display: inline-block !important;
+    width: 50%
+}
+.item p{
+    width: 100%;
+    color: white;
+    overflow: hidden;
 }
 .content {
     margin-top: 20px;
@@ -184,9 +216,9 @@ a:hover{
 #date{
     text-align: right;
 }
-#view{
-    text-decoration: underline;
-}
+/*#view{*/
+    /*text-decoration: underline;*/
+/*}*/
 /*Show idea*/
 .glyphicon{
     float:right;
@@ -331,5 +363,123 @@ a:hover{
     margin-top: 3px;
 }
 
+#language{
+    font-size: 17px;
+}
+#contacts{
+    font-size: 16px;
+}
+
 /* End Footer */
+
+/*Changes*/
+textarea {
+    resize: none;
+}
+
+textarea#txt{
+    height: 300px;
+}
+
+/*Sign in*/
+button.log-button{
+    background-color: white;
+    transition: all 0.5s ease;
+}
+
+button.log-button:hover{
+    background-color: lightgrey;
+    color:white;
+}
+
+
+#welcome{
+    text-decoration: none;
+    font-weight: bold;
+    color: #390457;
+    font-size: 16px;
+
+}
+
+.user_name{
+    font-size: 18px;
+    color: black;
+    font-style: italic;
+}
+#welcome:hover .user_name{
+    text-decoration: underline;
+    transition: all 0.5s ease;
+}
+
+
+#logout{
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 4px 4px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+#logout:hover{
+    background-color: lightgrey;
+    color: white;
+}
+
+/*back-to-top // view idea*/
+
+a.back-to-top{
+    text-decoration: none;
+    padding: 8px 15px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+a.back-to-top:hover{
+    background-color: lightgrey;
+    color: white;
+}
+
+
+.thumbnail {
+    max-width: 40%;
+}
+
+
+
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+    /** Default lightbox to hidden */
+    display: none;
+
+    /** Position and style */
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+    /** Pad the lightbox image */
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 2%;
+}
+
+.lightbox:target {
+    /** Remove default browser outline */
+    outline: none;
+
+    /** Unhide lightbox **/
+    display: block;
+}
+
 
