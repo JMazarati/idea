@@ -37,7 +37,7 @@
         </tr>
         <tr>
             <td><form:label path="useremail">${label_email}</form:label></td>
-            <td><form:input path="useremail"  class="form-control" placeholder="youremail@gmail.com" maxlength="50" required="required"/></td>
+            <td><form:input path="useremail" type="email" class="form-control" placeholder="youremail@gmail.com" maxlength="50" required="required"/></td>
             <td><span class="error" ><form:errors path="useremail" /></span></td>
         </tr>
         <tr>
