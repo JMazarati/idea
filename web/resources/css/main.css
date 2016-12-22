@@ -95,6 +95,14 @@ a:hover{
     /*padding: 4px 8px;*/
     /*margin: 4px 4px;*/
 /*}*/
+
+/*#tab1Admin,#tab2Admin,#tab3Admin,#tab4Admin,#tab5Admin{*/
+    /**/
+/*}*/
+.admin-tabs>li {
+
+    margin-bottom: -8px !important;
+}
 #search, #searchAnon{
     margin: 3px 5px 5px 5px;
 }
@@ -481,5 +489,7 @@ a.back-to-top:hover{
     /** Unhide lightbox **/
     display: block;
 }
+
+
 
 

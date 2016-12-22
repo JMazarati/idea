@@ -131,7 +131,7 @@
 
         <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">
             <nav class="nav nav-bar" id="menu" role="navigation">
-                <ul class="nav nav-tabs conmenu-ul">
+                <ul class="nav nav-tabs conmenu-ul admin-tabs">
                     <li role="presentation" id="tab1Admin" class="active"><a href="/index">${label_link_3}</a></li>
                     <li role="presentation" id="tab2Admin"><a href="/viewidea">${label_link_1}</a></li>
                     <li role="presentation" id="tab3Admin"><a href="/addidea">${label_link_2}</a></li>
