@@ -265,8 +265,8 @@ public class IdeaController {
                     if (i > topList.size() - 1) {
                         myIdea.setId(i);
                         myIdea.setPict("idea.png");
-                        myIdea.setCaption("Здесь могла бы быть ваша идея");
-                        myIdea.setTxt("Здесь могла бы быть ваша идея");
+                        myIdea.setCaption("Здесь могла бы быть ваша идея<br />Here could be your idea!");
+                        myIdea.setTxt("<h1>Здесь могла бы быть ваша идея!<br />Here could be your idea!</h1>");
                         topList.add(myIdea);
 
                     }

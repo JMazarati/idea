@@ -3,10 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
        xmlns:security="http://www.springframework.org/schema/security"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
     <mvc:annotation-driven />
     <bean id="ideaDaoImpl" class="ua.pp.idea.dao.IdeaDaoImpl" />
-    <bean id="userDaoImpl" class="ua.pp.idea.dao.UserDaoImpl" />
+    <bean id="userDao" class="ua.pp.idea.dao.UserDaoImpl" >
+        <aop:scoped-proxy/>
+    </bean>
     <bean id="commentsDaoImpl" class="ua.pp.idea.dao.CommentDaoImpl"/>
     <bean id="categoryDaoImpl" class="ua.pp.idea.dao.CategoryDaoImpl"/>
     <bean id="voteDao" class="ua.pp.idea.dao.VoteDaoImpl" />

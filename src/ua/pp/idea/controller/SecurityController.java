@@ -62,6 +62,11 @@ public class SecurityController {
 
         }
         uiModel.addAttribute("message", flashpatam);
+        uiModel.addAttribute("tabclass1","active");
+        uiModel.addAttribute("tabclass2","nonactive");
+        uiModel.addAttribute("tabclass3","nonactive");
+        uiModel.addAttribute("tabclass4","nonactive");
+        uiModel.addAttribute("tabclass5","nonactive");
         return "userregerror";
     }
 
@@ -211,5 +216,22 @@ public class SecurityController {
             return "redirect:/userregerror?error=6";
         }
 
+    }
+
+    @RequestMapping(value = "/deleteuser")
+    public String DeleteUse(RedirectAttributes redirectAttributes,HttpServletRequest httpServletRequest){
+        String scheme = httpServletRequest.getScheme() + "://";
+        String serverName = httpServletRequest.getServerName();
+        String serverPort = (httpServletRequest.getServerPort() == 80) ? "" : ":" + httpServletRequest.getServerPort();
+        String contextPath = httpServletRequest.getContextPath();
+        String rdrct = "redirect:" + scheme + serverName + serverPort;
+        try{
+            udi.deleteUser(SecurityContextHolder.getContext().getAuthentication().getName());
+        }catch (Exception e){
+            redirectAttributes.addFlashAttribute("e",e);
+            return "redirect:/userregerror?error=6";
+        }
+        SecurityContextHolder.getContext().getAuthentication().setAuthenticated(false);
+        return rdrct+"/j_spring_security_logout";
     }
 }

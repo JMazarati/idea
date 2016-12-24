@@ -10,12 +10,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-<spring:message code="label_login" var="labellogin"/>
-<spring:message code="label_logout" var="labellogout"/>
-<spring:message code="label_welcome" var="labelwelcome"/>
 <spring:url value="/reg" var="registrationlink"/>
-<spring:message code="label_username" var="labelusername"/>
 <spring:message code="label_pwd" var="labelpwd"/>
 <spring:message code="label_registration" var="labelregistration"/>
 <spring:url value="/myoffice" var="addContactUrl"/>
@@ -58,13 +53,14 @@
                 <c:set var="prop_tag" value="<%=(request.getParameter("tag")) %>"/>
                 <c:set var="prop_cat" value="<%=(request.getParameter("cat")) %>"/>
                 <c:set var="prop_usr" value="<%=(request.getParameter("usr")) %>"/>
+                <c:set var="prop_error" value="<%=(request.getParameter("error")) %>"/>
                 <c:set var="prop_lang" value="<%=(request.getParameter("lang")) %>"/>
 
-                <c:if test="${prop_tag eq null && prop_cat eq null && prop_usr eq null}">
+                <c:if test="${prop_tag eq null && prop_cat eq null && prop_usr eq null && prop_error eq null}">
                     <p><a href="${currentUrl}?lang=en"><img src="/resources/pict/uk.png" alt=""/>${labelEn}</a></p>
                     <p><a href="${currentUrl}?lang=ru"><img src="/resources/pict/ru.png" alt=""/>${labelRu}</a></p>
                 </c:if>
-                <c:if test="${prop_tag ne null || prop_cat ne null || prop_usr ne null}">
+                <c:if test="${prop_tag ne null || prop_cat ne null || prop_usr ne null || prop_error ne null}">
 
                     <c:set var="rquery" value="${pageContext.request.queryString}"/>
                     <c:if test="${prop_lang ne null}">
@@ -80,7 +76,7 @@
                 <%-- Login --%>
                 <div class="pull-right" id="login1">
                     <sec:authorize access="isAnonymous()">
-                        <button class="btn btn-default log-button" onclick="document.getElementById('form').style.display='block'" style="width:auto;">Login</button>
+                        <button class="btn btn-default log-button" onclick="document.getElementById('form').style.display='block'" style="width:auto;">${labellogin}</button>
                         <div id="form" class="modal">
                             <form class="modal-content animate" name="loginForm" action="${loginUrl}" method="post">
                                 <span onclick="document.getElementById('form').style.display='none'" class="close" title="Close Modal">&times;</span>

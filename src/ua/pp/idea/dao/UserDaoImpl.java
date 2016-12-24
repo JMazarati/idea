@@ -1,6 +1,8 @@
 package ua.pp.idea.dao;
 
 
+import org.springframework.security.access.prepost.PreAuthorize;
+import ua.pp.idea.dao.crud.DeleteUser;
 import ua.pp.idea.dao.crud.InsertUser;
 import ua.pp.idea.dao.crud.SelectUser;
 import ua.pp.idea.dao.crud.UpdateUser;
@@ -23,11 +25,8 @@ public class UserDaoImpl implements UserDao, Serializable {
     private InsertUser insertUser;
     private SelectUser selectUser;
     private UpdateUser updateUser;
-    // private SelectUserByEmail selectUserByEmail;
+   private DeleteUser deleteUser;
 
-    public DataSource getDataSource() {
-        return dataSource;
-    }
 
     @Resource(name = "dataSource")
     public void setDataSource(DataSource dataSource) {  //      return selectUser.executeByNamedParam(paramMap);
@@ -35,7 +34,7 @@ public class UserDaoImpl implements UserDao, Serializable {
         this.insertUser = new InsertUser(dataSource);
         this.selectUser = new SelectUser(dataSource);
         this.updateUser = new UpdateUser(dataSource);
-        //this.selectUserByEmail=new SelectUserByEmail(dataSource);
+       this.deleteUser = new DeleteUser(dataSource);
     }
 
     @Override
@@ -65,9 +64,12 @@ public class UserDaoImpl implements UserDao, Serializable {
         paramMap.put("userpwd", user.getUserpwd());
         updateUser.updateByNamedParam(paramMap);
     }
-    //  public List<User> findUserByEmail(String useremail){
-    //      Map<String,Object> paramMap = new HashMap<String,Object>();
-    //      paramMap.put("useremail",useremail);
+@PreAuthorize(value = "authenticated")
+@Override
+    public void deleteUser(String username) {
+        Map<String,Object> paramMap = new HashMap<>();
+        paramMap.put("username",username);
+        deleteUser.updateByNamedParam(paramMap);
 
-    // }
+    }
 }

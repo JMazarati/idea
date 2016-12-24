@@ -18,18 +18,19 @@
 <spring:message code="label_contact_desc" var="labeldesc" />
 <spring:message code="label_deleteuser" var="labeldeleteuser"/>
 <spring:message code="label_updateuser" var="labelupdateuser"/>
+<spring:message code="label_show_my_idea" var="labelshowmyidea"/>
 <div id="delete_update" class="update-user">
     <sec:authorize access="isAuthenticated()">
         <sec:authentication property="principal.username" var="username"/>
          <div><a href="/editprofile"><span id="glyphicons" class="glyphicon glyphicon-edit" aria-hidden="true"/>${labelupdateuser}</a></div>
-         <div><a href="/" onclick="return confirmDelete();"><span id="glyphicons" class="glyphicon glyphicon-trash" aria-hidden="true"/>${labeldeleteuser}</a></div>
+         <div><a href="/deleteuser" onclick="return confirmDelete();"><span id="glyphicons" class="glyphicon glyphicon-trash" aria-hidden="true"/>${labeldeleteuser}</a></div>
 
     </sec:authorize>
 </div>
 <div id="myOffice">
     <p>${labellogin}: <span>${username}</span></p>
     <p>${label_email}: <span>${useremail}</span></p>
-    <a href="/user?usr=${username}">get ideas by ${username}</a>
+    <a href="/user?usr=${username}">${labelshowmyidea}</a>
     <%--<b>${labelfirstname}:</b>  <br/>--%>
     <%--<b>${labellastname}:</b>  <br/>--%>
     <%--<b>${label_contact_birth_date}:</b>  <br/>--%>
