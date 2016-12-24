@@ -18,24 +18,21 @@
 <spring:message code="label_contact_desc" var="labeldesc" />
 <spring:message code="label_deleteuser" var="labeldeleteuser"/>
 <spring:message code="label_updateuser" var="labelupdateuser"/>
-<div id="delete_update">
-
+<div id="delete_update" class="update-user">
     <sec:authorize access="isAuthenticated()">
         <sec:authentication property="principal.username" var="username"/>
-            <a href="/editprofile"><span id="glyphicons" class="glyphicon glyphicon-edit"
-                                                  aria-hidden="true"/>${labelupdateuser}</a><br/>
-            <a href="/" onclick="return confirmDelete();"><span id="glyphicons" class="glyphicon glyphicon-trash"
-                                                                                         aria-hidden="true"/>${labeldeleteuser}
-            </a>
+         <div><a href="/editprofile"><span id="glyphicons" class="glyphicon glyphicon-edit" aria-hidden="true"/>${labelupdateuser}</a></div>
+         <div><a href="/" onclick="return confirmDelete();"><span id="glyphicons" class="glyphicon glyphicon-trash" aria-hidden="true"/>${labeldeleteuser}</a></div>
+
     </sec:authorize>
 </div>
 <div id="myOffice">
-    <b>${labellogin}:</b> ${username} <br/>
-    <b>${label_email}:</b> <br/>
-    <b>${labelfirstname}:</b>  <br/>
-    <b>${labellastname}:</b>  <br/>
-    <b>${label_contact_birth_date}:</b>  <br/>
-    <b>${label_contact_sex}:</b>  <br/>
-    <b>${labeldesc}:</b>  <br/><hr />
-    ${txt}
+    <p>${labellogin}: <span>${username}</span></p>
+    <p>${label_email}: <span>${useremail}</span></p>
+    <%--<b>${labelfirstname}:</b>  <br/>--%>
+    <%--<b>${labellastname}:</b>  <br/>--%>
+    <%--<b>${label_contact_birth_date}:</b>  <br/>--%>
+    <%--<b>${label_contact_sex}:</b>  <br/>--%>
+    <%--<b>${labeldesc}:</b>  <br/><hr />--%>
+    <p>${txt}</p>
 </div>

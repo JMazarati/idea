@@ -45,6 +45,11 @@ public class AdminController {
         model.addAttribute("authorities0",authorities);
         model.addAttribute("authorities1",SecurityContextHolder.getContext().getAuthentication().getAuthorities());
         model.addAttribute("user",SecurityContextHolder.getContext().getAuthentication().getPrincipal());
+        model.addAttribute("tabclass1","nonactive");
+        model.addAttribute("tabclass2","nonactive");
+        model.addAttribute("tabclass3","nonactive");
+        model.addAttribute("tabclass4","nonactive");
+        model.addAttribute("tabclass5","active");
         return "admin";
     }
 @PreAuthorize(value = "hasRole(ROLE_ADMINISTRATOR)")

@@ -50,13 +50,22 @@ public class IdeaController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String HomeController(Model uiModel) {
-
+        uiModel.addAttribute("tabclass1","active");
+        uiModel.addAttribute("tabclass2","nonactive");
+        uiModel.addAttribute("tabclass3","nonactive");
+        uiModel.addAttribute("tabclass4","nonactive");
+        uiModel.addAttribute("tabclass5","nonactive");
 
         return "index";
     }
 
     @RequestMapping(value = "/viewidea", method = RequestMethod.GET)
     public String ViewIdea(@RequestParam(defaultValue = "true") String sort, Model uiModel, RedirectAttributes redirectAttributes) {
+        uiModel.addAttribute("tabclass1","nonactive");
+        uiModel.addAttribute("tabclass2","active");
+        uiModel.addAttribute("tabclass3","nonactive");
+        uiModel.addAttribute("tabclass4","nonactive");
+        uiModel.addAttribute("tabclass5","nonactive");
         List<Idea> list;
         try {
             list = ide.getAll(Boolean.valueOf(sort));
@@ -100,6 +109,11 @@ public class IdeaController {
         uiModel.addAttribute("date", "/tags?tag=" + tag + "&sort=true");
         uiModel.addAttribute("rating", "/tags?tag=" + tag + "&sort=false");
         uiModel.addAttribute("list", list);
+        uiModel.addAttribute("tabclass1","nonactive");
+        uiModel.addAttribute("tabclass2","active");
+        uiModel.addAttribute("tabclass3","nonactive");
+        uiModel.addAttribute("tabclass4","nonactive");
+        uiModel.addAttribute("tabclass5","nonactive");
         return "viewidea";
     }
 
@@ -124,13 +138,22 @@ public class IdeaController {
         uiModel.addAttribute("date", "/category?cat=" + cat + "&sort=true");
         uiModel.addAttribute("rating", "/category?cat=" + cat + "&sort=false");
         uiModel.addAttribute("list", list);
+        uiModel.addAttribute("tabclass1","nonactive");
+        uiModel.addAttribute("tabclass2","active");
+        uiModel.addAttribute("tabclass3","nonactive");
+        uiModel.addAttribute("tabclass4","nonactive");
+        uiModel.addAttribute("tabclass5","nonactive");
         return "viewidea";
     }
 
 
     @RequestMapping(value = "/addidea", method = RequestMethod.GET)
     public String updateForm(@ModelAttribute Idea myIdea, Model model) {
-
+        model.addAttribute("tabclass1","nonactive");
+        model.addAttribute("tabclass2","nonactive");
+        model.addAttribute("tabclass3","active");
+        model.addAttribute("tabclass4","nonactive");
+        model.addAttribute("tabclass5","nonactive");
         Map<Integer, String> category = new LinkedHashMap<Integer, String>();
 
         for (Category item : catdi.getAllCategory()) {
@@ -186,6 +209,11 @@ public class IdeaController {
     public String Index(Model uiModel) {
 
         uiModel.addAttribute("list", "addidea");
+        uiModel.addAttribute("tabclass1","active");
+        uiModel.addAttribute("tabclass2","nonactive");
+        uiModel.addAttribute("tabclass3","nonactive");
+        uiModel.addAttribute("tabclass4","nonactive");
+        uiModel.addAttribute("tabclass5","nonactive");
 
         return "index";
     }
@@ -194,7 +222,11 @@ public class IdeaController {
     public String MyOffice(Model uiModel) {
         String txt = SecurityContextHolder.getContext().getAuthentication().getName();
         LocalDate today = LocalDate.now();
-
+        uiModel.addAttribute("tabclass1","nonactive");
+        uiModel.addAttribute("tabclass2","nonactive");
+        uiModel.addAttribute("tabclass3","nonactive");
+        uiModel.addAttribute("tabclass4","active");
+        uiModel.addAttribute("tabclass5","nonactive");
         uiModel.addAttribute("txt", today);
         return "myoffice";
 
@@ -206,7 +238,11 @@ public class IdeaController {
     @RequestMapping(value = "/viewidea/{id}", method = RequestMethod.GET)
     public String showid(@PathVariable("id") String s, Model myModel, Idea myIdea, Comment myComment, Rating rating) {
 
-
+        myModel.addAttribute("tabclass1","nonactive");
+        myModel.addAttribute("tabclass2","active");
+        myModel.addAttribute("tabclass3","nonactive");
+        myModel.addAttribute("tabclass4","nonactive");
+        myModel.addAttribute("tabclass5","nonactive");
         ArrayList<Comment> allComments = new ArrayList<>();
         Map<Integer, String> voteList = new LinkedHashMap<>();
         for (int i = 1; i < 6; i++) {
@@ -306,6 +342,11 @@ public class IdeaController {
 
     @RequestMapping(value = "/editidea/{id}", method = RequestMethod.GET)
     public String editidea(@PathVariable("id") String id, Model myModel, Idea myIdea) {
+        myModel.addAttribute("tabclass1","nonactive");
+        myModel.addAttribute("tabclass2","active");
+        myModel.addAttribute("tabclass3","nonactive");
+        myModel.addAttribute("tabclass4","nonactive");
+        myModel.addAttribute("tabclass5","nonactive");
         try {
             myIdea = ide.findIdeaByID(Integer.parseInt(id));
         } catch (Exception e) {

@@ -11,34 +11,28 @@
 <spring:message code="label_reply" var="label_reply"/>
 <spring:message code="label_comment_idea" var="label_comment_idea"/>
 
-<div id="delete_update">
+<%--<div id="delete_update" class="update-idea">--%>
 
-    <sec:authorize access="!isAnonymous()">
-        <sec:authentication property="principal.username" var="username"/>
-    </sec:authorize>
-    <sec:authorize access="hasRole('ROLE_USER')">
-        <c:if test="${username eq check.username}">
-            <a href="/editidea/${check.id}"><span id="glyphicons" class="glyphicon glyphicon-edit"
-                                                  aria-hidden="true"/>${labelupdate}</a><br/>
-            <a href="/deleteIdea?id=${check.id}" onclick="return confirmDelete();"><span id="glyphicons"
-                                                                                         class="glyphicon glyphicon-trash"
-                                                                                         aria-hidden="true"/>${labeldelete}
-            </a>
-        </c:if>
-    </sec:authorize>
-    <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">
-        <a href="/editidea/${check.id}"><span id="glyphicons" class="glyphicon glyphicon-edit"
-                                              aria-hidden="true"/>${labelupdate}</a><br/>
-        <a href="/deleteIdea?id=${check.id}" onclick="return confirmDelete();"><span id="glyphicons"
-                                                                                     class="glyphicon glyphicon-trash"
-                                                                                     aria-hidden="true"/>${labeldelete}
-        </a>
-    </sec:authorize>
-</div>
+    <%--<sec:authorize access="!isAnonymous()">--%>
+        <%--<sec:authentication property="principal.username" var="username"/>--%>
+    <%--</sec:authorize>--%>
+    <%--<sec:authorize access="hasRole('ROLE_USER')">--%>
+        <%--<c:if test="${username eq check.username}">--%>
+            <%--<a href="/editidea/${check.id}"><span id="glyphicons" class="glyphicon glyphicon-edit" aria-hidden="true"/>${labelupdate}</a><br/>--%>
+            <%--<a href="/deleteIdea?id=${check.id}" onclick="return confirmDelete();"><span id="glyphicons" class="glyphicon glyphicon-trash" aria-hidden="true"/>${labeldelete}--%>
+            <%--</a>--%>
+        <%--</c:if>--%>
+    <%--</sec:authorize>--%>
+    <%--<sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">--%>
+        <%--<a href="/editidea/${check.id}"><span id="glyphicons" class="glyphicon glyphicon-edit" aria-hidden="true"/>${labelupdate}</a>--%>
+        <%--<a href="/deleteIdea?id=${check.id}" onclick="return confirmDelete();"><span id="glyphicons" class="glyphicon glyphicon-trash" aria-hidden="true"/>${labeldelete}--%>
+        <%--</a>--%>
+    <%--</sec:authorize>--%>
+<%--</div>--%>
 
 <div id="idea" class="showIdea">
 
-    <font color="red">${err}</font><br/>
+    <span color="red">${err}</span><br/>
     <div class="header-panel">
         <div class="row row2">
             <div id="checkID" class="col-xs-2">ID: ${check.id}</div>
@@ -54,6 +48,24 @@
             <c:forEach items="${tags_separated}" var="ts">
                 <a href="/tags?tag=${ts}&sort=true">${ts}</a> &nbsp;
             </c:forEach></div>
+        <div id="delete_update" class="update-idea">
+
+            <sec:authorize access="!isAnonymous()">
+                <sec:authentication property="principal.username" var="username"/>
+            </sec:authorize>
+            <sec:authorize access="hasRole('ROLE_USER')">
+                <c:if test="${username eq check.username}">
+                    <a href="/editidea/${check.id}"><span id="glyphicons" class="glyphicon glyphicon-edit" aria-hidden="true"/>${labelupdate}</a><br/>
+                    <a href="/deleteIdea?id=${check.id}" onclick="return confirmDelete();"><span id="glyphicons" class="glyphicon glyphicon-trash" aria-hidden="true"/>${labeldelete}
+                    </a>
+                </c:if>
+            </sec:authorize>
+            <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">
+                <a href="/editidea/${check.id}"><span id="glyphicons" class="glyphicon glyphicon-edit" aria-hidden="true"/>${labelupdate}</a>
+                <a href="/deleteIdea?id=${check.id}" onclick="return confirmDelete();"><span id="glyphicons" class="glyphicon glyphicon-trash" aria-hidden="true"/>${labeldelete}
+                </a>
+            </sec:authorize>
+        </div>
     </div>
 
     <div class="contentOfIdea">

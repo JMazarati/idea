@@ -113,6 +113,11 @@ public class SecurityController {
 
     @RequestMapping(value = "/editprofile",method = RequestMethod.GET)
     public String editProfile(User myUser, Model model) {
+        model.addAttribute("tabclass1","nonactive");
+        model.addAttribute("tabclass2","nonactive");
+        model.addAttribute("tabclass3","nonactive");
+        model.addAttribute("tabclass4","active");
+        model.addAttribute("tabclass5","nonactive");
         myUser.setUsername(SecurityContextHolder.getContext().getAuthentication().getName());
         BindingResult bindingResult = (BindingResult) model.asMap().get("b");
         model.addAttribute("command", myUser);

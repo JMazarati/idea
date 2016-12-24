@@ -39,6 +39,8 @@
 <spring:message code="label_registration" var="labelregistration"/>
 <spring:message code="label_restore" var="labelrestore"/>
 <spring:message code="message_fail_login" var="mfl"/>
+<spring:message code="label_en" var="labelEn" />
+<spring:message code="label_ru" var="labelRu" />
 <c:url value="/login" var="loginUrl"/>
 
 <div class="container">
@@ -48,9 +50,31 @@
     </div>
     <div class="col-xs-10">
         <div class="row">
-            <div class="col-xs-8">
+            <div class="col-xs-6">
                 <div class="text-center" id="containerHeader">J.A.V.A.I.T. ideas</div>
             </div>
+
+            <div id="language" class="col-xs-2 text-center">
+                <c:set var="prop_tag" value="<%=(request.getParameter("tag")) %>"/>
+                <c:set var="prop_cat" value="<%=(request.getParameter("cat")) %>"/>
+                <c:set var="prop_lang" value="<%=(request.getParameter("lang")) %>"/>
+
+                <c:if test="${prop_tag eq null && prop_cat eq null}">
+                    <a href="${currentUrl}?lang=en"><img src="/resources/pict/uk.png" alt=""/>${labelEn}</a>
+                    <a href="${currentUrl}?lang=ru"><img src="/resources/pict/ru.png" alt=""/>${labelRu}</a>
+                </c:if>
+                <c:if test="${prop_tag ne null || prop_cat ne null}">
+
+                    <c:set var="rquery" value="${pageContext.request.queryString}"/>
+                    <c:if test="${prop_lang ne null}">
+                        <c:set var="rquery" value='${rquery.replaceAll("&lang=en",null)}'/>
+                        <c:set var="rquery" value='${rquery.replaceAll("&lang=ru",null)}'/>
+                    </c:if>
+                    <a href="?${rquery}&lang=en"><img src="/resources/pict/uk.png" alt=""/>${labelEn}</a>
+                    <a href="?${rquery}&lang=ru"><img src="/resources/pict/ru.png" alt=""/>${labelRu}</a>
+                </c:if>
+            </div>
+
             <div class="col-xs-4">
                 <%-- Login --%>
                 <div class="pull-right" id="login1">
@@ -115,10 +139,10 @@
         <sec:authorize access="hasAnyRole('ROLE_USER','ROLE_OPERATOR')">
             <nav class="nav nav-bar" id="menu" role="navigation">
                 <ul class="nav nav-tabs conmenu-ul">
-                    <li role="presentation" id="tab1" class="active"><a href="/index">${label_link_3}</a></li>
-                    <li role="presentation" id="tab2"><a href="/viewidea">${label_link_1}</a></li>
-                    <li role="presentation" id="tab3"><a href="/addidea">${label_link_2}</a></li>
-                    <li role="presentation" id="tab4"><a href="/myoffice">${label_link_4}</a></li>
+                    <li role="presentation" id="tab1" class="${tabclass1}"><a href="/index">${label_link_3}</a></li>
+                    <li role="presentation" id="tab2" class="${tabclass2}"><a href="/viewidea">${label_link_1}</a></li>
+                    <li role="presentation" id="tab3" class="${tabclass3}"><a href="/addidea">${label_link_2}</a></li>
+                    <li role="presentation" id="tab4" class="${tabclass4}"><a href="/myoffice">${label_link_4}</a></li>
                     <li class="pull-right">
                         <div class="form-group" id="search">
                             <input type="text" class="form-control" placeholder="${label_search}">
@@ -132,11 +156,11 @@
         <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">
             <nav class="nav nav-bar" id="menu" role="navigation">
                 <ul class="nav nav-tabs conmenu-ul admin-tabs">
-                    <li role="presentation" id="tab1Admin" class="active"><a href="/index">${label_link_3}</a></li>
-                    <li role="presentation" id="tab2Admin"><a href="/viewidea">${label_link_1}</a></li>
-                    <li role="presentation" id="tab3Admin"><a href="/addidea">${label_link_2}</a></li>
-                    <li role="presentation" id="tab4Admin"><a href="/myoffice">${label_link_4}</a></li>
-                    <li role="presentation" id="tab5Admin"><a href="/admin">${label_link_5}</a></li>
+                    <li role="presentation" id="tab1Admin" class="${tabclass1}"><a href="/index">${label_link_3}</a></li>
+                    <li role="presentation" id="tab2Admin" class="${tabclass2}"><a href="/viewidea">${label_link_1}</a></li>
+                    <li role="presentation" id="tab3Admin" class="${tabclass3}"><a href="/addidea">${label_link_2}</a></li>
+                    <li role="presentation" id="tab4Admin" class="${tabclass4}"><a href="/myoffice">${label_link_4}</a></li>
+                    <li role="presentation" id="tab5Admin" class="${tabclass5}"><a href="/admin">${label_link_5}</a></li>
                     <li class="pull-right">
                         <div class="form-group" id="searchAdmin">
                             <input type="text" class="form-control" placeholder="${label_search}">
@@ -149,8 +173,8 @@
         <sec:authorize access="isAnonymous()">
             <nav class="nav nav-bar" id="menu" role="navigation">
                 <ul class="nav nav-tabs conmenu-ul">
-                    <li role="presentation" id="tab1Anon" class="active"><a href="/index">${label_link_3}</a></li>
-                    <li role="presentation" id="tab2Anon" ><a href="/viewidea">${label_link_1}</a></li>
+                    <li role="presentation" id="tab1Anon" class="${tabclass1}"><a href="/index">${label_link_3}</a></li>
+                    <li role="presentation" id="tab2Anon" class="${tabclass2}"><a href="/viewidea">${label_link_1}</a></li>
                     <li class="pull-right">
                         <div class="form-group" id="searchAnon">
                             <input type="text" class="form-control" placeholder="${label_search}">

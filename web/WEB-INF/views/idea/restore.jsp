@@ -40,7 +40,7 @@
         <tr>
             <td colspan="2" id="button">
                 <input type="submit" class="btn btn-default" value="${label_button_submit}"/>
-                <input type="reset" class="btn btn-default" value="${label_button_reset}"/>
+                <input type="reset" class="btn btn-default reset" value="${label_button_reset}"/>
             </td>
         </tr>
     </table>
