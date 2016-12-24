@@ -49,6 +49,7 @@
         <security:intercept-url pattern="/deleteidea" access="hasAnyRole('ROLE_USER','ROLE_ADMINISTRATOR')"/>
         <security:intercept-url pattern="/editidea" access="isAuthenticated()"/>
         <security:intercept-url pattern="/editprofile" access="isAuthenticated()"/>
+        <security:intercept-url pattern="/deleteuser" access="isAuthenticated()"/>
     </security:http>
 
 
