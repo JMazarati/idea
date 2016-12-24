@@ -86,24 +86,18 @@
                                 <span onclick="document.getElementById('form').style.display='none'" class="close" title="Close Modal">&times;</span>
                                 <div class="containerLogin">
                                     <input type="hidden" class="form-control" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                                    <table>
-                                        <tr><caption align="right">${labellogin}</caption>
-                                            <td>${labelusername}</td>
-                                            <td><input type="text" name="username" id="login" class="form-control"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>${labelpwd}</td>
-                                            <td><input type="password" name="password" id="password" class="form-control"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td><input type="checkbox" checked="checked">${label_remember_me}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input name="submit" type="submit" class="btn btn-default" id="submitBtn" value="${labellogin}"/></td>
-                                            <td><a href=${registrationlink}>${labelregistration}</a>&nbsp;<a href="/restore">${labelrestore}</a> </td>
-                                        </tr>
-                                    </table>
+
+                                        <%--<caption align="right">${labellogin}</caption>--%>
+
+                                            <input type="text" name="username" id="login" placeholder="${labelusername}" class="form-control"/><%--
+                                            --%><input type="password" name="password" id="password" placeholder="${labelpwd}" class="form-control"/>
+
+                                            <input name="submit" type="submit" class="btn btn-default" id="submitBtn" value="${labellogin}"/>
+                                            <div class="reg-restore">
+                                                <span><a href=${registrationlink}>${labelregistration}</a></span>
+                                                <span><a href="/restore">${labelrestore}</a></span>
+                                            </div>
+
                                 </div>
                             </form>
                         </div>
@@ -119,10 +113,11 @@
                         </script>
 
                         <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
-                <span style="color: red; ">
-                    ${mfl} &nbsp;<a href="/restore">${labelrestore}</a><br/><br/>
+                <p style="color: red; ">
+                    ${mfl}
                     <c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}"/>.
-                </span>
+                    <span><a href="/restore">${labelrestore}</a></span>
+                </p>
                         </c:if>
                     </sec:authorize>
 
