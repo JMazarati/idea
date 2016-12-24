@@ -132,8 +132,8 @@ a:hover{
 .item img{
     /*margin: 0 auto;*/
     /*height: 35% !important;*/
-    width: 45% !important;
-    height: 350px !important;
+    /*width: 45% !important;*/
+    height: 400px !important;
     display: inline-block !important;
 
 }
@@ -375,12 +375,12 @@ a:hover{
 #language{
     font-size: 15px;
     margin-top: 6px;
-    text-align: right;
+    text-align: left;
 }
 
-/*#language a{*/
-    /*padding: 5px;*/
-/*}*/
+#language p{
+    margin-bottom: 0;
+}
 #language img{
     width: 15px;
     height: 15px;

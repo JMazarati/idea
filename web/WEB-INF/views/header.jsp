@@ -61,8 +61,8 @@
                 <c:set var="prop_lang" value="<%=(request.getParameter("lang")) %>"/>
 
                 <c:if test="${prop_tag eq null && prop_cat eq null && prop_usr eq null}">
-                    <a href="${currentUrl}?lang=en"><img src="/resources/pict/uk.png" alt=""/>${labelEn}</a>
-                    <a href="${currentUrl}?lang=ru"><img src="/resources/pict/ru.png" alt=""/>${labelRu}</a>
+                    <p><a href="${currentUrl}?lang=en"><img src="/resources/pict/uk.png" alt=""/>${labelEn}</a></p>
+                    <p><a href="${currentUrl}?lang=ru"><img src="/resources/pict/ru.png" alt=""/>${labelRu}</a></p>
                 </c:if>
                 <c:if test="${prop_tag ne null || prop_cat ne null || prop_usr ne null}">
 
@@ -71,8 +71,8 @@
                         <c:set var="rquery" value='${rquery.replaceAll("&lang=en",null)}'/>
                         <c:set var="rquery" value='${rquery.replaceAll("&lang=ru",null)}'/>
                     </c:if>
-                    <a href="?${rquery}&lang=en"><img src="/resources/pict/uk.png" alt=""/>${labelEn}</a>
-                    <a href="?${rquery}&lang=ru"><img src="/resources/pict/ru.png" alt=""/>${labelRu}</a>
+                    <p><a href="?${rquery}&lang=en"><img src="/resources/pict/uk.png" alt=""/>${labelEn}</a></p>
+                    <p><a href="?${rquery}&lang=ru"><img src="/resources/pict/ru.png" alt=""/>${labelRu}</a></p>
                 </c:if>
             </div>
 

@@ -19,7 +19,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img src="/resources/upload_image/${top5.get(0).pict}" alt="picture"/>
+            <img src="/resources/upload_image/${top5.get(0).pict}" alt="picture" class="thumbnail"/>
             <div>
                 <p><c:if test="${top5.get(0).txt.length() > 0}">
                     ${top5.get(0).txt}
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="item">
-            <img src="/resources/upload_image/${top5.get(1).pict}" alt="picture"/>
+            <img src="/resources/upload_image/${top5.get(1).pict}" alt="picture" class="thumbnail"/>
             <div>
                 <p><c:if test="${top5.get(1).txt.length() > 0}">
                     ${top5.get(1).txt}
@@ -44,7 +44,7 @@
         </div>
 
         <div class="item">
-            <img src="/resources/upload_image/${top5.get(2).pict}" alt="picture"/>
+            <img src="/resources/upload_image/${top5.get(2).pict}" alt="picture" class="thumbnail"/>
             <div>
                 <p>
                     <c:if test="${top5.get(2).txt.length() > 0}">
@@ -59,7 +59,7 @@
         </div>
 
         <div class="item">
-            <img src="/resources/upload_image/${top5.get(3).pict}" alt="picture"/>
+            <img src="/resources/upload_image/${top5.get(3).pict}" alt="picture" class="thumbnail"/>
             <div>
                 <p>
                     <c:if test="${top5.get(3).txt.length() > 0}">
@@ -73,7 +73,7 @@
         </div>
 
         <div class="item">
-            <img src="/resources/upload_image/${top5.get(4).pict}" alt="picture"/>
+            <img src="/resources/upload_image/${top5.get(4).pict}" alt="picture" class="thumbnail"/>
             <div>
                 <p>
                     <c:if test="${top5.get(4).txt.length() > 0}">
