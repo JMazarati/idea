@@ -57,13 +57,14 @@
             <div id="language" class="col-xs-2 text-center">
                 <c:set var="prop_tag" value="<%=(request.getParameter("tag")) %>"/>
                 <c:set var="prop_cat" value="<%=(request.getParameter("cat")) %>"/>
+                <c:set var="prop_usr" value="<%=(request.getParameter("usr")) %>"/>
                 <c:set var="prop_lang" value="<%=(request.getParameter("lang")) %>"/>
 
-                <c:if test="${prop_tag eq null && prop_cat eq null}">
+                <c:if test="${prop_tag eq null && prop_cat eq null && prop_usr eq null}">
                     <a href="${currentUrl}?lang=en"><img src="/resources/pict/uk.png" alt=""/>${labelEn}</a>
                     <a href="${currentUrl}?lang=ru"><img src="/resources/pict/ru.png" alt=""/>${labelRu}</a>
                 </c:if>
-                <c:if test="${prop_tag ne null || prop_cat ne null}">
+                <c:if test="${prop_tag ne null || prop_cat ne null || prop_usr ne null}">
 
                     <c:set var="rquery" value="${pageContext.request.queryString}"/>
                     <c:if test="${prop_lang ne null}">

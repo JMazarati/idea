@@ -39,7 +39,7 @@
             <div id="title" class="col-xs-10">${check.caption}</div>
         </div>
         <div class="row row2">
-            <div class="col-xs-9" id="username">By ${check.username}</div>
+            <div class="col-xs-9" id="username">By <a href="/user?usr=${check.username}"></a> </div>
             <div id="date" class="col-xs-3">added ${check.date_create}</div>
         </div>
         <div id="category"><span id="nameCategory">Category: </span>${check.category}</div>

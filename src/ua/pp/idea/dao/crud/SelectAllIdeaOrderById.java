@@ -1,21 +1,19 @@
 package ua.pp.idea.dao.crud;
 
-import org.springframework.jdbc.core.SqlParameter;
 import org.springframework.jdbc.object.MappingSqlQuery;
 import ua.pp.idea.entity.Idea;
 
 import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Types;
 
 /**
  * Created by Dark on 15.11.2016.
  */
-public class SelectAllIdeaOrderByRating extends MappingSqlQuery<Idea> {
-    private static final String SQL_SELECT_ALL_IDEA = "SELECT i.id,i.caption,i.txt,u.username,i.rating,i.date_create, i.category_link, i.tags FROM user_table u INNER JOIN idea_table i ON(i.owner=u.id) ORDER BY rating DESC ";
+public class SelectAllIdeaOrderById extends MappingSqlQuery<Idea> {
+    private static final String SQL_SELECT_ALL_IDEA = "SELECT i.id,i.caption,i.txt,u.username,i.rating,i.date_create, i.category_link, i.tags FROM user_table u INNER JOIN idea_table i ON(i.owner=u.id) ORDER BY id";
 
-    public SelectAllIdeaOrderByRating(DataSource dataSource) {
+    public SelectAllIdeaOrderById(DataSource dataSource) {
         super(dataSource, SQL_SELECT_ALL_IDEA);
     }
 

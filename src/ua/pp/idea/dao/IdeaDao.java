@@ -10,6 +10,8 @@ import java.util.List;
 public interface IdeaDao {
 
 
+    List<Idea> getAllIdeaOrderById();
+
     List<Idea> getAll(Boolean sort);
 
     List<Idea> getTop5();
@@ -17,6 +19,8 @@ public interface IdeaDao {
     Idea findIdeaByID(int id);
 
     List<Idea> findIdeaByCategory(int category_link,Boolean sort);
+
+    List<Idea> findIdeaByUser(String category_link, Boolean sort);
 
     void createIdea(Idea idea);
 

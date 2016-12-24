@@ -29,6 +29,9 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
     private SelectIdeaByTagOrderByRating selectIdeaByTagOrderByRating;
     private SelectIdeaByCategoryOrderByDate selectIdeaByCategoryOrderByDate;
     private SelectIdeaByCategoryOrderByRating selectIdeaByCategoryOrderByRating;
+    private SelectIdeaByUserOrderByDate selectIdeaByUserOrderByDate;
+    private SelectIdeaByUserOrderByRating selectIdeaByUserOrderByRating;
+    private SelectAllIdeaOrderById selectAllIdeaOrderById;
     private SelectTopIdea selectTopIdea;
 
 
@@ -45,11 +48,18 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
         this.selectIdeaByTagOrderByRating = new SelectIdeaByTagOrderByRating(dataSource);
         this.selectIdeaByCategoryOrderByDate = new SelectIdeaByCategoryOrderByDate(dataSource);
         this.selectIdeaByCategoryOrderByRating = new SelectIdeaByCategoryOrderByRating(dataSource);
+        this.selectIdeaByUserOrderByDate = new SelectIdeaByUserOrderByDate(dataSource);
+        this.selectIdeaByUserOrderByRating = new SelectIdeaByUserOrderByRating(dataSource);
+        this.selectAllIdeaOrderById = new SelectAllIdeaOrderById(dataSource);
         this.selectTopIdea = new SelectTopIdea(dataSource);
 
 
     }
 
+    @Override
+    public List<Idea> getAllIdeaOrderById() {
+        return selectAllIdeaOrderById.execute();
+    }
 
     @Override
     public List<Idea> getAll(Boolean sort) {
@@ -57,6 +67,7 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
             return selectAllIdeaOrderByDate.execute();
         else return selectAllIdeaOrderByRating.execute();
     }
+
     @Override
     public List<Idea> getTop5() {
         return selectTopIdea.execute();
@@ -98,6 +109,17 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
         else return selectIdeaByCategoryOrderByRating.executeByNamedParam(paramMap);
     }
 
+    @Override
+    public List<Idea> findIdeaByUser(String username, Boolean sort) {
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+
+        paramMap.put("username", username);
+        if (sort)
+            return selectIdeaByUserOrderByDate.executeByNamedParam(paramMap);
+        else return selectIdeaByUserOrderByRating.executeByNamedParam(paramMap);
+    }
+
+
     @PreAuthorize("isAuthenticated()")
     @Override
     public void createIdea(Idea idea) {
@@ -135,5 +157,6 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
         paramMap.put("tags", idea.getTags());
         updateIdeaByID.updateByNamedParam(paramMap);
     }
+
 
 }

@@ -11,10 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import ua.pp.idea.dao.*;
-import ua.pp.idea.entity.Category;
-import ua.pp.idea.entity.Comment;
-import ua.pp.idea.entity.Idea;
-import ua.pp.idea.entity.Rating;
+import ua.pp.idea.entity.*;
 import ua.pp.idea.validator.AddcommentValidator;
 import ua.pp.idea.validator.AddideaValidator;
 
@@ -49,14 +46,14 @@ public class IdeaController {
     AddcommentValidator addcommentValidator;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String HomeController(Model uiModel,RedirectAttributes redirectAttributes) {
-    List<Idea> topList = null;
-    Idea myIdea=new Idea();
-        try{
-            topList=ide.getTop5();
-            if(topList.size()<5) {
-                for(int i=0;i<5;i++){
-                    if(i>topList.size()-1){
+    public String HomeController(Model uiModel, RedirectAttributes redirectAttributes) {
+        List<Idea> topList = null;
+        Idea myIdea = new Idea();
+        try {
+            topList = ide.getTop5();
+            if (topList.size() < 5) {
+                for (int i = 0; i < 5; i++) {
+                    if (i > topList.size() - 1) {
                         myIdea.setId(i);
                         myIdea.setPict("idea.png");
                         myIdea.setCaption("Здесь могла бы быть ваша идея");
@@ -65,33 +62,33 @@ public class IdeaController {
 
                     }
                 }
-                uiModel.addAttribute("top5",topList);
-            }
-                else uiModel.addAttribute("top5",topList);
-        }catch (Exception e){
+                uiModel.addAttribute("top5", topList);
+            } else uiModel.addAttribute("top5", topList);
+        } catch (Exception e) {
             redirectAttributes.addFlashAttribute("e", e);
             return "redirect:/userregerror?error=6";
         }
 
-        uiModel.addAttribute("tabclass1","active");
-        uiModel.addAttribute("tabclass2","nonactive");
-        uiModel.addAttribute("tabclass3","nonactive");
-        uiModel.addAttribute("tabclass4","nonactive");
-        uiModel.addAttribute("tabclass5","nonactive");
+        uiModel.addAttribute("tabclass1", "active");
+        uiModel.addAttribute("tabclass2", "nonactive");
+        uiModel.addAttribute("tabclass3", "nonactive");
+        uiModel.addAttribute("tabclass4", "nonactive");
+        uiModel.addAttribute("tabclass5", "nonactive");
 
         return "default";
     }
 
     @RequestMapping(value = "/viewidea", method = RequestMethod.GET)
-    public String ViewIdea(@RequestParam(defaultValue = "true") String sort, Model uiModel, RedirectAttributes redirectAttributes) {
-        uiModel.addAttribute("tabclass1","nonactive");
-        uiModel.addAttribute("tabclass2","active");
-        uiModel.addAttribute("tabclass3","nonactive");
-        uiModel.addAttribute("tabclass4","nonactive");
-        uiModel.addAttribute("tabclass5","nonactive");
+    public String ViewIdea(@RequestParam(defaultValue = "") String sort, Model uiModel, RedirectAttributes redirectAttributes) {
+        uiModel.addAttribute("tabclass1", "nonactive");
+        uiModel.addAttribute("tabclass2", "active");
+        uiModel.addAttribute("tabclass3", "nonactive");
+        uiModel.addAttribute("tabclass4", "nonactive");
+        uiModel.addAttribute("tabclass5", "nonactive");
         List<Idea> list;
         try {
-            list = ide.getAll(Boolean.valueOf(sort));
+            if(sort.equals(""))list=ide.getAllIdeaOrderById();
+            else list = ide.getAll(Boolean.valueOf(sort));
         } catch (Exception e) {
             redirectAttributes.addFlashAttribute("e", e);
             return "redirect:/userregerror?error=6";
@@ -132,11 +129,11 @@ public class IdeaController {
         uiModel.addAttribute("date", "/tags?tag=" + tag + "&sort=true");
         uiModel.addAttribute("rating", "/tags?tag=" + tag + "&sort=false");
         uiModel.addAttribute("list", list);
-        uiModel.addAttribute("tabclass1","nonactive");
-        uiModel.addAttribute("tabclass2","active");
-        uiModel.addAttribute("tabclass3","nonactive");
-        uiModel.addAttribute("tabclass4","nonactive");
-        uiModel.addAttribute("tabclass5","nonactive");
+        uiModel.addAttribute("tabclass1", "nonactive");
+        uiModel.addAttribute("tabclass2", "active");
+        uiModel.addAttribute("tabclass3", "nonactive");
+        uiModel.addAttribute("tabclass4", "nonactive");
+        uiModel.addAttribute("tabclass5", "nonactive");
         return "viewidea";
     }
 
@@ -161,22 +158,51 @@ public class IdeaController {
         uiModel.addAttribute("date", "/category?cat=" + cat + "&sort=true");
         uiModel.addAttribute("rating", "/category?cat=" + cat + "&sort=false");
         uiModel.addAttribute("list", list);
-        uiModel.addAttribute("tabclass1","nonactive");
-        uiModel.addAttribute("tabclass2","active");
-        uiModel.addAttribute("tabclass3","nonactive");
-        uiModel.addAttribute("tabclass4","nonactive");
-        uiModel.addAttribute("tabclass5","nonactive");
+        uiModel.addAttribute("tabclass1", "nonactive");
+        uiModel.addAttribute("tabclass2", "active");
+        uiModel.addAttribute("tabclass3", "nonactive");
+        uiModel.addAttribute("tabclass4", "nonactive");
+        uiModel.addAttribute("tabclass5", "nonactive");
         return "viewidea";
     }
 
+    //END BLOCK
+    //------------------------------------------------------------------------------------------------------------------
+    //SELECT IDEA BY USER
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    public String ViewIdeaByUser(@RequestParam(value = "usr", defaultValue = "") String usr, @RequestParam(defaultValue = "true") String sort,
+                                 Model uiModel, RedirectAttributes redirectAttributes) {
+        List<Idea> list;
+        try {
+            list = ide.findIdeaByUser(usr, Boolean.valueOf(sort));
+        } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("e", e);
+            return "redirect:/userregerror?error=6";
+        }
+        Map<Integer, String> category = new LinkedHashMap<Integer, String>();
+
+        for (Category item : catdi.getAllCategory()) {
+            category.put(item.getId(), item.getTitle());
+        }
+        uiModel.addAttribute("cat", category);
+        uiModel.addAttribute("date", "/user?usr=" + usr + "&sort=true");
+        uiModel.addAttribute("rating", "/user?usr=" + usr + "&sort=false");
+        uiModel.addAttribute("list", list);
+        uiModel.addAttribute("tabclass1", "nonactive");
+        uiModel.addAttribute("tabclass2", "active");
+        uiModel.addAttribute("tabclass3", "nonactive");
+        uiModel.addAttribute("tabclass4", "nonactive");
+        uiModel.addAttribute("tabclass5", "nonactive");
+        return "viewidea";
+    }
 
     @RequestMapping(value = "/addidea", method = RequestMethod.GET)
     public String updateForm(@ModelAttribute Idea myIdea, Model model) {
-        model.addAttribute("tabclass1","nonactive");
-        model.addAttribute("tabclass2","nonactive");
-        model.addAttribute("tabclass3","active");
-        model.addAttribute("tabclass4","nonactive");
-        model.addAttribute("tabclass5","nonactive");
+        model.addAttribute("tabclass1", "nonactive");
+        model.addAttribute("tabclass2", "nonactive");
+        model.addAttribute("tabclass3", "active");
+        model.addAttribute("tabclass4", "nonactive");
+        model.addAttribute("tabclass5", "nonactive");
         Map<Integer, String> category = new LinkedHashMap<Integer, String>();
 
         for (Category item : catdi.getAllCategory()) {
@@ -231,12 +257,12 @@ public class IdeaController {
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String Index(Model uiModel, RedirectAttributes redirectAttributes) {
         List<Idea> topList = null;
-        Idea myIdea=new Idea();
-        try{
-            topList=ide.getTop5();
-            if(topList.size()<5) {
-                for(int i=0;i<5;i++){
-                    if(i>topList.size()-1){
+        Idea myIdea = new Idea();
+        try {
+            topList = ide.getTop5();
+            if (topList.size() < 5) {
+                for (int i = 0; i < 5; i++) {
+                    if (i > topList.size() - 1) {
                         myIdea.setId(i);
                         myIdea.setPict("idea.png");
                         myIdea.setCaption("Здесь могла бы быть ваша идея");
@@ -245,32 +271,39 @@ public class IdeaController {
 
                     }
                 }
-                uiModel.addAttribute("top5",topList);
-            }
-            else uiModel.addAttribute("top5",topList);
-        }catch (Exception e){
+                uiModel.addAttribute("top5", topList);
+            } else uiModel.addAttribute("top5", topList);
+        } catch (Exception e) {
             redirectAttributes.addFlashAttribute("e", e);
             return "redirect:/userregerror?error=6";
         }
         uiModel.addAttribute("list", "addidea");
-        uiModel.addAttribute("tabclass1","active");
-        uiModel.addAttribute("tabclass2","nonactive");
-        uiModel.addAttribute("tabclass3","nonactive");
-        uiModel.addAttribute("tabclass4","nonactive");
-        uiModel.addAttribute("tabclass5","nonactive");
+        uiModel.addAttribute("tabclass1", "active");
+        uiModel.addAttribute("tabclass2", "nonactive");
+        uiModel.addAttribute("tabclass3", "nonactive");
+        uiModel.addAttribute("tabclass4", "nonactive");
+        uiModel.addAttribute("tabclass5", "nonactive");
 
         return "index";
     }
 
     @RequestMapping(value = "/myoffice", method = RequestMethod.GET)
-    public String MyOffice(Model uiModel) {
+    public String MyOffice(Model uiModel, RedirectAttributes redirectAttributes) {
         String txt = SecurityContextHolder.getContext().getAuthentication().getName();
+        try {
+            User user = udi.findUserByName(txt).get(0);
+            uiModel.addAttribute("useremail", user.getUseremail());
+        } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("e", e);
+            return "redirect:/userregerror?error=6";
+        }
+
         LocalDate today = LocalDate.now();
-        uiModel.addAttribute("tabclass1","nonactive");
-        uiModel.addAttribute("tabclass2","nonactive");
-        uiModel.addAttribute("tabclass3","nonactive");
-        uiModel.addAttribute("tabclass4","active");
-        uiModel.addAttribute("tabclass5","nonactive");
+        uiModel.addAttribute("tabclass1", "nonactive");
+        uiModel.addAttribute("tabclass2", "nonactive");
+        uiModel.addAttribute("tabclass3", "nonactive");
+        uiModel.addAttribute("tabclass4", "active");
+        uiModel.addAttribute("tabclass5", "nonactive");
         uiModel.addAttribute("txt", today);
         return "myoffice";
 
@@ -282,11 +315,11 @@ public class IdeaController {
     @RequestMapping(value = "/viewidea/{id}", method = RequestMethod.GET)
     public String showid(@PathVariable("id") String s, Model myModel, Idea myIdea, Comment myComment, Rating rating) {
 
-        myModel.addAttribute("tabclass1","nonactive");
-        myModel.addAttribute("tabclass2","active");
-        myModel.addAttribute("tabclass3","nonactive");
-        myModel.addAttribute("tabclass4","nonactive");
-        myModel.addAttribute("tabclass5","nonactive");
+        myModel.addAttribute("tabclass1", "nonactive");
+        myModel.addAttribute("tabclass2", "active");
+        myModel.addAttribute("tabclass3", "nonactive");
+        myModel.addAttribute("tabclass4", "nonactive");
+        myModel.addAttribute("tabclass5", "nonactive");
         ArrayList<Comment> allComments = new ArrayList<>();
         Map<Integer, String> voteList = new LinkedHashMap<>();
         for (int i = 1; i < 6; i++) {
@@ -386,11 +419,11 @@ public class IdeaController {
 
     @RequestMapping(value = "/editidea/{id}", method = RequestMethod.GET)
     public String editidea(@PathVariable("id") String id, Model myModel, Idea myIdea) {
-        myModel.addAttribute("tabclass1","nonactive");
-        myModel.addAttribute("tabclass2","active");
-        myModel.addAttribute("tabclass3","nonactive");
-        myModel.addAttribute("tabclass4","nonactive");
-        myModel.addAttribute("tabclass5","nonactive");
+        myModel.addAttribute("tabclass1", "nonactive");
+        myModel.addAttribute("tabclass2", "active");
+        myModel.addAttribute("tabclass3", "nonactive");
+        myModel.addAttribute("tabclass4", "nonactive");
+        myModel.addAttribute("tabclass5", "nonactive");
         try {
             myIdea = ide.findIdeaByID(Integer.parseInt(id));
         } catch (Exception e) {
@@ -475,15 +508,15 @@ public class IdeaController {
     @PreAuthorize("isAuthenticated()")
     @RequestMapping(value = "/like", method = RequestMethod.POST)
     public String like(HttpServletRequest httpServletRequest, Rating rating, @RequestParam(value = "idea_link", required = false) int idea_link,
-                       @RequestParam (value = "likeordislike", required = false)int likeordislike) {
+                       @RequestParam(value = "likeordislike", required = false) int likeordislike) {
         String scheme = httpServletRequest.getScheme() + "://";
         String serverName = httpServletRequest.getServerName();
         String serverPort = (httpServletRequest.getServerPort() == 80) ? "" : ":" + httpServletRequest.getServerPort();
         String rdrct = "redirect:" + scheme + serverName + serverPort;
         rating.setUser_creator(SecurityContextHolder.getContext().getAuthentication().getName().toString());
         rating.setIdea_link(idea_link);
-        if(likeordislike == 1)rating.setLikeordislike(1);
-        if(likeordislike == -1)rating.setLikeordislike(-1);
+        if (likeordislike == 1) rating.setLikeordislike(1);
+        if (likeordislike == -1) rating.setLikeordislike(-1);
 
         try {
             voteDao.Insertlikeordislike(rating);
@@ -492,6 +525,7 @@ public class IdeaController {
         }
         return rdrct + "/viewidea/" + rating.getIdea_link();
     }
+
     //END OF BLOCK LIKE
     //------------------------------------------------------------------------------------------------------------------
     static String Smile(String smile) {
