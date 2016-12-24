@@ -12,6 +12,8 @@ public interface IdeaDao {
 
     List<Idea> getAll(Boolean sort);
 
+    List<Idea> getTop5();
+
     Idea findIdeaByID(int id);
 
     List<Idea> findIdeaByCategory(int category_link,Boolean sort);

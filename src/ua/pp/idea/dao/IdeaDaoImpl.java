@@ -29,6 +29,7 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
     private SelectIdeaByTagOrderByRating selectIdeaByTagOrderByRating;
     private SelectIdeaByCategoryOrderByDate selectIdeaByCategoryOrderByDate;
     private SelectIdeaByCategoryOrderByRating selectIdeaByCategoryOrderByRating;
+    private SelectTopIdea selectTopIdea;
 
 
     @Resource(name = "dataSource")
@@ -44,6 +45,7 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
         this.selectIdeaByTagOrderByRating = new SelectIdeaByTagOrderByRating(dataSource);
         this.selectIdeaByCategoryOrderByDate = new SelectIdeaByCategoryOrderByDate(dataSource);
         this.selectIdeaByCategoryOrderByRating = new SelectIdeaByCategoryOrderByRating(dataSource);
+        this.selectTopIdea = new SelectTopIdea(dataSource);
 
 
     }
@@ -51,9 +53,13 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
 
     @Override
     public List<Idea> getAll(Boolean sort) {
-        if(sort)
-        return selectAllIdeaOrderByDate.execute();
+        if (sort)
+            return selectAllIdeaOrderByDate.execute();
         else return selectAllIdeaOrderByRating.execute();
+    }
+    @Override
+    public List<Idea> getTop5() {
+        return selectTopIdea.execute();
     }
 
     @Override
@@ -73,21 +79,22 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
     }
 
     @Override
-    public List<Idea> findIdeaByTag(String tag,Boolean sort) {
+    public List<Idea> findIdeaByTag(String tag, Boolean sort) {
         Map<String, Object> paramMap = new HashMap<String, Object>();
         paramMap.put("tags", tag.toLowerCase());
-        if(sort)
-        return selectIdeaByTagOrderByDate.executeByNamedParam(paramMap);
+        if (sort)
+            return selectIdeaByTagOrderByDate.executeByNamedParam(paramMap);
         else return selectIdeaByTagOrderByRating.executeByNamedParam(paramMap);
 
     }
+
     @Override
-    public List<Idea> findIdeaByCategory(int category_link,Boolean sort) {
+    public List<Idea> findIdeaByCategory(int category_link, Boolean sort) {
         Map<String, Object> paramMap = new HashMap<String, Object>();
 
         paramMap.put("category_link", category_link);
-        if(sort)
-        return selectIdeaByCategoryOrderByDate.executeByNamedParam(paramMap);
+        if (sort)
+            return selectIdeaByCategoryOrderByDate.executeByNamedParam(paramMap);
         else return selectIdeaByCategoryOrderByRating.executeByNamedParam(paramMap);
     }
 

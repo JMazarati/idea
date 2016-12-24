@@ -49,14 +49,38 @@ public class IdeaController {
     AddcommentValidator addcommentValidator;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String HomeController(Model uiModel) {
+    public String HomeController(Model uiModel,RedirectAttributes redirectAttributes) {
+    List<Idea> topList = null;
+    Idea myIdea=new Idea();
+
+        try{
+            topList=ide.getTop5();
+            if(topList.size()<5) {
+                for(int i=0;i<5;i++){
+                    if(i>topList.size()-1){
+                        myIdea.setId(i);
+                        myIdea.setPict("idea.png");
+                        myIdea.setCaption("Здесь могла бы быть ваша идея");
+                        myIdea.setTxt("Здесь могла бы быть ваша идея");
+                        topList.add(myIdea);
+
+                    }
+                }
+                uiModel.addAttribute("top5",topList);
+            }
+                else uiModel.addAttribute("top5",topList);
+        }catch (Exception e){
+            redirectAttributes.addFlashAttribute("e", e);
+            return "redirect:/userregerror?error=6";
+        }
+
         uiModel.addAttribute("tabclass1","active");
         uiModel.addAttribute("tabclass2","nonactive");
         uiModel.addAttribute("tabclass3","nonactive");
         uiModel.addAttribute("tabclass4","nonactive");
         uiModel.addAttribute("tabclass5","nonactive");
 
-        return "index";
+        return "default";
     }
 
     @RequestMapping(value = "/viewidea", method = RequestMethod.GET)
