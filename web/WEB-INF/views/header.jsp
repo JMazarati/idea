@@ -85,10 +85,10 @@
 
                                         <%--<caption align="right">${labellogin}</caption>--%>
 
-                                            <input type="text" name="username" id="login" placeholder="${labelusername}" class="form-control"/><%--
-                                            --%><input type="password" name="password" id="password" placeholder="${labelpwd}" class="form-control"/>
+                                            <input type="text" name="username" id="login" placeholder="${labelusername}" class="form-control" required="required"/><%--
+                                            --%><input type="password" name="password" id="password" placeholder="${labelpwd}" required="required" class="form-control"/>
 
-                                            <input name="submit" type="submit" class="btn btn-default" id="submitBtn" value="${labellogin}"/>
+                                            <input name="submit" type="submit" class="btn btn-default" id="submitBtn" value="${labellogin}" />
                                             <div class="reg-restore">
                                                 <span><a href=${registrationlink}>${labelregistration}</a></span>
                                                 <span><a href="/restore">${labelrestore}</a></span>

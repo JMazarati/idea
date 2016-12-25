@@ -148,7 +148,7 @@ a:hover{
     /*margin: 0 auto;*/
     /*height: 35% !important;*/
     /*width: 45% !important;*/
-    height: 400px !important;
+    height: 350px !important;
     display: inline-block !important;
 
 }
@@ -160,8 +160,9 @@ a:hover{
     width: 50%
 }
 .item p{
-    width: 100%;
-    color: white;
+    /*width: 60%;*/
+    height: 350px;
+    color: black;
     overflow: hidden;
 }
 .content {
@@ -450,7 +451,7 @@ button.log-button:hover{
     text-decoration: none;
     padding: 8px 15px;
     margin: 4px 4px;
-    background-color: white;
+    background-color: rgba(147, 12, 225, 0.23);
     border: 1px solid black;
     border-radius: 5px;
     transition: all 0.5s ease;
@@ -541,4 +542,36 @@ div.update-idea .glyphicon{
 }
 
 
+@media screen and (min-device-width: 1752px) {
+    .item div{
+        width: 60%;
 
+    }
+}
+@media screen and (max-device-width: 1396px) {
+    .item div{
+        width: 45%;
+
+    }
+}
+
+@media screen and (max-device-width: 1244px) {
+    .item div{
+        width: 40%;
+
+    }
+}
+
+@media screen and (max-device-width: 1152px) {
+    .item div{
+        width: 35%;
+
+    }
+}
+
+@media screen and (max-device-width: 1048px) {
+    .item div{
+        width: 30%;
+
+    }
+}

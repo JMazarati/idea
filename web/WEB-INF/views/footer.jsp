@@ -18,28 +18,10 @@
         <div class="row">
             <div class="col-md-12 text-center" id="contacts">
                 ${label_copy}
-                <a href="https://github.com/andrewdark/idea">GitHub</a>
+                <a href="https://github.com/andrewdark/idea" target="_blank">GitHub</a>
             </div>
-            <%--<div id="language" class="col-md-12 text-center">--%>
-                <%--<c:set var="prop_tag" value="<%=(request.getParameter("tag")) %>"/>--%>
-                <%--<c:set var="prop_cat" value="<%=(request.getParameter("cat")) %>"/>--%>
-                <%--<c:set var="prop_lang" value="<%=(request.getParameter("lang")) %>"/>--%>
 
-                <%--<c:if test="${prop_tag eq null && prop_cat eq null}">--%>
-                    <%--<a href="${currentUrl}?lang=en">${labelEn}</a>--%>
-                    <%--<a href="${currentUrl}?lang=ru">${labelRu}</a>--%>
-                <%--</c:if>--%>
-                <%--<c:if test="${prop_tag ne null || prop_cat ne null}">--%>
 
-                    <%--<c:set var="rquery" value="${pageContext.request.queryString}"/>--%>
-                    <%--<c:if test="${prop_lang ne null}">--%>
-                        <%--<c:set var="rquery" value='${rquery.replaceAll("&lang=en",null)}'/>--%>
-                        <%--<c:set var="rquery" value='${rquery.replaceAll("&lang=ru",null)}'/>--%>
-                    <%--</c:if>--%>
-                    <%--<a href="?${rquery}&lang=en">${labelEn}</a>--%>
-                    <%--<a href="?${rquery}&lang=ru">${labelRu}</a>--%>
-                <%--</c:if>--%>
-            <%--</div>--%>
             <div class="col-md-12 text-center" id="copyright">&copy; Copyright J.A.V.A.I.T. 2016</div>
 
         </div>

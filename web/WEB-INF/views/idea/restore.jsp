@@ -25,7 +25,7 @@
     <table class="form-horizontal" id="registration">
         <tr>
             <td><form:label path="username">${label_username}</form:label></td>
-            <td><form:input path="username"  class="form-control" maxlength="50" htmlEscape="true"/></td>
+            <td><form:input path="username"  class="form-control" maxlength="50" htmlEscape="true" required="required"/></td>
             <td><span class="error" >
                 <form:errors path="username" element="div"/>
                 </span>
@@ -33,7 +33,7 @@
         </tr>
         <tr>
             <td><form:label path="useremail">${label_email}</form:label></td>
-            <td><form:input path="useremail"  class="form-control" maxlength="50" htmlEscape="true"/></td>
+            <td><form:input path="useremail"  class="form-control" maxlength="50" htmlEscape="true" required="required"/></td>
             <td><span class="error" ><form:errors path="useremail" /></span></td>
         </tr>
 
