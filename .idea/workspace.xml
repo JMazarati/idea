@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="idea" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f85692f-bba7-4975-88e2-78571ba6e466" name="Default" comment="fix slider, fix footer(reference) , fix logout color">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByDate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByRating.java" />
+    <list default="true" id="3f85692f-bba7-4975-88e2-78571ba6e466" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/pp/idea/controller/IdeaController.java" afterPath="$PROJECT_DIR$/src/ua/pp/idea/controller/IdeaController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/pp/idea/dao/IdeaDao.java" afterPath="$PROJECT_DIR$/src/ua/pp/idea/dao/IdeaDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/pp/idea/dao/IdeaDaoImpl.java" afterPath="$PROJECT_DIR$/src/ua/pp/idea/dao/IdeaDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/i18n/application_en.properties" afterPath="$PROJECT_DIR$/web/WEB-INF/i18n/application_en.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/i18n/application_ru.properties" afterPath="$PROJECT_DIR$/web/WEB-INF/i18n/application_ru.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/header.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/idea/addidea.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/idea/addidea.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/js/reply_to_comment.js" afterPath="$PROJECT_DIR$/web/resources/js/reply_to_comment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByDate.java" afterPath="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByDate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByRating.java" afterPath="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByRating.java" />
     </list>
     <ignored path="idea.iws" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -80,12 +76,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reply_to_comment.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IdeaDaoImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/IdeaDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reply_to_comment.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/resources/js/reply_to_comment.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelectIdeaByTextOrderByDate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByDate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="16" column="137" selection-start-line="16" selection-start-column="137" selection-end-line="16" selection-end-column="137" />
+              <folding>
+                <marker date="1482768071419" expanded="true" signature="457:779" ph="SELECT i.id,... user_table" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelectIdeaByTextOrderByRating.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByRating.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="16" column="130" selection-start-line="16" selection-start-column="130" selection-end-line="16" selection-end-column="130" />
+              <folding>
+                <marker date="1482768071390" expanded="true" signature="459:776" ph="SELECT i.id,... user_table" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,6 +134,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <push-targets>
+      <push-target-info repo="$PROJECT_DIR$" source="fancy_branch" target-remote="origin" target-branch="master" />
+    </push-targets>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -117,8 +150,6 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/restore.jsp" />
         <option value="$PROJECT_DIR$/web/resources/css/main.css" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/index.jsp" />
-        <option value="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByDate.java" />
-        <option value="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByRating.java" />
         <option value="$PROJECT_DIR$/src/ua/pp/idea/controller/IdeaController.java" />
         <option value="$PROJECT_DIR$/src/ua/pp/idea/dao/IdeaDaoImpl.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/header.jsp" />
@@ -127,6 +158,8 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/addidea.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp" />
         <option value="$PROJECT_DIR$/web/resources/js/reply_to_comment.js" />
+        <option value="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByDate.java" />
+        <option value="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByRating.java" />
       </list>
     </option>
   </component>
@@ -265,6 +298,72 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -275,6 +374,8 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -816,12 +917,20 @@
       <workItem from="1482669652131" duration="5811000" />
       <workItem from="1482700344170" duration="599000" />
       <workItem from="1482753852356" duration="1463000" />
-      <workItem from="1482757796707" duration="6854000" />
+      <workItem from="1482757796707" duration="8180000" />
     </task>
+    <task id="LOCAL-00001" summary="add module search by text of idea&#10;add feature translate  text of idea">
+      <created>1482765408228</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1482765408228</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14739000" />
+    <option name="totallyTimeSpent" value="16065000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -886,6 +995,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add module search by text of idea&#10;add feature translate  text of idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="add module search by text of idea&#10;add feature translate  text of idea" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1018,13 +1131,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="20" column="73" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByUserOrderByDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" column="139" selection-start-line="16" selection-start-column="113" selection-end-line="16" selection-end-column="139" />
         </state>
       </provider>
     </entry>
@@ -1204,34 +1310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByRating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-          <folding>
-            <marker date="1482760238905" expanded="true" signature="459:769" ph="SELECT i.id,... user_table" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" column="135" selection-start-line="16" selection-start-column="119" selection-end-line="16" selection-end-column="135" />
-          <folding>
-            <marker date="1482760239004" expanded="true" signature="457:772" ph="SELECT i.id,... user_table" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/IdeaDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -1290,6 +1368,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByUserOrderByDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="139" selection-start-line="16" selection-start-column="113" selection-end-line="16" selection-end-column="139" />
+          <folding>
+            <marker date="1482755066541" expanded="true" signature="457:776" ph="SELECT i.id,... user_table" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="137" selection-start-line="16" selection-start-column="137" selection-end-line="16" selection-end-column="137" />
+          <folding>
+            <marker date="1482768071419" expanded="true" signature="457:779" ph="SELECT i.id,... user_table" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByRating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="130" selection-start-line="16" selection-start-column="130" selection-end-line="16" selection-end-column="130" />
+          <folding>
+            <marker date="1482768071390" expanded="true" signature="459:776" ph="SELECT i.id,... user_table" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/pp/idea/dao/IdeaDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
           <folding />
         </state>
       </provider>

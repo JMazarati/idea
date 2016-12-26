@@ -14,7 +14,7 @@ import java.sql.Types;
  */
 public class SelectIdeaByTextOrderByRating extends MappingSqlQuery<Idea> {
     private static final String SQL_SELECT_IDEA_BY_CATEGORY = "SELECT i.id, i.txt, i.pict,i.video, i.caption, i.rating, i.count_like, i.count_dislike, u.username, i.date_create, cat.title,i.tags FROM user_table u " +
-            "INNER JOIN idea_table i ON(i.owner=u.id) INNER JOIN category_table cat ON (cat.id=i.category_link)  WHERE i.txt like :text ORDER BY rating DESC";
+            "INNER JOIN idea_table i ON(i.owner=u.id) INNER JOIN category_table cat ON (cat.id=i.category_link)  WHERE lower(i.txt) like :text ORDER BY rating DESC";
 
     public SelectIdeaByTextOrderByRating(DataSource dataSource) {
         super(dataSource, SQL_SELECT_IDEA_BY_CATEGORY);
