@@ -195,7 +195,38 @@ public class IdeaController {
         uiModel.addAttribute("tabclass5", "nonactive");
         return "viewidea";
     }
+    //END BLOCK
+    //------------------------------------------------------------------------------------------------------------------
+    //SELECT IDEA BY TEXT
+    @RequestMapping(value = "/text", method = RequestMethod.GET)
+    public String ViewIdeaByText(@RequestParam(value = "txt", defaultValue = "") String usr, @RequestParam(defaultValue = "true") String sort,
+                                 Model uiModel, RedirectAttributes redirectAttributes) {
+        List<Idea> list;
+        try {
+            list = ide.findIdeaByText("%"+usr+"%", Boolean.valueOf(sort));
+        } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("e", e);
+            return "redirect:/userregerror?error=6";
+        }
+        Map<Integer, String> category = new LinkedHashMap<Integer, String>();
 
+        for (Category item : catdi.getAllCategory()) {
+            category.put(item.getId(), item.getTitle());
+        }
+        uiModel.addAttribute("cat", category);
+        uiModel.addAttribute("date", "/text?txt=" + usr + "&sort=true");
+        uiModel.addAttribute("rating", "/text?txt=" + usr + "&sort=false");
+        uiModel.addAttribute("list", list);
+        uiModel.addAttribute("tabclass1", "nonactive");
+        uiModel.addAttribute("tabclass2", "active");
+        uiModel.addAttribute("tabclass3", "nonactive");
+        uiModel.addAttribute("tabclass4", "nonactive");
+        uiModel.addAttribute("tabclass5", "nonactive");
+        return "viewidea";
+    }
+    //END BLOCK
+    //------------------------------------------------------------------------------------------------------------------
+    //INSERT NEW IDEA INTO DATABASE
     @RequestMapping(value = "/addidea", method = RequestMethod.GET)
     public String updateForm(@ModelAttribute Idea myIdea, Model model) {
         model.addAttribute("tabclass1", "nonactive");

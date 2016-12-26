@@ -3,6 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <spring:message code="label_delete" var="labeldelete"/>
 <spring:message code="label_update" var="labelupdate"/>
@@ -10,24 +11,25 @@
 <spring:message code="label_comments" var="label_comments"/>
 <spring:message code="label_reply" var="label_reply"/>
 <spring:message code="label_comment_idea" var="label_comment_idea"/>
+<spring:message code="label_tweet" var="label_tweet"/>
 
 <%--<div id="delete_update" class="update-idea">--%>
 
-    <%--<sec:authorize access="!isAnonymous()">--%>
-        <%--<sec:authentication property="principal.username" var="username"/>--%>
-    <%--</sec:authorize>--%>
-    <%--<sec:authorize access="hasRole('ROLE_USER')">--%>
-        <%--<c:if test="${username eq check.username}">--%>
-            <%--<a href="/editidea/${check.id}"><span id="glyphicons" class="glyphicon glyphicon-edit" aria-hidden="true"/>${labelupdate}</a><br/>--%>
-            <%--<a href="/deleteIdea?id=${check.id}" onclick="return confirmDelete();"><span id="glyphicons" class="glyphicon glyphicon-trash" aria-hidden="true"/>${labeldelete}--%>
-            <%--</a>--%>
-        <%--</c:if>--%>
-    <%--</sec:authorize>--%>
-    <%--<sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">--%>
-        <%--<a href="/editidea/${check.id}"><span id="glyphicons" class="glyphicon glyphicon-edit" aria-hidden="true"/>${labelupdate}</a>--%>
-        <%--<a href="/deleteIdea?id=${check.id}" onclick="return confirmDelete();"><span id="glyphicons" class="glyphicon glyphicon-trash" aria-hidden="true"/>${labeldelete}--%>
-        <%--</a>--%>
-    <%--</sec:authorize>--%>
+<%--<sec:authorize access="!isAnonymous()">--%>
+<%--<sec:authentication property="principal.username" var="username"/>--%>
+<%--</sec:authorize>--%>
+<%--<sec:authorize access="hasRole('ROLE_USER')">--%>
+<%--<c:if test="${username eq check.username}">--%>
+<%--<a href="/editidea/${check.id}"><span id="glyphicons" class="glyphicon glyphicon-edit" aria-hidden="true"/>${labelupdate}</a><br/>--%>
+<%--<a href="/deleteIdea?id=${check.id}" onclick="return confirmDelete();"><span id="glyphicons" class="glyphicon glyphicon-trash" aria-hidden="true"/>${labeldelete}--%>
+<%--</a>--%>
+<%--</c:if>--%>
+<%--</sec:authorize>--%>
+<%--<sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">--%>
+<%--<a href="/editidea/${check.id}"><span id="glyphicons" class="glyphicon glyphicon-edit" aria-hidden="true"/>${labelupdate}</a>--%>
+<%--<a href="/deleteIdea?id=${check.id}" onclick="return confirmDelete();"><span id="glyphicons" class="glyphicon glyphicon-trash" aria-hidden="true"/>${labeldelete}--%>
+<%--</a>--%>
+<%--</sec:authorize>--%>
 <%--</div>--%>
 
 <div id="idea" class="showIdea">
@@ -39,7 +41,7 @@
             <div id="title" class="col-xs-10">${check.caption}</div>
         </div>
         <div class="row row2">
-            <div class="col-xs-9" id="username">By <a href="/user?usr=${check.username}">${check.username}</a> </div>
+            <div class="col-xs-9" id="username">By <a href="/user?usr=${check.username}">${check.username}</a></div>
             <div id="date" class="col-xs-3">added ${check.date_create}</div>
         </div>
         <div id="category"><span id="nameCategory">Category: </span>${check.category}</div>
@@ -55,14 +57,20 @@
             </sec:authorize>
             <sec:authorize access="hasRole('ROLE_USER')">
                 <c:if test="${username eq check.username}">
-                    <a href="/editidea/${check.id}"><span id="glyphicons" class="glyphicon glyphicon-edit" aria-hidden="true"/>${labelupdate}</a><br/>
-                    <a href="/deleteIdea?id=${check.id}" onclick="return confirmDelete();"><span id="glyphicons" class="glyphicon glyphicon-trash" aria-hidden="true"/>${labeldelete}
+                    <a href="/editidea/${check.id}"><span id="glyphicons" class="glyphicon glyphicon-edit"
+                                                          aria-hidden="true"/>${labelupdate}</a><br/>
+                    <a href="/deleteIdea?id=${check.id}" onclick="return confirmDelete();"><span id="glyphicons"
+                                                                                                 class="glyphicon glyphicon-trash"
+                                                                                                 aria-hidden="true"/>${labeldelete}
                     </a>
                 </c:if>
             </sec:authorize>
             <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">
-                <a href="/editidea/${check.id}"><span id="glyphicons" class="glyphicon glyphicon-edit" aria-hidden="true"/>${labelupdate}</a>
-                <a href="/deleteIdea?id=${check.id}" onclick="return confirmDelete();"><span id="glyphicons" class="glyphicon glyphicon-trash" aria-hidden="true"/>${labeldelete}
+                <a href="/editidea/${check.id}"><span id="glyphicons" class="glyphicon glyphicon-edit"
+                                                      aria-hidden="true"/>${labelupdate}</a>
+                <a href="/deleteIdea?id=${check.id}" onclick="return confirmDelete();"><span id="glyphicons"
+                                                                                             class="glyphicon glyphicon-trash"
+                                                                                             aria-hidden="true"/>${labeldelete}
                 </a>
             </sec:authorize>
         </div>
@@ -74,12 +82,12 @@
             <c:if test="${check.pict.length()>1}">
 
                 <a href="#img1">
-                    <img src="/resources/upload_image/${check.pict}"  class="thumbnail"/>
+                    <img src="/resources/upload_image/${check.pict}" class="thumbnail"/>
                 </a>
 
                 <!-- lightbox container hidden with CSS -->
                 <a href="#_" class="lightbox" id="img1">
-                    <img src="/resources/upload_image/${check.pict}" />
+                    <img src="/resources/upload_image/${check.pict}"/>
                 </a>
 
             </c:if>
@@ -93,7 +101,14 @@
         <div id="textOfIdeaShow">
             <c:if test="${check.txt.length()>1}">
                 <%--Text--%>
-                ${check.txt}
+
+                ${check.txt}<br />
+                <c:if test="${fn:toUpperCase(pageContext.response.locale) eq 'RU'}">
+                    <a href="https://translate.google.com/#en/ru/${check.txt}" target="_blank">Перевести на русский</a>
+                </c:if>
+                <c:if test="${fn:toUpperCase(pageContext.response.locale) eq 'EN'}">
+                    <a href="https://translate.google.com/#ru/en/${check.txt}" target="_blank">Translate into English</a>
+                </c:if>
             </c:if>
         </div>
     </div>
@@ -120,11 +135,12 @@
                            commandName="rcommand">
                     <input name="idea_link" type="hidden" value="${check.id}"/>
                     <form:select path="rating" items="${votelist}"/>
-                    <input type="submit" value="Submit"/>
+                    <input type="submit" value="${label_button_submit}"/>
                 </form:form>
             </sec:authorize>
 
-            <div id="totalRating"> total rating:<fmt:formatNumber type="number" maxFractionDigits="2" value="${check.rating}" />
+            <div id="totalRating"> total rating:<fmt:formatNumber type="number" maxFractionDigits="2"
+                                                                  value="${check.rating}"/>
 
             </div>
         </div>
@@ -135,35 +151,40 @@
             <div class="col-xs-4" id="nameLikes"> like/dislike</div>
             <div class="col-xs-8">
                 <sec:authorize access="isAuthenticated()">
-                <table>
-                    <tr>
-                        <td>
-                            <form:form method="post" action="${pageContext.servletContext.contextPath}/like" id="like" commandName="rcommand">
-                                <input name="idea_link" type="hidden" value="${check.id}"/>
-                                <input name="likeordislike" type="hidden" value="1"/>
-                                <button class="likes" type="submit" >
-                                    <img src="/resources/pict/like.jpg" width="19" height="30" alt="likes">${check.count_like}
-                                </button>
-                            </form:form>
-                        </td>
-                        <td>
-                            <form:form method="post" action="${pageContext.servletContext.contextPath}/like" id="dislike" commandName="rcommand">
-                                <input name="idea_link" type="hidden" value="${check.id}"/>
-                                <input name="likeordislike" type="hidden" value="-1"/>
-                                <button class="likes" type="submit">
-                                    <img src="/resources/pict/dislike.jpg" width="19" height="30" alt="dislikes">${check.count_dislike}
-                                </button>
-                            </form:form>
-                        </td>
-                    </tr>
-                </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <form:form method="post" action="${pageContext.servletContext.contextPath}/like"
+                                           id="like" commandName="rcommand">
+                                    <input name="idea_link" type="hidden" value="${check.id}"/>
+                                    <input name="likeordislike" type="hidden" value="1"/>
+                                    <button class="likes" type="submit">
+                                        <img src="/resources/pict/like.jpg" width="19" height="30"
+                                             alt="likes">${check.count_like}
+                                    </button>
+                                </form:form>
+                            </td>
+                            <td>
+                                <form:form method="post" action="${pageContext.servletContext.contextPath}/like"
+                                           id="dislike" commandName="rcommand">
+                                    <input name="idea_link" type="hidden" value="${check.id}"/>
+                                    <input name="likeordislike" type="hidden" value="-1"/>
+                                    <button class="likes" type="submit">
+                                        <img src="/resources/pict/dislike.jpg" width="19" height="30"
+                                             alt="dislikes">${check.count_dislike}
+                                    </button>
+                                </form:form>
+                            </td>
+                        </tr>
+                    </table>
                 </sec:authorize>
                 <sec:authorize access="isAnonymous()">
-                    <button class="likes" type="button" >
+                    <button class="likes" type="button">
                         <img src="/resources/pict/like.jpg" width="19" height="30" alt="likes">${check.count_like}
                     </button>
                     <button class="likes" type="button">
-                        <img src="/resources/pict/dislike.jpg" width="19" height="30" alt="dislikes">${check.count_dislike}
+                        <img src="/resources/pict/dislike.jpg" width="19" height="30"
+                             alt="dislikes">${check.count_dislike}
                     </button>
                 </sec:authorize>
             </div>
@@ -173,16 +194,17 @@
 
     <div class="pull-left col-xs-12" id="titleComments">${label_comments}:
         <sec:authorize access="isAuthenticated()">
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="reply_to" onclick="setCommentId(0)">${label_comment_idea}</span>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="reply_to"
+                                                                   onclick="setCommentId(0)">${label_comment_idea}</span>
         </sec:authorize>
     </div>
     <div id="comments">
         <c:if test="${not empty child}">
         <c:forEach items="${child}" var="child">
         <c:if test="${child.id eq child.parentLink}">
-        </div>
-        <br/>
-        </c:if>
+    </div>
+    <br/>
+    </c:if>
     <c:if test="${child.id ne child.parentLink}">
         <c:forEach var="cycle" begin="0" end="${child.depth}">
             &nbsp;
@@ -198,7 +220,7 @@
         ${child.note}
     <c:if test="${child.id eq child.parentLink}">
 
-    <a href="javascript:look('${child.id}');" title="Смотреть HOLY WAR">HOLY WAR</a><br/>
+    <a href="javascript:look('${child.id}');" title="look ${label_tweet}">${label_tweet}</a><br/>
     <div id="${child.id}" style="display: none;">
         </c:if>
 
@@ -222,7 +244,8 @@
                     Введите комментарий:
                 </tr>
                 <tr>
-                    <form:textarea id="commentField" class="form-control" path="note" maxlength="256" rows="3" htmlEscape="true"/>
+                    <form:textarea id="commentField" class="form-control" path="note" maxlength="512" rows="3"
+                                   htmlEscape="true"/>
                 </tr>
                 <tr id="commentIdea" class="pull-right">
                     <td>

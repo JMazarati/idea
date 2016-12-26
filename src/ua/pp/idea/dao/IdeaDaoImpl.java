@@ -33,6 +33,8 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
     private SelectIdeaByUserOrderByRating selectIdeaByUserOrderByRating;
     private SelectAllIdeaOrderById selectAllIdeaOrderById;
     private SelectTopIdea selectTopIdea;
+    private SelectIdeaByTextOrderByDate selectIdeaByTextOrderByDate;
+    private SelectIdeaByTextOrderByRating selectIdeaByTextOrderByRating;
 
 
     @Resource(name = "dataSource")
@@ -52,7 +54,8 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
         this.selectIdeaByUserOrderByRating = new SelectIdeaByUserOrderByRating(dataSource);
         this.selectAllIdeaOrderById = new SelectAllIdeaOrderById(dataSource);
         this.selectTopIdea = new SelectTopIdea(dataSource);
-
+        this.selectIdeaByTextOrderByDate = new SelectIdeaByTextOrderByDate(dataSource);
+        this.selectIdeaByTextOrderByRating = new SelectIdeaByTextOrderByRating(dataSource);
 
     }
 
@@ -67,7 +70,15 @@ public class IdeaDaoImpl implements Serializable, IdeaDao {
             return selectAllIdeaOrderByDate.execute();
         else return selectAllIdeaOrderByRating.execute();
     }
+    @Override
+    public List<Idea> findIdeaByText(String text, Boolean sort) {
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        paramMap.put("text", text.toLowerCase());
+        if (sort)
+            return selectIdeaByTextOrderByDate.executeByNamedParam(paramMap);
+        else return selectIdeaByTextOrderByRating.executeByNamedParam(paramMap);
 
+    }
     @Override
     public List<Idea> getTop5() {
         return selectTopIdea.execute();

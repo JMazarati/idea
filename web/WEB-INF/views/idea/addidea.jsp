@@ -41,7 +41,7 @@
         </tr>
         <tr>
             <td><form:label path="pict">${label_picture}</form:label></td>
-            <td><input name="p" type="file"/></td>
+            <td><input name="p" type="file" value="hello file" /></td>
             <td><span class="error" ><form:errors path="file" /></span></td>
 
         </tr>

@@ -14,6 +14,8 @@ public interface IdeaDao {
 
     List<Idea> getAll(Boolean sort);
 
+    List<Idea> findIdeaByText(String text, Boolean sort);
+
     List<Idea> getTop5();
 
     Idea findIdeaByID(int id);
