@@ -139,7 +139,7 @@
                 </form:form>
             </sec:authorize>
 
-            <div id="totalRating"> total rating:<fmt:formatNumber type="number" maxFractionDigits="2"
+            <div id="totalRating" value="${check.rating}"> total rating: <fmt:formatNumber type="number" maxFractionDigits="2"
                                                                   value="${check.rating}"/>
 
             </div>

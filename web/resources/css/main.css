@@ -286,26 +286,26 @@ a:hover{
     top: 0;
     z-index: 0;
 }
-#reviewLightbulb-input input:checked ~ label {
-    background: url(/resources/pict/like.jpg);
-    height: 30px;
-    width: 19px;
-}
+/*#reviewLightbulb-input input:checked ~ label {*/
+    /*background: url(/resources/pict/like.jpg);*/
+    /*height: 30px;*/
+    /*width: 19px;*/
+/*}*/
 #reviewLightbulb-input label {
     background: url(/resources/pict/dislike.jpg);
     height: 30px;
     width: 19px;
     float: right;
-    cursor: pointer;
+    /*cursor: pointer;*/
     margin-right: 10px;
     position: relative;
     z-index: 0;
 }
-#reviewLightbulb-input label:hover, #reviewLightbulb-input label:hover ~ label {
-    background: url(/resources/pict/like.jpg);
-    height: 30px;
-    width: 19px;
-}
+/*#reviewLightbulb-input label:hover, #reviewLightbulb-input label:hover ~ label {*/
+    /*background: url(/resources/pict/like.jpg);*/
+    /*height: 30px;*/
+    /*width: 19px;*/
+/*}*/
 #reviewLightbulb-input #lightbulb-0 {
     left: 0;
 }
@@ -346,6 +346,8 @@ a:hover{
 .reply_to{
     color: #390457;
     border-bottom: 1px dotted dimgrey;
+    float: right;
+    margin-bottom: 5px;
 }
 .reply_to:hover{
     cursor: pointer;
@@ -438,7 +440,7 @@ button.log-button:hover{
 
 .user_name{
     font-size: 18px;
-    color: black;
+    color: purple;
     font-style: italic;
 }
 #welcome:hover .user_name{
@@ -521,11 +523,11 @@ a.back-to-top:hover{
 
 /*update user*/
 div.update-user{
-    height: 50px;
-    width: 230px;
-    margin: auto;
+    float: right;
 }
-
+div.update-user div{
+    padding: 10px;
+}
 div.update-user .glyphicon, div.update-idea .glyphicon{
     font-weight: 900;
 }
@@ -539,6 +541,13 @@ div.update-user .glyphicon, div.update-idea .glyphicon{
 }
 div.update-idea .glyphicon{
     padding: 3px;
+}
+
+.show_ideas{
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+
 }
 
 

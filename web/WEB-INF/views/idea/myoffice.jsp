@@ -30,7 +30,7 @@
 <div id="myOffice">
     <p>${labellogin}: <span>${username}</span></p>
     <p>${label_email}: <span>${useremail}</span></p>
-    <a href="/user?usr=${username}">${labelshowmyidea}</a>
+    <p><a class="show_ideas" href="/user?usr=${username}">${labelshowmyidea}</a></p>
     <%--<b>${labelfirstname}:</b>  <br/>--%>
     <%--<b>${labellastname}:</b>  <br/>--%>
     <%--<b>${label_contact_birth_date}:</b>  <br/>--%>

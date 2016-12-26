@@ -42,4 +42,42 @@ $(document).ready(function(){
         }
     });
 
+    var lamp=$('#reviewLightbulb-input label');
+
+    var rating=$('#totalRating').attr('value');
+
+    if(rating>4){
+        lamp.each(function () {
+            $(this).css('background','url(/resources/pict/like.jpg)');
+        })
+    } else{
+    if(rating>3){
+
+        for(var i=4;i!=0;i--){
+            $(lamp[i]).css('background','url(/resources/pict/like.jpg)');
+        }
+
+    }
+    else if(rating>2){
+        for(var i=4;i!=1;i--){
+            $(lamp[i]).css('background','url(/resources/pict/like.jpg)');
+        }
+    }
+    else if(rating>1){
+        for(var i=4;i!=2;i--){
+            $(lamp[i]).css('background','url(/resources/pict/like.jpg)');
+        }
+    }
+    else if (rating>0){
+        for(var i=4;i!=3;i--){
+            $(lamp[i]).css('background','url(/resources/pict/like.jpg)');
+        }
+    }
+    }
+
+
+
+
+
+
 });
