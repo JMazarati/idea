@@ -57,7 +57,7 @@ public class IdeaController {
                         myIdea.setId(i);
                         myIdea.setPict("idea.png");
                         myIdea.setCaption("Здесь могла бы быть ваша идея<br />Here could be your idea!");
-                        myIdea.setTxt("<h1>Здесь могла бы быть ваша идея!<br />Here could be your idea!</h1>");
+                        myIdea.setTxt("Здесь могла бы быть ваша идея!<br />Here could be your idea!");
                         topList.add(myIdea);
 
                     }
@@ -266,7 +266,7 @@ public class IdeaController {
                         myIdea.setId(i);
                         myIdea.setPict("idea.png");
                         myIdea.setCaption("Здесь могла бы быть ваша идея<br />Here could be your idea!");
-                        myIdea.setTxt("<h1>Здесь могла бы быть ваша идея!<br />Here could be your idea!</h1>");
+                        myIdea.setTxt("Здесь могла бы быть ваша идея!<br />Here could be your idea!");
                         topList.add(myIdea);
 
                     }
