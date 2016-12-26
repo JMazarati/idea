@@ -138,7 +138,7 @@
                     <li role="presentation" id="tab4" class="${tabclass4}"><a href="/myoffice">${label_link_4}</a></li>
                     <li class="pull-right">
                         <div class="form-group" id="search">
-                            <input type="text" class="form-control" placeholder="${label_search}">
+                            <input type="text" class="form-control" id="searchtext" placeholder="${label_search}">
                         </div>
                     </li>
 
@@ -156,7 +156,7 @@
                     <li role="presentation" id="tab5Admin" class="${tabclass5}"><a href="/admin">${label_link_5}</a></li>
                     <li class="pull-right">
                         <div class="form-group" id="searchAdmin">
-                            <input type="text" class="form-control" placeholder="${label_search}">
+                            <input type="text" class="form-control" id="searchtext" placeholder="${label_search}">
                         </div>
                     </li>
                 </ul>
@@ -170,7 +170,7 @@
                     <li role="presentation" id="tab2Anon" class="${tabclass2}"><a href="/viewidea">${label_link_1}</a></li>
                     <li class="pull-right">
                         <div class="form-group" id="searchAnon">
-                            <input type="text" class="form-control" placeholder="${label_search}">
+                            <input type="text" class="form-control" id="searchtext" placeholder="${label_search}">
                         </div>
                     </li>
                 </ul>

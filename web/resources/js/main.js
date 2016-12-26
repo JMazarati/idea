@@ -29,3 +29,17 @@
 // })(jQuery);
 
 
+
+$(document).ready(function(){
+    $("#searchtext").keypress(function(e){
+        if(e.keyCode==13){
+
+        var text=$("#searchtext").val();
+
+            var url = "/text?txt="+text;
+            $(location).attr('href',url);
+
+        }
+    });
+
+});
