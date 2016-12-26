@@ -43,7 +43,7 @@
                     <div class="row row1">
                         <div id="rating" class="col-xs-10">
                             <div class="rating-lamp" id="reviewLightbulb-input">
-                                <input id="lightbulb-4" type="radio" name="reviewLightbulb"  value ="5"/>
+                                <input id="lightbulb-4" type="radio" disabled ="disabled" name="reviewLightbulb"  value ="5"/>
                                 <label  for="lightbulb-4"></label>
 
                             </div>

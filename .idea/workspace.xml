@@ -8,11 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3f85692f-bba7-4975-88e2-78571ba6e466" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/idea/myoffice.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/idea/myoffice.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/idea/viewidea.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/idea/viewidea.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/css/main.css" afterPath="$PROJECT_DIR$/web/resources/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/js/main.js" afterPath="$PROJECT_DIR$/web/resources/js/main.js" />
     </list>
     <ignored path="idea.iws" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -45,27 +42,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewidea.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/viewidea.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/resources/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="548" column="23" selection-start-line="548" selection-start-column="23" selection-end-line="548" selection-end-column="23" />
+            <state relative-caret-position="148">
+              <caret line="287" column="1" selection-start-line="287" selection-start-column="1" selection-end-line="287" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myoffice.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="myoffice.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/myoffice.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="328">
@@ -80,6 +67,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="529">
               <caret line="141" column="33" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewidea.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/viewidea.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -115,9 +112,9 @@
         <option value="$PROJECT_DIR$/src/ua/pp/idea/dao/crud/SelectIdeaByTextOrderByDate.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/show.jsp" />
         <option value="$PROJECT_DIR$/web/resources/js/main.js" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/myoffice.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/viewidea.jsp" />
         <option value="$PROJECT_DIR$/web/resources/css/main.css" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/idea/myoffice.jsp" />
       </list>
     </option>
   </component>
@@ -864,7 +861,7 @@
       <workItem from="1482700344170" duration="599000" />
       <workItem from="1482753852356" duration="1463000" />
       <workItem from="1482757796707" duration="9786000" />
-      <workItem from="1482776750111" duration="9974000" />
+      <workItem from="1482776750111" duration="11239000" />
     </task>
     <task id="LOCAL-00001" summary="add module search by text of idea&#10;add feature translate  text of idea">
       <created>1482765408228</created>
@@ -880,11 +877,18 @@
       <option name="project" value="LOCAL" />
       <updated>1482768199892</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="bugs, rating &#10;">
+      <created>1482787146258</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1482787146258</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27645000" />
+    <option name="totallyTimeSpent" value="28910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -984,7 +988,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add module search by text of idea&#10;add feature translate  text of idea" />
     <MESSAGE value="PATCH_1 module search by text of idea&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="PATCH_1 module search by text of idea&#10;" />
+    <MESSAGE value="bugs, rating &#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugs, rating &#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1371,26 +1376,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/css/main.css">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/myoffice.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="548" column="23" selection-start-line="548" selection-start-column="23" selection-end-line="548" selection-end-column="23" />
+        <state relative-caret-position="328">
+          <caret line="32" column="84" selection-start-line="32" selection-start-column="84" selection-end-line="32" selection-end-column="84" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/viewidea.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        <state relative-caret-position="155">
+          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/idea/myoffice.jsp">
+    <entry file="file://$PROJECT_DIR$/web/resources/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="32" column="84" selection-start-line="32" selection-start-column="84" selection-end-line="32" selection-end-column="84" />
+        <state relative-caret-position="148">
+          <caret line="287" column="1" selection-start-line="287" selection-start-column="1" selection-end-line="287" selection-end-column="1" />
           <folding />
         </state>
       </provider>
