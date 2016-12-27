@@ -553,6 +553,18 @@ div.update-idea .glyphicon{
 
 }
 
+.nothing{
+    margin-left: 15%;
+}
+
+.nothing .glyphicon{
+    float: none !important;
+}
+
+/*input:required {*/
+    /*border: 1px solid red;*/
+/*}*/
+
 
 @media screen and (min-device-width: 1752px) {
     .item div{

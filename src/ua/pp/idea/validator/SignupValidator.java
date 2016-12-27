@@ -58,7 +58,7 @@ public class SignupValidator implements Validator {
             errors.rejectValue("userpwd", "confirmPassword.passwordDontMatch", "Passwords length must be more six symbol.");
         }
         if (!(myUser.getUserpwd()).equals(myUser.getUserkpwd())) {
-            errors.rejectValue("userkpwd", "confirmPassword.passwordDontMatch", "Passwords don't match.");
+            errors.rejectValue("userkpwd", "confirmPassword.passwordDontMatch", "Passwords don't match");
         }
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "useremail", "useremail.empty", "Email must not be empty.");
         if (!isEmail(myUser.getUseremail())) {

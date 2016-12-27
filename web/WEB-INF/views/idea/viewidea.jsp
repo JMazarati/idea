@@ -57,9 +57,10 @@
 
         </c:if>
         <c:if test="${empty list}">
-
+            <div class="nothing">
             <img src="<c:url value="/resources/pict/10753921.jpg" />" /> <br />
             ${enf} <a href="/addidea">${labellink2}</a><br/>
+            </div>
         </c:if>
     </div>
 

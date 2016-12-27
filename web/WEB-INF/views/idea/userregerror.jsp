@@ -38,11 +38,11 @@
 
 </c:if>
 <c:if test="${error==4}" >
-    ${e4}
+   <p class="nothing"> ${e4} </p>
 
 </c:if>
 <c:if test="${error==5}" >
-    Идея удалена!
+    <p class="nothing"><span id="glyphicons" class="glyphicon glyphicon-trash" aria-hidden="true"/> Идея удалена!</p>
 
 </c:if>
 <c:if test="${error==6}" >

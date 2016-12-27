@@ -17,6 +17,7 @@
 <spring:message code="label_picture" var="label_picture" />
 <spring:message code="label_video" var="label_video" />
 <spring:message code="label_tags" var="label_tags" />
+<spring:message code="label_file" var="label_file" />
 
 
 <form:form method="POST" action="${pageContext.servletContext.contextPath}/addideapost" enctype="multipart/form-data">

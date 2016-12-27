@@ -17,7 +17,7 @@
 <spring:message code="label_login" var="label_login"/>
 <spring:message code="label_pwd" var="label_pwd"/>
 <spring:message code="label_pwd_confirm" var="label_pwd_confirm"/>
-
+<spring:message code="label_pwd_ln" var="label_pwd_ln"/>
 <h4 class="text-center page-header">${label_registration}</h4>
 <style type="text/css">
     span.error {
@@ -29,7 +29,7 @@
     <table class="form-horizontal" id="registration">
         <tr>
             <td><form:label path="username">${label_username}</form:label></td>
-            <td><form:input path="username"  class="form-control" placeholder="${label_username}" maxlength="50" required="required"/></td>
+            <td><form:input path="username"  class="form-control" placeholder="${label_username}" maxlength="50"  required="required"/></td>
             <td><span class="error" >
                 <form:errors path="username" element="div"/>
                 </span>
@@ -42,12 +42,12 @@
         </tr>
         <tr>
             <td><form:label path="userpwd" >${label_pwd}</form:label></td>
-            <td><form:input path="userpwd" type="password"  class="form-control" placeholder="******" maxlength="64" required="required" title="Your password is less than 6 symbols" pattern=".{6,60}"/></td>
+            <td><form:input path="userpwd" type="password"  class="form-control" placeholder="******" maxlength="64" required="required" title="${label_pwd_ln}" pattern=".{6,60}"/></td>
             <td><span class="error" ><form:errors path="userpwd" /></span></td>
         </tr>
         <tr>
             <td><form:label path="userkpwd">${label_pwd_confirm}</form:label></td>
-            <td><form:input path="userkpwd" type="password"  class="form-control" placeholder="******" maxlength="64" required="required" title="Your password is less than 6 symbols" pattern=".{6,60}"/></td>
+            <td><form:input path="userkpwd" type="password"  class="form-control" placeholder="******" maxlength="64" required="required" title="{label_pwd_ln}" pattern=".{6,60}"/></td>
             <td><span class="error" ><form:errors path="userkpwd" /></span></td>
         </tr>
         <tr>

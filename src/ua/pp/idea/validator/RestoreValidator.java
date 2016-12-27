@@ -48,7 +48,7 @@ public class RestoreValidator implements Validator {
             }
 
             if (!username.toLowerCase().equals(str.toLowerCase())) {
-                errors.rejectValue("username", "username.full", "User not found");
+                errors.rejectValue("username", "username.full", "User not found ");
             }
         }
 

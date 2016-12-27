@@ -112,9 +112,9 @@
                         <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
                 <p style="color: red; ">
                     ${mfl}
-                    <c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}"/>.
-                    <span><a href="/restore">${labelrestore}</a></span>
+                    <%--<c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}"/>.--%>
                 </p>
+                            <p><a href="/restore">${labelrestore}</a></p>
                         </c:if>
                     </sec:authorize>
 
